@@ -9,3 +9,14 @@ Numero di studenti iscritti per provincia di residenza, provincia della sede did
 
 ###### File
 [`14a_iscrittixresidenzasedecorsogruppo.csv`](14a_iscrittixresidenzasedecorsogruppo.csv)
+
+
+#### List of Tourist Accommodation Businesses  
+###### Description
+Elenco esercizi attività ricettive Bologna (attive e cessate), aggiornate 2025
+
+###### Source
+[OpenData Comune di Bologna](https://opendata.comune.bologna.it/explore/dataset/elenco-esercizi-attivita-ricettive/export/?disjunctive.sottoarea&sort=data_inizio_attivita)
+
+###### File 
+[`elenco-esercizi-attivita-ricettive.csv`](elenco-esercizi-attivita-ricettive.csv)
