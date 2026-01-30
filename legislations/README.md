@@ -18,7 +18,7 @@ Codice del Turismo
 Regolazione Affitti Brevi 
 
 ###### Source
-[Normattiva](([https://www.normattiva.it/atto/caricaDettaglioAtto?atto.dataPubblicazioneGazzetta=2023-10-18&atto.codiceRedazionale=23G00158&atto.articolo.numero=0&atto.articolo.sottoArticolo=1&atto.articolo.sottoArticolo1=0&qId=f9cb57b6-2985-4de4-ae64-3134d6454d87&tabID=0.32907711939010453&title=lbl.dettaglioAtto](https://www.normattiva.it/atto/caricaDettaglioAtto?atto.dataPubblicazioneGazzetta=2017-04-24&atto.codiceRedazionale=17G00063&tipoDettaglio=vigente&qId=39eeb1c7-dd34-4f54-956a-549f63137f23&classica=true&dataVigenza=&generaTabId=true&bloccoAggiornamentoBreadCrumb=true&title=lbl.dettaglioAtto&tabID=0.5334835962113985)))
+[Normattiva]([https://www.normattiva.it/atto/caricaDettaglioAtto?atto.dataPubblicazioneGazzetta=2023-10-18&atto.codiceRedazionale=23G00158&atto.articolo.numero=0&atto.articolo.sottoArticolo=1&atto.articolo.sottoArticolo1=0&qId=f9cb57b6-2985-4de4-ae64-3134d6454d87&tabID=0.32907711939010453&title=lbl.dettaglioAtto](https://www.normattiva.it/atto/caricaDettaglioAtto?atto.dataPubblicazioneGazzetta=2017-04-24&atto.codiceRedazionale=17G00063&tipoDettaglio=vigente&qId=39eeb1c7-dd34-4f54-956a-549f63137f23&classica=true&dataVigenza=&generaTabId=true&bloccoAggiornamentoBreadCrumb=true&title=lbl.dettaglioAtto&tabID=0.5334835962113985))
 
 ###### File
 [`2017_50.pdf`](2017_50.pdf)
