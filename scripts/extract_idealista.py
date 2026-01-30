@@ -16,13 +16,13 @@ The output CSV is written next to the input file, using the same filename with
 the `.csv` extension.
 
 Usage:
-    python extract_idealista.py centro-storico-full.html
+    python extract_idealista.py idealista-storico-centro_storico.html
 
 Input:
-    centro-storico-full.html   (HTML file saved from the Idealista website)
+    idealista-storico-centro_storico.html   (HTML file saved from the Idealista website)
 
 Output:
-    centro-storico-full.csv    (CSV file derived from the input filename)
+    idealista-storico-centro_storico.csv    (CSV file derived from the input filename)
 
 Notes:
 - The script performs no network requests.
