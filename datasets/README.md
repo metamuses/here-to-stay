@@ -32,7 +32,7 @@ Capacity of collective tourist accommodation by type of accommodation and munici
 - [IstatData](https://esploradati.istat.it/databrowser/#/it/dw/categories/IT1,Z0700SER,1.0/SER_TOURISM/SER_TOURISM_RELATED_FILES)
 
 ###### Files
-- [`capacità_comunale_2013-2024.xlsx`](capacità_comunale_2013-2024.xlsx)
+- [`capacità_comunale_2013-2024.xlsx`](raw/istat/capacità_comunale_2013-2024.xlsx)
 
 ---
 
@@ -44,7 +44,7 @@ Occupancy of tourist accommodation establishments by type of accomodation and re
 - [IstatData](https://esploradati.istat.it/databrowser/#/it/dw/categories/IT1,Z0700SER,1.0/SER_TOURISM/SER_TOURISM_RELATED_FILES)
 
 ###### Files
-- [`dati_comunali_2014-2024.xlsx`](dati_comunali_2014-2024.xlsx)
+- [`dati_comunali_2014-2024.xlsx`](raw/istat/dati_comunali_2014-2024.xlsx)
 
 ---
 
