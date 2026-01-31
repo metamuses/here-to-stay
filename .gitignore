@@ -241,4 +241,9 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
+# Excel temporary and lock files
+~$*.xlsx
+~$*.xls
+*.tmp
+
 # Project specific
