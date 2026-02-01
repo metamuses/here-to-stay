@@ -1,0 +1,18 @@
+@prefix stocazzo: <https://github.com/metamuses/houses> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+stocazzo:D1_POPULATION a dctapit:Dataset,
+  dcat:Dataset ;
+  dcterms:identifier "agid:D.1" ;
+  dcterms:title "Resident municipal population by age, sex and marital status"@en .
+  dcterms:description "Dataset on the resident municipal population disaggregated by age, sex, and marital status."@en ;
+  dct:modified    "2015-05-25"^^xsd:date ;
+  dcat:distribution "Excel";
+  dcterms:language "it"^^xsd:language ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:accessRights "Public"@en ;
+  dcat:releaseDate "2018"^^xsd:year ;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/POP> ;
+  dcterms:publisher <https://www.comune.bologna.it/> ;
