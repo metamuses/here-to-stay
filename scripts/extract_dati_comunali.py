@@ -3,11 +3,17 @@
 """
 Convert the Excel file containing tourist arrivals and overnight stays data
 from Istat into per-year CSV files.
+
+Usage:
+    python extract_dati_comunali.py
 """
 
 import pandas as pd
 import numpy as np
 
+XLS = pd.ExcelFile("dati_comunali_2014-2024.xlsx")
+
+STRING_COLS = list(range(7))
 HEADERS = [
     "cod. reg.",
     "regione",
@@ -35,9 +41,6 @@ HEADERS = [
     "presenze esercizi extra-alberghieri non residenti",
     "presenze esercizi extra-alberghieri totale",
 ]
-
-XLS = pd.ExcelFile("dati_comunali_2014-2024.xlsx")
-STRING_COLS = list(range(7))
 
 # process sheets for each year from 2014 to 2024
 for year in range(2014, 2025):
