@@ -35,7 +35,7 @@ hts:CATALOG_HERE_TO_STAY a dcatapit:Catalog,
       hts:MD5_REGIONAL_ENROLLMENT_RENT_PRICES,
       hts:MD6_REGIONAL_SENSITIVITY_INDEX .
 
-# ===== DATASETS =========================
+# ===== ORIGINAL DATASETS ================
 # D1 - Accommodations facility in Bologna
 hts:D1_ACCOMODATIONS_BOLOGNA a dcatapit:Dataset,
     dcat:Dataset ;
@@ -181,7 +181,7 @@ hts:D5_RENTAL_PRICES_BOLOGNA_SERIES a dcatapit:Dataset,
   dcterms:identifier "metamuses:rental-prices-bologna-series" ;
   dcterms:title "Prezzi di locazione degli immobili residenziali offerti in affitto tramite la piattaforma Idealista a Bologna - Serie per quartiere"@it ;
   dcterms:title "Rental prices of residential properties offered for rent through the Idealista platform - Series by neighborhood"@en ;
-  dcterms:description "Granular version of the Idealista dataset on Bologna's rental prices, divided into neighborhood level CSV files."@en ;
+  dcterms:description "Granular version of the Idealista dataset on Bologna's rental prices, divided into neighborhood-level CSV files."@en ;
   dcterms:publisher <https://github.com/metamuses> ;
   prov:wasDerivedFrom hts:D5_RENTAL_PRICES_BOLOGNA ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
