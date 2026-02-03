@@ -45,7 +45,7 @@ hts:D1_ACCOMMODATIONS_BOLOGNA a dcatapit:Dataset,
   dcterms:description "Some description of the dataset that will be added later"@en ;
   dcterms:modified "2025-12-31"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
-  dcterms:rightsHolder <http://w3id.org/italia/data/organization/public-organization/c_a944> ;
+  dcterms:rightsHolder <http://w3id.org/italia/data/public-organization/c_a944> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
   dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
   dcat:distribution hts:D1_ACCOMMODATIONS_BOLOGNA_DISTRIBUTION .
@@ -100,7 +100,7 @@ hts:D2_ACCOMMODATIONS_CAPACITY_SERIES_DISTRIBUTION a dcatapit:Distribution,
     dcat:Distribution ;
   dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
   dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
-  dcat:accessURL <https://github.com/metamuses/burning-down-the-house/tree/main/datasets/istat/facilities> .
+  dcat:accessURL <https://github.com/metamuses/here-to-stay/tree/main/datasets/istat/facilities> .
 
 # D3 - Tourist flow
 hts:D3_TOURIST_FLOW a dcatapit:Dataset,
@@ -146,7 +146,7 @@ hts:D3_TOURIST_FLOW_SERIES_DISTRIBUTION a dcatapit:Distribution,
     dcat:Distribution ;
   dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
   dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
-  dcat:accessURL <https://github.com/metamuses/burning-down-the-house/tree/main/datasets/istat/arrivals> .
+  dcat:accessURL <https://github.com/metamuses/here-to-stay/tree/main/datasets/istat/arrivals> .
 
 # D4 - Legislations
 hts:D4_LEGISLATIONS a dcatapit:Dataset,
@@ -160,6 +160,7 @@ hts:D4_LEGISLATIONS a dcatapit:Dataset,
   dcterms:rightsHolder <https://github.com/metamuses> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/AS_NEEDED> ;
   dcterms:source <https://www.normattiva.it/> ;
+  dcterms:publisher <https://github.com/metamuses> ;
   dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
   dcat:distribution hts:D4_LEGISLATIONS_DISTRIBUTION .
 
@@ -167,7 +168,7 @@ hts:D4_LEGISLATIONS_DISTRIBUTION a dcatapit:Distribution,
     dcat:Distribution ;
   dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
   dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
-  dcat:accessURL <https://github.com/metamuses/burning-down-the-house/blob/main/datasets/legislations.csv> .
+  dcat:accessURL <https://github.com/metamuses/here-to-stay/blob/main/datasets/legislations.csv> .
 
 # D5 - Rental Prices in Bologna
 hts:D5_RENTAL_PRICES_BOLOGNA a dcatapit:Dataset,
@@ -178,7 +179,7 @@ hts:D5_RENTAL_PRICES_BOLOGNA a dcatapit:Dataset,
   dcterms:description "Some description of the dataset that will be added later"@en ;
   dcterms:modified "2026-01-31"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
-  dcterms:rightsHolder <http://w3id.org/italia/data/organization/private-organization/05388220963> ;
+  dcterms:rightsHolder <http://w3id.org/italia/data/private-organization/05388220963> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/MONTHLY> ;
   dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/RESTRICTED> ;
   dcat:distribution hts:D5_RENTAL_PRICES_BOLOGNA_DISTRIBUTION .
@@ -197,7 +198,7 @@ hts:D5_RENTAL_PRICES_BOLOGNA_SERIES a dcatapit:Dataset,
   dcterms:description "Granular version of the Idealista dataset on Bologna's rental prices, divided into neighborhood-level CSV files."@en ;
   dcterms:modified "2026-02-05"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
-  dcterms:rightsHolder <http://w3id.org/italia/data/organization/private-organization/05388220963> ;
+  dcterms:rightsHolder <http://w3id.org/italia/data/private-organization/05388220963> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/AS_NEEDED> ;
   prov:wasDerivedFrom hts:D5_RENTAL_PRICES_BOLOGNA ;
   dcterms:publisher <https://github.com/metamuses> ;
@@ -214,7 +215,7 @@ hts:D5_RENTAL_PRICES_BOLOGNA_SERIES_DISTRIBUTION a dcatapit:Distribution,
     dcat:Distribution ;
   dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
   dcterms:license <http://rightsstatements.org/vocab/InC/1.0/> ;
-  dcat:accessURL <https://github.com/metamuses/burning-down-the-house/tree/main/datasets/idealista> .
+  dcat:accessURL <https://github.com/metamuses/here-to-stay/tree/main/datasets/idealista> .
 
 # D6 - Student enrollment by residence
 hts:D6_STUDENT_ENROLLMENT a dcatapit:Dataset,
@@ -225,7 +226,7 @@ hts:D6_STUDENT_ENROLLMENT a dcatapit:Dataset,
   dcterms:description "Some description of the dataset that will be added later"@en ;
   dcterms:modified "2025-12-10"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
-  dcterms:rightsHolder <http://w3id.org/italia/data/organization/public-organization/KH5RHFCV> ;
+  dcterms:rightsHolder <http://w3id.org/italia/data/public-organization/KH5RHFCV> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
   dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
   dcat:distribution hts:D6_STUDENT_ENROLLMENT_DISTRIBUTION .
@@ -258,7 +259,7 @@ hts:MD1_ISTAT_OPENDATA_ACCOMMODATIONS_DISTRIBUTION a dcatapit:Distribution,
     dcat:Distribution ;
   dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
   dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
-  dcat:accessURL <https://github.com/metamuses/burning-down-the-house/blob/main/datasets/mashup/istat_opendata_ACCOMMODATIONS.csv> .
+  dcat:accessURL <https://github.com/metamuses/here-to-stay/blob/main/datasets/mashup/istat_opendata_ACCOMMODATIONS.csv> .
 
 # MD2 - Tourism carrying capacity
 hts:MD2_TOURISM_CARRYING_CAPACITY a dcatapit:Dataset,
@@ -281,7 +282,7 @@ hts:MD2_TOURISM_CARRYING_CAPACITY_DISTRIBUTION a dcatapit:Distribution,
     dcat:Distribution ;
   dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
   dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
-  dcat:accessURL <https://github.com/metamuses/burning-down-the-house/blob/main/datasets/mashup/tourism_carrying_capacity.csv> .
+  dcat:accessURL <https://github.com/metamuses/here-to-stay/blob/main/datasets/mashup/tourism_carrying_capacity.csv> .
 
 # MD3 - Legislative impact
 hts:MD3_LEGISLATIVE_IMPACT a dcatapit:Dataset,
@@ -306,7 +307,7 @@ hts:MD3_LEGISLATIVE_IMPACT_DISTRIBUTION a dcatapit:Distribution,
     dcat:Distribution ;
   dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
   dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
-  dcat:accessURL <https://github.com/metamuses/burning-down-the-house/blob/main/datasets/mashup/legislative_impact.csv> .
+  dcat:accessURL <https://github.com/metamuses/here-to-stay/blob/main/datasets/mashup/legislative_impact.csv> .
 
 # MD4 - Price vs facilities growth rate
 hts:MD4_PRICE_FACILITIES_GROWTH a dcatapit:Dataset,
@@ -330,7 +331,7 @@ hts:MD4_PRICE_FACILITIES_GROWTH_DISTRIBUTION a dcatapit:Distribution,
     dcat:Distribution ;
   dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
   dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
-  dcat:accessURL <https://github.com/metamuses/burning-down-the-house/blob/main/datasets/mashup/price_facilities_growth.csv> .
+  dcat:accessURL <https://github.com/metamuses/here-to-stay/blob/main/datasets/mashup/price_facilities_growth.csv> .
 
 # MD5 - Regional enrollment vs rent prices
 hts:MD5_REGIONAL_ENROLLMENT_RENT_PRICES a dcatapit:Dataset,
@@ -354,7 +355,7 @@ hts:MD5_REGIONAL_ENROLLMENT_RENT_PRICES_DISTRIBUTION a dcatapit:Distribution,
     dcat:Distribution ;
   dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
   dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
-  dcat:accessURL <https://github.com/metamuses/burning-down-the-house/blob/main/datasets/mashup/regional_enrollment_rent_prices.csv> .
+  dcat:accessURL <https://github.com/metamuses/here-to-stay/blob/main/datasets/mashup/regional_enrollment_rent_prices.csv> .
 
 # MD6 - Regional sensitivity index
 hts:MD6_REGIONAL_SENSITIVITY_INDEX a dcatapit:Dataset,
@@ -378,10 +379,10 @@ hts:MD6_REGIONAL_SENSITIVITY_INDEX_DISTRIBUTION a dcatapit:Distribution,
     dcat:Distribution ;
   dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
   dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
-  dcat:accessURL <https://github.com/metamuses/burning-down-the-house/blob/main/datasets/mashup/regional_sensitivity_index.csv> .
+  dcat:accessURL <https://github.com/metamuses/here-to-stay/blob/main/datasets/mashup/regional_sensitivity_index.csv> .
 
 # ===== AGENTS ===========================
-<http://w3id.org/italia/data/organization/public-organization/c_a944> a dcatapit:Agent,
+<http://w3id.org/italia/data/public-organization/c_a944> a dcatapit:Agent,
       foaf:Agent ;
     dcterms:identifier "c_a944" ;
     foaf:name "Comune di Bologna"@it ;
@@ -393,13 +394,13 @@ hts:MD6_REGIONAL_SENSITIVITY_INDEX_DISTRIBUTION a dcatapit:Distribution,
   foaf:name "Istituto Nazionale di Statistica"@it ;
   foaf:homepage <https://www.istat.it/> .
 
-<http://w3id.org/italia/data/organization/public-organization/KH5RHFCV> a dcatapit:Agent,
+<http://w3id.org/italia/data/public-organization/KH5RHFCV> a dcatapit:Agent,
     foaf:Agent ;
   dcterms:identifier "KH5RHFCV" ;
   foaf:name "Ministero dell'Università e della Ricerca"@it ;
   foaf:homepage <https://www.mur.gov.it/> .
 
-<http://w3id.org/italia/data/organization/private-organization/05388220963> a dcatapit:Agent,
+<http://w3id.org/italia/data/private-organization/05388220963> a dcatapit:Agent,
       foaf:Agent ;
     dcterms:identifier "05388220963" ;
     foaf:name "Idealista S.p.A."@it ;
