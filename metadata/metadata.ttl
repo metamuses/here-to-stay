@@ -162,12 +162,12 @@ hts:D4_LEGISLATIONS_DISTRIBUTION a dcatapit:Distribution,
   dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
   dcat:accessURL <https://github.com/metamuses/burning-down-the-house/blob/main/datasets/legislations.csv> .
 
-# D5 - Rental Prices
+# D5 - Rental Prices in Bologna
 hts:D5_RENTAL_PRICES_BOLOGNA a dcatapit:Dataset,
     dcat:Dataset ;
   dcterms:identifier "idealista:D.rental-prices-bologna" ;
   dcterms:title "Prezzi di locazione degli immobili residenziali offerti in affitto tramite la piattaforma Idealista a Bologna"@it ;
-  dcterms:title "Rental prices of residential properties offered for rent through the Idealista platform"@en ;
+  dcterms:title "Rental prices of residential properties offered for rent through the Idealista platform in Bologna"@en ;
   dcterms:description "Some description of the dataset that will be added later"@en ;
   dcterms:modified "2026-01-31"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
