@@ -161,7 +161,6 @@ hts:D4_LEGISLATIONS a dcatapit:Dataset,
   dcterms:rightsHolder <https://github.com/metamuses> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/AS_NEEDED> ;
   dcterms:source <https://www.normattiva.it/> ;
-  dcterms:publisher <https://github.com/metamuses> ;
   dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
   dcat:distribution hts:D4_LEGISLATIONS_DISTRIBUTION .
 
