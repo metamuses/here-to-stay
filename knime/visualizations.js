@@ -1,0 +1,555 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Extract colors from CSS variables
+    const rootStyles = getComputedStyle(document.documentElement);
+
+    const theme = {
+        bg: rootStyles.getPropertyValue('--bg-color').trim(),
+        text: rootStyles.getPropertyValue('--text-primary').trim(),
+        heading: rootStyles.getPropertyValue('--text-heading').trim(),
+        golden: rootStyles.getPropertyValue('--surface-color').trim(),
+        teal: rootStyles.getPropertyValue('--contrast-color').trim(),
+        orange: rootStyles.getPropertyValue('--orange-color').trim(),
+        grid: 'rgba(34, 29, 63, 0.1)',
+
+        // Data Source Colors (Consistent across all charts)
+        sources: {
+            istat: rootStyles.getPropertyValue('--contrast-color').trim(),    // Teal
+            openData: rootStyles.getPropertyValue('--surface-color').trim(), // Golden
+            data: rootStyles.getPropertyValue('--orange-color').trim(),  // Orange
+            histCenter: rootStyles.getPropertyValue('--text-heading').trim(), // Dark Red
+            outerZones: rootStyles.getPropertyValue('--surface-color').trim()
+        }
+    };
+
+
+    // --- CHART 1: ISTAT vs Open Data Growth Comparison (MD1) ---
+    function initGrowthChart() {
+        fetch("datasets/MD1_istat_opendata_comparison.csv")
+            .then(response => {
+                if (!response.ok) throw new Error("File not found");
+                return response.text();
+            })
+            .then(csvText => {
+                const lines = csvText.trim().split(/\r?\n/);
+                const delimiter = lines[0].includes(';') ? ';' : ',';
+                const headers = lines[0].split(delimiter).map(h => h.trim().toLowerCase().replace(/"/g, ''));
+                const rows = lines.slice(1).map(line => {
+                    const values = line.split(delimiter);
+                    return headers.reduce((obj, header, i) => {
+                        obj[header] = values[i] ? values[i].trim().replace(/"/g, '') : null;
+                        return obj;
+                    }, {});
+                });
+
+                const clean = (val) => {
+                    if (!val) return null;
+                    let n = parseFloat(val.toString().replace(',', '.'));
+                    return isNaN(n) ? null : n;
+                };
+
+                const traceIstat = {
+                    x: rows.map(r => r['anno']),
+                    y: rows.map(r => clean(r['percentuale crescita istat'])),
+                    name: 'ISTAT',
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    line: { color: theme.sources.istat, width: 3, shape: 'spline' }
+                };
+
+                const traceOpenData = {
+                    x: rows.map(r => r['anno']),
+                    y: rows.map(r => clean(r['percentuale crescita open data bologna'])),
+                    name: 'Open Data Bologna',
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    line: { color: theme.sources.openData, width: 3, dash: 'dot', shape: 'spline' }
+                };
+
+                const layout = {
+                    title: { text: 'ISTAT vs Open Data Comparison', font: { color: theme.heading, size: 20 } },
+                    paper_bgcolor: 'rgba(0,0,0,0)',
+                    plot_bgcolor: 'rgba(0,0,0,0)',
+                    font: { color: theme.text },
+                    xaxis: { title: 'Year', gridcolor: theme.grid },
+                    yaxis: { title: 'Growth %', gridcolor: theme.grid },
+                    hovermode: 'x unified',
+                    legend: { orientation: 'h', y: -0.2 }
+                };
+
+                Plotly.newPlot('line-plot1', [traceIstat, traceOpenData], layout, { responsive: true });
+            })
+            .catch(err => console.error("Error Chart 1:", err.message));
+    }
+
+
+    // --- CHART 2: Per-establishment Tourism Load in Bologna (MD2) ---
+    function initCapacityChart () {
+        fetch("datasets/MD2_tourism_load.csv")
+          .then(response => {
+              if (!response.ok) throw new Error("File not found");
+              return response.text();
+          })
+
+          .then(csvText => {
+                const lines = csvText.trim().split(/\r?\n/);
+                const delimiter = lines[0].includes(';') ? ';' : ',';
+                const headers = lines[0].split(delimiter).map(h => h.trim().toLowerCase().replace(/"/g, ''));
+                const rows = lines.slice(1).map(line => {
+                    const values = line.split(delimiter);
+                    return headers.reduce((obj, header, i) => {
+                        obj[header] = values[i] ? values[i].trim().replace(/"/g, '') : null;
+                        return obj;
+                    }, {});
+                });
+
+                const clean = (val) => {
+                    if (!val) return null;
+                    let n = parseFloat(val.toString().replace(',', '.'));
+                    return isNaN(n) ? null : n;
+                };
+
+                const traceLoadDensity = {
+                    x: rows.map(r => r['anno']),
+                    y: rows.map(r => clean(r['densità di carico'])),
+                    name: 'Arrival Density (per structure)',
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    line: { color: theme.sources.data, width: 3, shape: 'spline' },
+                    showLegend: true,
+                };
+
+                const layout = {
+                    title: { text: 'Per-establishment Tourism Load in Bologna', font: { color: theme.heading, size: 20 } },
+                    paper_bgcolor: 'rgba(0,0,0,0)',
+                    plot_bgcolor: 'rgba(0,0,0,0)',
+                    font: { color: theme.text },
+
+                    // --- LEGEND SETTINGS ---
+                    showlegend: true,
+                    legend: {
+                        orientation: 'h', // Horizontal
+                        yanchor: 'bottom',
+                        y: -0.3,         // Position it below the x-axis
+                        // xanchor: 'center',
+                        // x: 0.5,
+                        font: { color: theme.text }
+                    },
+                    // -----------------------
+
+                    xaxis: { title: 'Year', gridcolor: theme.grid },
+                    yaxis: {
+                      title: {
+                        text: 'Arrival Density (per structure)',
+                        standoff: 15
+                      },
+                      gridcolor: theme.grid
+                    },
+                    hovermode: 'x unified',
+                };
+
+                Plotly.newPlot('line-plot2', [traceLoadDensity], layout, { responsive: true });
+            })
+            .catch(err => console.error("Error Chart 2:", err.message));
+    }
+
+
+    // --- CHART 3: Legislative impact (MD23---
+    function initLegislativeChart () {
+        fetch("datasets/MD3_legislative_impact.csv")
+          .then(response => {
+              if (!response.ok) throw new Error("File not found");
+              return response.text();
+          })
+
+          .then(csvText => {
+                // Ignores commas inside double quotes
+                const parseCSVLine = (line) => {
+                    const result = [];
+                    let cur = '';
+                    let inQuotes = false;
+                    for (let char of line) {
+                        if (char === '"') inQuotes = !inQuotes;
+                        else if (char === ',' && !inQuotes) {
+                            result.push(cur.trim());
+                            cur = '';
+                        } else cur += char;
+                    }
+                    result.push(cur.trim());
+                    return result;
+                };
+                const lines = csvText.trim().split(/\r?\n/);
+                const headers = parseCSVLine(lines[0]).map(h => h.toLowerCase());
+
+                const rows = lines.slice(1).map(line => {
+                    const values = parseCSVLine(line);
+                    return headers.reduce((obj, header, i) => {
+                        obj[header] = values[i] || null;
+                        return obj;
+                    }, {});
+                });
+
+                const clean = (val) => {
+                    if (!val) return null;
+                    let n = parseFloat(val.toString().replace(',', '.'));
+                    return isNaN(n) ? null : n;
+                };
+
+                // --- COLOR MAPPING FOR PERIODS ---
+                // Since we don't have getRowColors() like in Knime, we define a map here
+                const periodColorMap = {
+                    "Mercato deregolamentato": theme.teal,
+                    "Istituzionalizzazione locazioni brevi": theme.golden,
+                    "Obbligo CIR": theme.orange,
+                    "Obbligo nazionale CIN": theme.heading,
+                    "Aumento gettito fiscale": theme.text,
+                };
+
+                let data = []
+                let shapes = [];
+                let annotations = [];
+                let periodsInLegend = [];
+
+                const traceIstat = {
+                    x: rows.map(r => r['anno']),
+                    y: rows.map(r => clean(r['conteggio istat'])),
+                    name: 'ISTAT',
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    line: { color: theme.sources.istat, width: 3, shape: 'spline' },
+                    showLegend: true,
+                };
+
+                const traceOpenData = {
+                    x: rows.map(r => r['anno']),
+                    y: rows.map(r => clean(r['conteggio open data bologna'])),
+                    name: 'Open Data Bologna',
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    line: { color: theme.sources.openData, width: 3, dash: 'dot', shape: 'spline' },
+                    showLegend: true,
+                };
+
+                data.push(traceIstat, traceOpenData);
+
+                // SHAPES AND ANNOTATIONS
+                rows.forEach((row, i) => {
+
+                    // Law Annotations
+                    if (row['id_legge'] && row['id_legge'] !== "null") {
+                        annotations.push({
+                            x: row['anno'],
+                            y: clean(row['conteggio open data bologna']),
+                            text: row['id_legge'],
+                            showarrow: true, arrowhead: 2, ax: 0, ay: -40,
+                            font: { size: 10, color: theme.text },
+                            bgcolor: theme.bg, bordercolor: theme.grid
+                        });
+                    }
+
+                    // Background shapes (Rectangles between points)
+                    if (i < rows.length - 1) {
+                    const currentYear = row['anno'];
+                    const nextYear = rows[i+1]['anno'];
+                    const periodName = row['periodo normativo'];
+                    const periodColor = periodColorMap[periodName] || periodColorMap['default'];
+
+                        shapes.push({
+                            type: 'rect', xref: 'x', yref: 'paper',
+                            x0: currentYear, x1: nextYear, y0: 0, y1: 1,
+                            fillcolor: periodColor, opacity: 0.15,
+                            line: { width: 0 }, layer: 'below'
+                        });
+
+                        // Fake trace for Legend entry of periods
+                        if (!periodsInLegend.includes(periodName)) {
+                            data.push({
+                                x: [null], y: [null],
+                                name: periodName,
+                                mode: 'markers',
+                                marker: { symbol: 'square', size: 12, color: periodColor, opacity: 0.5 },
+                                legendgroup: 'periods',
+                                showlegend: true
+                            });
+                            periodsInLegend.push(periodName);
+                        }
+                    }
+                });
+
+                console.log("Shapes generated:", shapes.length); // Check this in F12
+
+                const layout = {
+                    title: { text: 'Legislative Impact', font: { color: theme.heading, size: 20 } },
+                    paper_bgcolor: 'rgba(0,0,0,0)',
+                    plot_bgcolor: 'rgba(0,0,0,0)',
+                    font: { color: theme.text },
+
+                    // --- LEGEND SETTINGS ---
+                    showlegend: true,
+                    legend: {
+                        orientation: 'h', // Horizontal
+                        y: -0.3,         // Position it below the x-axis
+                        xanchor: 'center',
+                        x: 0.5,
+                        font: { color: theme.text }
+                    },
+                    // -----------------------
+
+                    xaxis: {
+                      title: "Year",
+                      gridcolor: theme.grid,
+                      dtick: 1
+                    },
+                    yaxis: {
+                      // title: "Arrival Density (per structure)",
+                      title: {
+                        text: "Arrival Density (per structure)",
+                        standoff: 15,
+                      },
+                      gridcolor: theme.grid,
+                    },
+                    margin: { t: 80, b: 180, l: 80, r: 50 },
+                    shapes: shapes,
+                    annotations: annotations,
+                    data: data,
+                    hovermode: 'x unified',
+                };
+
+                Plotly.newPlot('line-plot3', data, layout, { responsive: true });
+            })
+            .catch(err => console.error("Error Chart 3:", err.message));
+    }
+
+
+    // --- CHART 4: Price vs. Facilities Growth Rate (MD4) ---
+    function initGrowthPricesChart () {
+        fetch("datasets/MD4_correlation_prices_vs_facilities_by_zone.csv")
+          .then(response => {
+              if (!response.ok) throw new Error("File not found");
+              return response.text();
+          })
+
+          .then(csvText => {
+                const lines = csvText.trim().split(/\r?\n/);
+                const delimiter = lines[0].includes(';') ? ';' : ',';
+                const headers = lines[0].split(delimiter).map(h => h.trim().toLowerCase().replace(/"/g, ''));
+                const rows = lines.slice(1).map(line => {
+                    const values = line.split(delimiter);
+                    return headers.reduce((obj, header, i) => {
+                        obj[header] = values[i] ? values[i].trim().replace(/"/g, '') : null;
+                        return obj;
+                    }, {});
+                });
+
+                const clean = (val) => {
+                    if (!val) return null;
+                    let n = parseFloat(val.toString().replace(',', '.'));
+                    return isNaN(n) ? null : n;
+                };
+
+                const tracePricesHistCentre = {
+                    x: rows.map(r => r['anno']),
+                    y: rows.map(r => clean(r['crescita prezzi centro storico'])),
+                    name: 'Price Growth (Historic Center)',
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    line: { color: theme.sources.histCenter, width: 3, dash: 'dot', shape: 'spline' },
+                    showLegend: true,
+                };
+
+                const traceFacilitiesHistCentre = {
+                    x: rows.map(r => r['anno']),
+                    y: rows.map(r => clean(r['crescita strutture centro storico'])),
+                    name: 'Increase in Accomodations (Historic Center)',
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    line: { color: theme.sources.histCenter, width: 3, shape: 'spline' },
+                    showLegend: true,
+                };
+
+                const tracePricesOuterZones = {
+                    x: rows.map(r => r['anno']),
+                    y: rows.map(r => clean(r['crescita prezzi zone esterne'])),
+                    name: 'Price Growth (Outer Zones)',
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    line: { color: theme.sources.outerZones, width: 3, dash: 'dot', shape: 'spline' },
+                    showLegend: true,
+                };
+
+                const traceFacilitiesOuterZones = {
+                    x: rows.map(r => r['anno']),
+                    y: rows.map(r => clean(r['crescita strutture zone esterne'])),
+                    name: 'Increase in Accomodations (Outer Zones)',
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    line: { color: theme.sources.outerZones, width: 3, shape: 'spline' },
+                    showLegend: true,
+                };
+
+                const layout = {
+                    title: { text: 'Price vs. Facilities Growth Rate', font: { color: theme.heading, size: 20 } },
+                    paper_bgcolor: 'rgba(0,0,0,0)',
+                    plot_bgcolor: 'rgba(0,0,0,0)',
+                    font: { color: theme.text },
+
+                    // --- LEGEND SETTINGS ---
+                    showlegend: true,
+                    legend: {
+                        orientation: 'h', // Horizontal
+                        y: -0.3,         // Position it below the x-axis
+                        xanchor: 'center',
+                        x: 0.5,
+                        font: { color: theme.text }
+                    },
+                    // -----------------------
+
+                    xaxis: { title: 'Year', gridcolor: theme.grid },
+                    yaxis: {
+                      title: {
+                        text: 'Growth Rate (%)',
+                        standoff: 15
+                      },
+                      gridcolor: theme.grid
+                    },
+                    hovermode: 'x unified',
+                };
+
+                Plotly.newPlot('line-plot4', [traceFacilitiesHistCentre, traceFacilitiesOuterZones, tracePricesHistCentre, tracePricesOuterZones], layout, { responsive: true });
+            })
+            .catch(err => console.error("Error Chart 4:", err.message));
+    }
+
+
+    // --- CHART 5: Student Composition Chart ---
+    function initStudentCompositionChart () {
+        fetch("datasets/D1_student_composition.csv")
+          .then(response => {
+              if (!response.ok) throw new Error("File not found");
+              return response.text();
+          })
+
+          .then(csvText => {
+                // Ignores commas inside double quotes
+                const parseCSVLine = (line) => {
+                    const result = [];
+                    let cur = '';
+                    let inQuotes = false;
+                    for (let char of line) {
+                        if (char === '"') inQuotes = !inQuotes;
+                        else if (char === ',' && !inQuotes) {
+                            result.push(cur.trim());
+                            cur = '';
+                        } else cur += char;
+                    }
+                    result.push(cur.trim());
+                    return result;
+                };
+                const lines = csvText.trim().split(/\r?\n/);
+                // lower case header for data access
+                const headers = parseCSVLine(lines[0]).map(h => h.toLowerCase());
+                // Identify region columns (everything except AnnoA and Sum)
+                const rawHeaders = parseCSVLine(lines[0]);
+                const regions = rawHeaders.filter(h =>
+                    h.toLowerCase() !== "annoa" && h.toLowerCase() !== "totale studenti"
+                );
+
+                const rows = lines.slice(1).map(line => {
+                    const values = parseCSVLine(line);
+                    return headers.reduce((obj, header, i) => {
+                        obj[header] = values[i] || null;
+                        return obj;
+                    }, {});
+                });
+
+                const clean = (val) => {
+                    if (!val) return null;
+                    let n = parseFloat(val.toString().replace(',', '.'));
+                    return isNaN(n) ? null : n;
+                };
+
+                // 2. CREATE DYNAMIC TRACES
+                // const data = regions.map(regionName => {
+                //     return {
+                //         x: rows.map(r => r["AnnoA"]),
+                //         y: rows.map(r => {
+                //             let val = r[regionName] ? parseFloat(r[regionName].replace(',', '.')) : 0;
+                //             return parseFloat(val.toFixed(2));
+                //         }),
+                //         name: regionName,
+                //         stackgroup: 'one', // This creates the stacked area effect
+                //         type: 'scatter',
+                //         mode: 'none',
+                //         fill: 'tonexty'
+                //     };
+                // });
+
+                // CREATE TRACES
+                const data = regions.map(regionName => {
+                    // We use the lowercase version of the region name to find the data in the row
+                    const dataKey = regionName.toLowerCase();
+
+                    return {
+                        x: rows.map(r => r["annoa"]), // Access 'annoa' in lowercase
+                        y: rows.map(r => {
+                            let valRaw = r[dataKey]; // Match the lowercase header
+                            if (!valRaw) return 0;
+
+                            let cleanedVal = valRaw.toString().replace(/\s/g, '').replace(',', '.');
+                            let val = parseFloat(cleanedVal);
+                            return isNaN(val) ? 0 : val;
+                        }),
+                        name: regionName, // The Legend will still show the nice Uppercase name
+                        stackgroup: 'one',
+                        type: 'scatter',
+                        mode: 'none',
+                        fill: 'tonexty'
+                    };
+                });
+
+                // 3. LAYOUT
+                const layout = {
+                    title: {
+                        text: 'Evolution of Student Body Composition by Region (2014-2024)',
+                        font: { color: theme.heading, size: 20 }
+                    },
+                    paper_bgcolor: 'rgba(0,0,0,0)',
+                    plot_bgcolor: 'rgba(0,0,0,0)',
+                    font: { color: theme.text },
+                    xaxis: {
+                        title: "Academic Year",
+                        gridcolor: theme.grid,
+                        dtick: 1
+                    },
+                    yaxis: {
+                        title: {
+                            text: "Regional Share (%)",
+                            standoff: 20 // Space between numbers and axis title
+                        },
+                        ticksuffix: '%',
+                        gridcolor: theme.grid
+                    },
+                    hovermode: 'x unified',
+                    legend: {
+                        orientation: 'h',
+                        y: -0.2,
+                        x: 0.5,
+                        xanchor: 'center',
+                        font: { size: 10 }
+                    },
+                    margin: { t: 80, b: 200, l: 100, r: 50 } // Large bottom margin for long legend
+                };
+
+                console.log("Sample Y data for " + regions[0] + ":", data[0].y);
+                Plotly.newPlot('student-chart', data, layout, { responsive: true });
+            })
+            .catch(err => console.error("Error Student Chart:", err));
+}
+
+    // Initialize all charts
+    initGrowthChart();
+    initCapacityChart();
+    initLegislativeChart();
+    initGrowthPricesChart();
+    initStudentCompositionChart();
+});
+

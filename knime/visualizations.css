@@ -1,0 +1,30 @@
+:root {
+    --bg-color: #E5D2CC;
+    --text-primary: #221D3F; /* Space Indigo */
+    --text-heading: #771710; /* Molten Lava */
+    --accent-color: #221D3F;
+    --surface-color: #C9A12D; /* Golden Bronze */
+    --contrast-color: #82B5AE; /* Muted Teal */
+    --orange-color: #c46a2e; /* Chocolate */
+}
+
+body {
+    background-color: white;
+    color: var(--text-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: var(--text-heading);
+}
+
+#chart-wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 2rem;
+}
