@@ -16,19 +16,20 @@ hts:CATALOG_HERE_TO_STAY a dcatapit:Catalog,
   dcterms:publisher <https://github.com/metamuses> ;
   dcterms:modified "2026-02-05"^^xsd:date ;
   dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
-  dcterms:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+  dcterms:language <http://publications.europa.eu/resource/authority/language/ITA>,
+    <http://publications.europa.eu/resource/authority/language/ENG> ;
   foaf:homepage <https://github.com/metamuses/here-to-stay> ;
   dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme> ;
-  dcat:dataset hts:D1_ACCOMODATIONS_BOLOGNA,
-      hts:D2_ACCOMODATIONS_CAPACITY,
-      hts:D2_ACCOMODATIONS_CAPACITY_SERIES,
+  dcat:dataset hts:D1_ACCOMMODATIONS_BOLOGNA,
+      hts:D2_ACCOMMODATIONS_CAPACITY,
+      hts:D2_ACCOMMODATIONS_CAPACITY_SERIES,
       hts:D3_TOURIST_FLOW,
       hts:D3_TOURIST_FLOW_SERIES,
       hts:D4_LEGISLATIONS,
       hts:D5_RENTAL_PRICES_BOLOGNA,
       hts:D5_RENTAL_PRICES_BOLOGNA_SERIES,
       hts:D6_STUDENT_ENROLLMENT,
-      hts:MD1_ISTAT_OPENDATA_ACCOMODATIONS,
+      hts:MD1_ISTAT_OPENDATA_ACCOMMODATIONS,
       hts:MD2_TOURISM_CARRYING_CAPACITY,
       hts:MD3_LEGISLATIVE_IMPACT,
       hts:MD4_PRICE_FACILITIES_GROWTH,
@@ -37,7 +38,7 @@ hts:CATALOG_HERE_TO_STAY a dcatapit:Catalog,
 
 # ===== ORIGINAL DATASETS ================
 # D1 - Accommodations facility in Bologna
-hts:D1_ACCOMODATIONS_BOLOGNA a dcatapit:Dataset,
+hts:D1_ACCOMMODATIONS_BOLOGNA a dcatapit:Dataset,
     dcat:Dataset ;
   dcterms:identifier "c_a944:D.elenco-esercizi-attivita-ricettive" ;
   dcterms:title "Elenco degli esercizi appartenenti alla categoria attività ricettive"@it ;
@@ -47,16 +48,16 @@ hts:D1_ACCOMODATIONS_BOLOGNA a dcatapit:Dataset,
   dcterms:rightsHolder <http://w3id.org/italia/data/organization/public-organization/c_a944> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
   dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
-  dcat:distribution hts:D1_ACCOMODATIONS_BOLOGNA_DISTRIBUTION .
+  dcat:distribution hts:D1_ACCOMMODATIONS_BOLOGNA_DISTRIBUTION .
 
-hts:D1_ACCOMODATIONS_BOLOGNA_DISTRIBUTION a dcatapit:Distribution,
+hts:D1_ACCOMMODATIONS_BOLOGNA_DISTRIBUTION a dcatapit:Distribution,
       dcat:Distribution ;
     dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
     dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
     dcat:accessURL <https://opendata.comune.bologna.it/explore/dataset/elenco-esercizi-attivita-ricettive/> .
 
 # D2 - Accommodations capacity
-hts:D2_ACCOMODATIONS_CAPACITY a dcatapit:Dataset,
+hts:D2_ACCOMMODATIONS_CAPACITY a dcatapit:Dataset,
     dcat:Dataset ;
   dcterms:identifier "ISTAT:D.DF_BULK_DCSC_CAPACOFTUR" ;
   dcterms:title "Capacità degli esercizi ricettivi per tipo di alloggio e per comune"@it ;
@@ -67,15 +68,15 @@ hts:D2_ACCOMODATIONS_CAPACITY a dcatapit:Dataset,
   dcterms:rightsHolder <http://w3id.org/italia/data/public-organization/ISTAT> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
   dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
-  dcat:distribution hts:D2_ACCOMODATIONS_CAPACITY_DISTRIBUTION .
+  dcat:distribution hts:D2_ACCOMMODATIONS_CAPACITY_DISTRIBUTION .
 
-hts:D2_ACCOMODATIONS_CAPACITY_DISTRIBUTION a dcatapit:Distribution,
+hts:D2_ACCOMMODATIONS_CAPACITY_DISTRIBUTION a dcatapit:Distribution,
     dcat:Distribution ;
   dcterms:format <http://publications.europa.eu/resource/authority/file-type/XLSX> ;
   dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
   dcat:accessURL <https://esploradati.istat.it/databrowser/#/it/dw/categories/IT1,Z0700SER,1.0/SER_TOURISM/SER_TOURISM_RELATED_FILES> .
 
-hts:D2_ACCOMODATIONS_CAPACITY_SERIES a dcatapit:Dataset,
+hts:D2_ACCOMMODATIONS_CAPACITY_SERIES a dcatapit:Dataset,
     dcat:Dataset ;
   dcterms:identifier "metamuses:D.DF_BULK_DCSC_CAPACOFTUR-SERIES" ;
   dcterms:title "Capacità degli esercizi ricettivi per tipo di alloggio e per comune - Serie 2014-2024"@it ;
@@ -85,7 +86,7 @@ hts:D2_ACCOMODATIONS_CAPACITY_SERIES a dcatapit:Dataset,
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
   dcterms:rightsHolder <http://w3id.org/italia/data/public-organization/ISTAT> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
-  prov:wasDerivedFrom hts:D2_ACCOMODATIONS_CAPACITY ;
+  prov:wasDerivedFrom hts:D2_ACCOMMODATIONS_CAPACITY ;
   dcterms:publisher <https://github.com/metamuses> ;
   dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
   dcterms:temporal [
@@ -93,9 +94,9 @@ hts:D2_ACCOMODATIONS_CAPACITY_SERIES a dcatapit:Dataset,
     dcat:startDate "2014-01-01"^^xsd:date ;
     dcat:endDate "2024-12-31"^^xsd:date
   ] ;
-  dcat:distribution hts:D2_ACCOMODATIONS_CAPACITY_SERIES_DISTRIBUTION .
+  dcat:distribution hts:D2_ACCOMMODATIONS_CAPACITY_SERIES_DISTRIBUTION .
 
-hts:D2_ACCOMODATIONS_CAPACITY_SERIES_DISTRIBUTION a dcatapit:Distribution,
+hts:D2_ACCOMMODATIONS_CAPACITY_SERIES_DISTRIBUTION a dcatapit:Distribution,
     dcat:Distribution ;
   dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
   dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
@@ -237,9 +238,9 @@ hts:D6_STUDENT_ENROLLMENT_DISTRIBUTION a dcatapit:Distribution,
 
 # ===== MASHUP DATASETS ==================
 # MD1 - Istat vs Open Data accommodations
-hts:MD1_ISTAT_OPENDATA_ACCOMODATIONS a dcatapit:Dataset,
+hts:MD1_ISTAT_OPENDATA_ACCOMMODATIONS a dcatapit:Dataset,
     dcat:Dataset ;
-  dcterms:identifier "metamuses:D.mashup-istat_opendata_accomodations" ;
+  dcterms:identifier "metamuses:D.mashup-istat_opendata_ACCOMMODATIONS" ;
   dcterms:title "Confronto tra dati ISTAT e Open Data comunali sugli esercizi ricettivi a Bologna"@it ;
   dcterms:title "Comparison between ISTAT and municipal Open Data on accommodation establishments in Bologna"@en ;
   dcterms:description "Some description of the dataset that will be added later"@en ;
@@ -247,17 +248,17 @@ hts:MD1_ISTAT_OPENDATA_ACCOMODATIONS a dcatapit:Dataset,
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
   dcterms:rightsHolder <https://github.com/metamuses> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/AS_NEEDED> ;
-  prov:wasDerivedFrom hts:D1_ACCOMODATIONS_BOLOGNA,
-    hts:D2_ACCOMODATIONS_CAPACITY ;
+  prov:wasDerivedFrom hts:D1_ACCOMMODATIONS_BOLOGNA,
+    hts:D2_ACCOMMODATIONS_CAPACITY ;
   dcterms:publisher <https://github.com/metamuses> ;
   dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
-  dcat:distribution hts:MD1_ISTAT_OPENDATA_ACCOMODATIONS_DISTRIBUTION .
+  dcat:distribution hts:MD1_ISTAT_OPENDATA_ACCOMMODATIONS_DISTRIBUTION .
 
-hts:MD1_ISTAT_OPENDATA_ACCOMODATIONS_DISTRIBUTION a dcatapit:Distribution,
+hts:MD1_ISTAT_OPENDATA_ACCOMMODATIONS_DISTRIBUTION a dcatapit:Distribution,
     dcat:Distribution ;
   dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
   dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
-  dcat:accessURL <https://github.com/metamuses/burning-down-the-house/blob/main/datasets/mashup/istat_opendata_accomodations.csv> .
+  dcat:accessURL <https://github.com/metamuses/burning-down-the-house/blob/main/datasets/mashup/istat_opendata_ACCOMMODATIONS.csv> .
 
 # MD2 - Tourism carrying capacity
 hts:MD2_TOURISM_CARRYING_CAPACITY a dcatapit:Dataset,
@@ -270,7 +271,7 @@ hts:MD2_TOURISM_CARRYING_CAPACITY a dcatapit:Dataset,
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
   dcterms:rightsHolder <https://github.com/metamuses> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/AS_NEEDED> ;
-  prov:wasDerivedFrom hts:D2_ACCOMODATIONS_CAPACITY,
+  prov:wasDerivedFrom hts:D2_ACCOMMODATIONS_CAPACITY,
     hts:D3_TOURIST_FLOW ;
   dcterms:publisher <https://github.com/metamuses> ;
   dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
@@ -294,8 +295,8 @@ hts:MD3_LEGISLATIVE_IMPACT a dcatapit:Dataset,
     <http://publications.europa.eu/resource/authority/data-theme/GOVE> ;
   dcterms:rightsHolder <https://github.com/metamuses> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/AS_NEEDED> ;
-  prov:wasDerivedFrom hts:D1_ACCOMODATIONS_BOLOGNA,
-    hts:D2_ACCOMODATIONS_CAPACITY,
+  prov:wasDerivedFrom hts:D1_ACCOMMODATIONS_BOLOGNA,
+    hts:D2_ACCOMMODATIONS_CAPACITY,
     hts:D4_LEGISLATIONS ;
   dcterms:publisher <https://github.com/metamuses> ;
   dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
@@ -319,7 +320,7 @@ hts:MD4_PRICE_FACILITIES_GROWTH a dcatapit:Dataset,
     <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
   dcterms:rightsHolder <https://github.com/metamuses> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/AS_NEEDED> ;
-  prov:wasDerivedFrom hts:D1_ACCOMODATIONS_BOLOGNA,
+  prov:wasDerivedFrom hts:D1_ACCOMMODATIONS_BOLOGNA,
     hts:D5_RENTAL_PRICES_BOLOGNA ;
   dcterms:publisher <https://github.com/metamuses> ;
   dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
@@ -344,7 +345,7 @@ hts:MD5_REGIONAL_ENROLLMENT_RENT_PRICES a dcatapit:Dataset,
   dcterms:rightsHolder <https://github.com/metamuses> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/AS_NEEDED> ;
   prov:wasDerivedFrom hts:D5_RENTAL_PRICES_BOLOGNA,
-    hts:D6_STUDENT_ENROLLMENT_REGIONAL ;
+    hts:D6_STUDENT_ENROLLMENT ;
   dcterms:publisher <https://github.com/metamuses> ;
   dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
   dcat:distribution hts:MD5_REGIONAL_ENROLLMENT_RENT_PRICES_DISTRIBUTION .
