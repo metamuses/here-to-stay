@@ -42,6 +42,7 @@ hts:D1_ACCOMMODATIONS_BOLOGNA a dcatapit:Dataset,
     dcat:Dataset ;
   dcterms:identifier "c_a944:D.elenco-esercizi-attivita-ricettive" ;
   dcterms:title "Elenco degli esercizi appartenenti alla categoria attività ricettive"@it ;
+  dcterms:title "List of establishments belonging to the category of accommodation activities"@en ;
   dcterms:description "Some description of the dataset that will be added later"@en ;
   dcterms:modified "2025-12-31"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
