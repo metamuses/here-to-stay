@@ -79,9 +79,12 @@ hts:D2_ACCOMODATIONS_CAPACITY_SERIES a dcatapit:Dataset,
   dcterms:title "Capacità degli esercizi ricettivi per tipo di alloggio e per comune - Serie 2014-2024"@it ;
   dcterms:title "Capacity of collective tourist accommodation by type of accommodation and municipality - Series 2014-2024"@en ;
   dcterms:description "Granular version of the ISTAT dataset on accommodations capacity, divided into annual CSV files for the period 2014-2024."@en ;
-  dcterms:publisher <https://github.com/metamuses> ;
-  prov:wasDerivedFrom hts:D2_ACCOMODATIONS_CAPACITY ;
+  dcterms:modified "2026-02-05"^^xsd:date ;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
+  dcterms:rightsHolder <http://w3id.org/italia/data/public-organization/ISTAT> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
+  prov:wasDerivedFrom hts:D2_ACCOMODATIONS_CAPACITY ;
+  dcterms:publisher <https://github.com/metamuses> ;
   dcterms:temporal [
     a dcterms:PeriodOfTime ;
     dcat:startDate "2014-01-01"^^xsd:date ;
@@ -120,9 +123,12 @@ hts:D3_TOURIST_FLOW_SERIES a dcatapit:Dataset,
   dcterms:title "Movimento dei clienti (arrivi e presenze) negli esercizi ricettivi per tipologia ricettiva, residenza dei clienti e comune di destinazione - Serie 2014-2024"@it ;
   dcterms:title "Occupancy in collective accommodation establishments at municipality level by type of accomodation and residence of guests - Series 2014-2024"@en ;
   dcterms:description "Granular version of the ISTAT dataset on tourist flow, divided into annual CSV files for the period 2014-2024."@en ;
-  dcterms:publisher <https://github.com/metamuses> ;
-  prov:wasDerivedFrom hts:D3_TOURIST_FLOW ;
+  dcterms:modified "2026-02-05"^^xsd:date ;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
+  dcterms:rightsHolder <http://w3id.org/italia/data/public-organization/ISTAT> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
+  prov:wasDerivedFrom hts:D3_TOURIST_FLOW ;
+  dcterms:publisher <https://github.com/metamuses> ;
   dcterms:temporal [
     a dcterms:PeriodOfTime ;
     dcat:startDate "2014-01-01"^^xsd:date ;
@@ -144,10 +150,10 @@ hts:D4_LEGISLATIONS a dcatapit:Dataset,
   dcterms:title "National and regional legislations on tourist rentals"@en ;
   dcterms:description "Some description of the dataset that will be added later"@en ;
   dcterms:modified "2026-02-05"^^xsd:date ;
-  dcterms:source <https://www.normattiva.it/> ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/GOVE> ;
   dcterms:rightsHolder <https://github.com/metamuses> ;
-  dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/NOT_PLANNED> ;
+  dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/AS_NEEDED> ;
+  dcterms:source <https://www.normattiva.it/> ;
   dcat:distribution hts:D4_LEGISLATIONS_DISTRIBUTION .
 
 hts:D4_LEGISLATIONS_DISTRIBUTION a dcatapit:Distribution,
@@ -163,7 +169,7 @@ hts:D5_RENTAL_PRICES_BOLOGNA a dcatapit:Dataset,
   dcterms:title "Prezzi di locazione degli immobili residenziali offerti in affitto tramite la piattaforma Idealista a Bologna"@it ;
   dcterms:title "Rental prices of residential properties offered for rent through the Idealista platform"@en ;
   dcterms:description "Some description of the dataset that will be added later"@en ;
-  dcterms:modified "202-01-31"^^xsd:date ;
+  dcterms:modified "2026-01-31"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
   dcterms:rightsHolder <http://w3id.org/italia/data/organization/private-organization/05388220963> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/MONTHLY> ;
@@ -182,9 +188,12 @@ hts:D5_RENTAL_PRICES_BOLOGNA_SERIES a dcatapit:Dataset,
   dcterms:title "Prezzi di locazione degli immobili residenziali offerti in affitto tramite la piattaforma Idealista a Bologna - Serie per quartiere"@it ;
   dcterms:title "Rental prices of residential properties offered for rent through the Idealista platform - Series by neighborhood"@en ;
   dcterms:description "Granular version of the Idealista dataset on Bologna's rental prices, divided into neighborhood-level CSV files."@en ;
-  dcterms:publisher <https://github.com/metamuses> ;
-  prov:wasDerivedFrom hts:D5_RENTAL_PRICES_BOLOGNA ;
+  dcterms:modified "2026-02-05"^^xsd:date ;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
+  dcterms:rightsHolder <http://w3id.org/italia/data/organization/private-organization/05388220963> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
+  prov:wasDerivedFrom hts:D5_RENTAL_PRICES_BOLOGNA ;
+  dcterms:publisher <https://github.com/metamuses> ;
   dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/RESTRICTED> ;
   dcterms:spatial
     [ a dcterms:Location ; locn:geographicName "Centro Storico, Bologna"@it ] ,
