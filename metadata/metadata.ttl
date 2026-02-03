@@ -191,7 +191,7 @@ hts:D5_RENTAL_PRICES_BOLOGNA_SERIES a dcatapit:Dataset,
   dcterms:modified "2026-02-05"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
   dcterms:rightsHolder <http://w3id.org/italia/data/organization/private-organization/05388220963> ;
-  dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
+  dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/AS_NEEDED> ;
   prov:wasDerivedFrom hts:D5_RENTAL_PRICES_BOLOGNA ;
   dcterms:publisher <https://github.com/metamuses> ;
   dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/RESTRICTED> ;
@@ -219,7 +219,7 @@ hts:D6_STUDENT_ENROLLMENT a dcatapit:Dataset,
   dcterms:modified "2025-12-10"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
   dcterms:rightsHolder <http://w3id.org/italia/data/organization/public-organization/KH5RHFCV> ;
-  dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/UNKNOWN> ;
+  dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
   dcat:distribution hts:D6_STUDENT_ENROLLMENT_DISTRIBUTION .
 
 hts:D6_STUDENT_ENROLLMENT_DISTRIBUTION a dcatapit:Distribution,
