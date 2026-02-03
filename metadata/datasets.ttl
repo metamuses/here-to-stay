@@ -1,18 +1,76 @@
-@prefix stocazzo: <https://github.com/metamuses/houses> .
+@prefix hts: <https://github.com/metamuses/here-to-stay/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dctapit: <https://www.dati.gov.it/onto/dcatapit#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-stocazzo:D1_POPULATION a dctapit:Dataset,
-  dcat:Dataset ;
-  dcterms:identifier "agid:D.1" ;
-  dcterms:title "Resident municipal population by age, sex and marital status"@en .
-  dcterms:description "Dataset on the resident municipal population disaggregated by age, sex, and marital status."@en ;
-  dct:modified    "2015-05-25"^^xsd:date ;
-  dcat:distribution "Excel";
-  dcterms:language "it"^^xsd:language ;
-  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-  dcterms:accessRights "Public"@en ;
-  dcat:releaseDate "2018"^^xsd:year ;
-  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/POP> ;
-  dcterms:publisher <https://www.comune.bologna.it/> ;
+# ===== CATALOG ==========================
+hts:CATALOG_HERE_TO_STAY a dcatapit:Catalog,
+    dcat:Catalog ;
+  dcterms:title ""@it ;
+  dcterms:description ""@it ;
+  dcterms:publisher <https://github.com/metamuses> ;
+  dcterms:modified "2026-02-05"^^xsd:date ;
+  dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+  dcterms:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+  dcterms:language <http://publications.europa.eu/resource/authority/language/ENG> ;
+  foaf:homepage <https://github.com/metamuses/here-to-stay> ;
+  dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme> .
+  dcat:dataset hts:D1_ACCOMODATIONS_BOLOGNA,
+      hts:D2_ACCOMODATIONS_CAPACITY ;
+      hts:D3_TOURIST_FLOW ;
+      hts:D4_LEGISLATIONS ;
+      hts:D5_RENTAL_PRICES ;
+      hts:D6_STUDENT_ENROLLMENT ;
+      hts:MD1_ISTAT_OPENDATA_ACCOMODATIONS ;
+      hts:MD2_TOURISM_CARRYING_CAPACITY ;
+      hts:MD3_LEGISLATIVE_IMPACT ;
+      hts:MD4_PRICE_FACILITIES_GROWTH ;
+      hts:MD5_REGIONAL_ENROLLMENT_RENT_PRICES ;
+      hts:MD6_REGIONAL_SENSITIVITY_INDEX .
+
+# ===== DATASETS =========================
+hts:D1_ACCOMODATIONS_BOLOGNA a dctapit:Dataset,
+    dcat:Dataset ;
+  dcterms:identifier "c_a944:D.elenco-esercizi-attivita-ricettive" ;
+  dcterms:title "Elenco degli esercizi appartenenti alla categoria attività ricettive"@it ;
+  dcterms:description "Some description of the dataset that will be added later"@en ;
+  dcterms:modified "2025-12-31"^^xsd:date ;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
+  dcterms:rightsHolder <https://w3id.org/italia/data/organization/public-organization/c_a944> ;
+  dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
+  dcat:distribution hts:D1_ACCOMODATIONS_BOLOGNA_DISTRIBUTION ;
+
+hts:D1_ACCOMODATIONS_BOLOGNA_DISTRIBUTION a dcatapit:Distribution,
+      dcat:Distribution ;
+    dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+    dcat:accessURL <https://opendata.comune.bologna.it/explore/dataset/elenco-esercizi-attivita-ricettive/> .
+
+# ===== AGENTS ===========================
+<https://w3id.org/italia/data/organization/public-organization/c_a944> a dcatapit:Agent,
+      foaf:Agent ;
+    dcterms:identifier "c_a944" ;
+    foaf:name "Comune di Bologna"@it .
+
+<https://w3id.org/italia/data/public-organization/ISTAT> a dcatapit:Agent,
+    foaf:Agent ;
+  dcterms:identifier "ISTAT" ;
+  foaf:name "Istituto Nazionale di Statistica"@it .
+
+<https://w3id.org/italia/data/organization/public-organization/KH5RHFCV> a dcatapit:Agent,
+    foaf:Agent ;
+  dcterms:identifier "KH5RHFCV" ;
+  foaf:name "Ministero dell'Università e della Ricerca"@it .
+
+<https://w3id.org/italia/data/organization/private-organization/05388220963> a dcatapit:Agent,
+      foaf:Agent ;
+    dcterms:identifier "05388220963" ;
+    foaf:name "Idealista S.p.A."@it .
+
+<https://github.com/metamuses> a dcatapit:Agent,
+      foaf:Agent ;
+    dcterms:identifier "MetaMuses" ;
+    foaf:name "MetaMuses"@en.
