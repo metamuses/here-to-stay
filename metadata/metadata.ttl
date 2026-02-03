@@ -242,7 +242,7 @@ hts:D6_STUDENT_ENROLLMENT_DISTRIBUTION a dcatapit:Distribution,
 # MD1 - Istat vs Open Data accommodations
 hts:MD1_ISTAT_OPENDATA_ACCOMMODATIONS a dcatapit:Dataset,
     dcat:Dataset ;
-  dcterms:identifier "metamuses:D.mashup-istat_opendata_ACCOMMODATIONS" ;
+  dcterms:identifier "metamuses:D.MASHUP-istat_opendata_ACCOMMODATIONS" ;
   dcterms:title "Confronto tra dati ISTAT e Open Data comunali sugli esercizi ricettivi a Bologna"@it ;
   dcterms:title "Comparison between ISTAT and municipal Open Data on accommodation establishments in Bologna"@en ;
   dcterms:description "Some description of the dataset that will be added later"@en ;
@@ -265,7 +265,7 @@ hts:MD1_ISTAT_OPENDATA_ACCOMMODATIONS_DISTRIBUTION a dcatapit:Distribution,
 # MD2 - Tourism carrying capacity
 hts:MD2_TOURISM_CARRYING_CAPACITY a dcatapit:Dataset,
     dcat:Dataset ;
-  dcterms:identifier "metamuses:D.mashup-tourism_carrying_capacity" ;
+  dcterms:identifier "metamuses:D.MASHUP-tourism_carrying_capacity" ;
   dcterms:title "Stima della capacità di carico turistica a Bologna"@it ;
   dcterms:title "Estimate of tourism carrying capacity in Bologna"@en ;
   dcterms:description "Some description of the dataset that will be added later"@en ;
@@ -288,7 +288,7 @@ hts:MD2_TOURISM_CARRYING_CAPACITY_DISTRIBUTION a dcatapit:Distribution,
 # MD3 - Legislative impact
 hts:MD3_LEGISLATIVE_IMPACT a dcatapit:Dataset,
     dcat:Dataset ;
-  dcterms:identifier "metamuses:D.mashup-legislative_impact" ;
+  dcterms:identifier "metamuses:D.MASHUP-legislative_impact" ;
   dcterms:title "Impatto delle legislazioni sulle locazioni turistiche a Bologna"@it ;
   dcterms:title "Impact of legislations on tourist rentals in Bologna"@en ;
   dcterms:description "Some description of the dataset that will be added later"@en ;
@@ -313,7 +313,7 @@ hts:MD3_LEGISLATIVE_IMPACT_DISTRIBUTION a dcatapit:Distribution,
 # MD4 - Price vs facilities growth rate
 hts:MD4_PRICE_FACILITIES_GROWTH a dcatapit:Dataset,
     dcat:Dataset ;
-  dcterms:identifier "metamuses:D.mashup-price_facilities_growth" ;
+  dcterms:identifier "metamuses:D.MASHUP-price_facilities_growth" ;
   dcterms:title "Confronto tra tasso di crescita dei prezzi di locazione e degli esercizi ricettivi a Bologna"@it ;
   dcterms:title "Comparison between growth rate of rental prices and accommodation establishments in Bologna"@en ;
   dcterms:description "Some description of the dataset that will be added later"@en ;
@@ -337,7 +337,7 @@ hts:MD4_PRICE_FACILITIES_GROWTH_DISTRIBUTION a dcatapit:Distribution,
 # MD5 - Regional enrollment vs rent prices
 hts:MD5_REGIONAL_ENROLLMENT_RENT_PRICES a dcatapit:Dataset,
     dcat:Dataset ;
-  dcterms:identifier "metamuses:D.mashup-regional_enrollment_rent_prices" ;
+  dcterms:identifier "metamuses:D.MASHUP-regional_enrollment_rent_prices" ;
   dcterms:title "Confronto tra iscrizioni universitarie e prezzi di locazione a livello regionale"@it ;
   dcterms:title "Comparison between university enrollments and rental prices at regional level"@en ;
   dcterms:description "Some description of the dataset that will be added later"@en ;
@@ -361,7 +361,7 @@ hts:MD5_REGIONAL_ENROLLMENT_RENT_PRICES_DISTRIBUTION a dcatapit:Distribution,
 # MD6 - Regional sensitivity index
 hts:MD6_REGIONAL_SENSITIVITY_INDEX a dcatapit:Dataset,
     dcat:Dataset ;
-  dcterms:identifier "metamuses:D.mashup-regional_sensitivity_index" ;
+  dcterms:identifier "metamuses:D.MASHUP-regional_sensitivity_index" ;
   dcterms:title "Indice di sensibilità regionale alle locazioni turistiche"@it ;
   dcterms:title "Regional sensitivity index to tourist rentals"@en ;
   dcterms:description "Some description of the dataset that will be added later"@en ;
