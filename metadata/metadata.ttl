@@ -1,6 +1,6 @@
 @prefix hts: <https://github.com/metamuses/here-to-stay/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dcatapit: <https://www.dati.gov.it/onto/dcatapit#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
