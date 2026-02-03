@@ -46,6 +46,7 @@ hts:D1_ACCOMODATIONS_BOLOGNA a dcatapit:Dataset,
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
   dcterms:rightsHolder <http://w3id.org/italia/data/organization/public-organization/c_a944> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
+  dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
   dcat:distribution hts:D1_ACCOMODATIONS_BOLOGNA_DISTRIBUTION .
 
 hts:D1_ACCOMODATIONS_BOLOGNA_DISTRIBUTION a dcatapit:Distribution,
@@ -65,6 +66,7 @@ hts:D2_ACCOMODATIONS_CAPACITY a dcatapit:Dataset,
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
   dcterms:rightsHolder <http://w3id.org/italia/data/public-organization/ISTAT> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
+  dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
   dcat:distribution hts:D2_ACCOMODATIONS_CAPACITY_DISTRIBUTION .
 
 hts:D2_ACCOMODATIONS_CAPACITY_DISTRIBUTION a dcatapit:Distribution,
@@ -85,6 +87,7 @@ hts:D2_ACCOMODATIONS_CAPACITY_SERIES a dcatapit:Dataset,
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
   prov:wasDerivedFrom hts:D2_ACCOMODATIONS_CAPACITY ;
   dcterms:publisher <https://github.com/metamuses> ;
+  dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
   dcterms:temporal [
     a dcterms:PeriodOfTime ;
     dcat:startDate "2014-01-01"^^xsd:date ;
@@ -109,6 +112,7 @@ hts:D3_TOURIST_FLOW a dcatapit:Dataset,
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
   dcterms:rightsHolder <http://w3id.org/italia/data/public-organization/ISTAT> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
+  dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
   dcat:distribution hts:D3_TOURIST_FLOW_DISTRIBUTION .
 
 hts:D3_TOURIST_FLOW_DISTRIBUTION a dcatapit:Distribution,
@@ -129,6 +133,7 @@ hts:D3_TOURIST_FLOW_SERIES a dcatapit:Dataset,
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
   prov:wasDerivedFrom hts:D3_TOURIST_FLOW ;
   dcterms:publisher <https://github.com/metamuses> ;
+  dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
   dcterms:temporal [
     a dcterms:PeriodOfTime ;
     dcat:startDate "2014-01-01"^^xsd:date ;
@@ -154,6 +159,7 @@ hts:D4_LEGISLATIONS a dcatapit:Dataset,
   dcterms:rightsHolder <https://github.com/metamuses> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/AS_NEEDED> ;
   dcterms:source <https://www.normattiva.it/> ;
+  dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
   dcat:distribution hts:D4_LEGISLATIONS_DISTRIBUTION .
 
 hts:D4_LEGISLATIONS_DISTRIBUTION a dcatapit:Distribution,
@@ -220,6 +226,7 @@ hts:D6_STUDENT_ENROLLMENT a dcatapit:Dataset,
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
   dcterms:rightsHolder <http://w3id.org/italia/data/organization/public-organization/KH5RHFCV> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+  dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
   dcat:distribution hts:D6_STUDENT_ENROLLMENT_DISTRIBUTION .
 
 hts:D6_STUDENT_ENROLLMENT_DISTRIBUTION a dcatapit:Distribution,
@@ -243,6 +250,7 @@ hts:MD1_ISTAT_OPENDATA_ACCOMODATIONS a dcatapit:Dataset,
   prov:wasDerivedFrom hts:D1_ACCOMODATIONS_BOLOGNA,
     hts:D2_ACCOMODATIONS_CAPACITY ;
   dcterms:publisher <https://github.com/metamuses> ;
+  dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
   dcat:distribution hts:MD1_ISTAT_OPENDATA_ACCOMODATIONS_DISTRIBUTION .
 
 hts:MD1_ISTAT_OPENDATA_ACCOMODATIONS_DISTRIBUTION a dcatapit:Distribution,
@@ -265,6 +273,7 @@ hts:MD2_TOURISM_CARRYING_CAPACITY a dcatapit:Dataset,
   prov:wasDerivedFrom hts:D2_ACCOMODATIONS_CAPACITY,
     hts:D3_TOURIST_FLOW ;
   dcterms:publisher <https://github.com/metamuses> ;
+  dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
   dcat:distribution hts:MD2_TOURISM_CARRYING_CAPACITY_DISTRIBUTION .
 
 hts:MD2_TOURISM_CARRYING_CAPACITY_DISTRIBUTION a dcatapit:Distribution,
@@ -289,6 +298,7 @@ hts:MD3_LEGISLATIVE_IMPACT a dcatapit:Dataset,
     hts:D2_ACCOMODATIONS_CAPACITY,
     hts:D4_LEGISLATIONS ;
   dcterms:publisher <https://github.com/metamuses> ;
+  dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
   dcat:distribution hts:MD3_LEGISLATIVE_IMPACT_DISTRIBUTION .
 
 hts:MD3_LEGISLATIVE_IMPACT_DISTRIBUTION a dcatapit:Distribution,
@@ -312,6 +322,7 @@ hts:MD4_PRICE_FACILITIES_GROWTH a dcatapit:Dataset,
   prov:wasDerivedFrom hts:D1_ACCOMODATIONS_BOLOGNA,
     hts:D5_RENTAL_PRICES_BOLOGNA ;
   dcterms:publisher <https://github.com/metamuses> ;
+  dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
   dcat:distribution hts:MD4_PRICE_FACILITIES_GROWTH_DISTRIBUTION .
 
 hts:MD4_PRICE_FACILITIES_GROWTH_DISTRIBUTION a dcatapit:Distribution,
@@ -335,6 +346,7 @@ hts:MD5_REGIONAL_ENROLLMENT_RENT_PRICES a dcatapit:Dataset,
   prov:wasDerivedFrom hts:D5_RENTAL_PRICES_BOLOGNA,
     hts:D6_STUDENT_ENROLLMENT_REGIONAL ;
   dcterms:publisher <https://github.com/metamuses> ;
+  dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
   dcat:distribution hts:MD5_REGIONAL_ENROLLMENT_RENT_PRICES_DISTRIBUTION .
 
 hts:MD5_REGIONAL_ENROLLMENT_RENT_PRICES_DISTRIBUTION a dcatapit:Distribution,
@@ -357,6 +369,8 @@ hts:MD6_REGIONAL_SENSITIVITY_INDEX a dcatapit:Dataset,
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/AS_NEEDED> ;
   prov:wasDerivedFrom hts:D5_RENTAL_PRICES_BOLOGNA,
     hts:D6_STUDENT_ENROLLMENT ;
+  dcterms:publisher <https://github.com/metamuses> ;
+  dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
   dcat:distribution hts:MD6_REGIONAL_SENSITIVITY_INDEX_DISTRIBUTION .
 
 hts:MD6_REGIONAL_SENSITIVITY_INDEX_DISTRIBUTION a dcatapit:Distribution,
