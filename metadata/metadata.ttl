@@ -240,6 +240,9 @@ hts:MD1_ISTAT_OPENDATA_ACCOMODATIONS a dcatapit:Dataset,
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
   dcterms:rightsHolder <https://github.com/metamuses> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/AS_NEEDED> ;
+  prov:wasDerivedFrom hts:D1_ACCOMODATIONS_BOLOGNA,
+    hts:D2_ACCOMODATIONS_CAPACITY ;
+  dcterms:publisher <https://github.com/metamuses> ;
   dcat:distribution hts:MD1_ISTAT_OPENDATA_ACCOMODATIONS_DISTRIBUTION .
 
 hts:MD1_ISTAT_OPENDATA_ACCOMODATIONS_DISTRIBUTION a dcatapit:Distribution,
@@ -259,6 +262,9 @@ hts:MD2_TOURISM_CARRYING_CAPACITY a dcatapit:Dataset,
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
   dcterms:rightsHolder <https://github.com/metamuses> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/AS_NEEDED> ;
+  prov:wasDerivedFrom hts:D2_ACCOMODATIONS_CAPACITY,
+    hts:D3_TOURIST_FLOW ;
+  dcterms:publisher <https://github.com/metamuses> ;
   dcat:distribution hts:MD2_TOURISM_CARRYING_CAPACITY_DISTRIBUTION .
 
 hts:MD2_TOURISM_CARRYING_CAPACITY_DISTRIBUTION a dcatapit:Distribution,
@@ -279,6 +285,10 @@ hts:MD3_LEGISLATIVE_IMPACT a dcatapit:Dataset,
     <http://publications.europa.eu/resource/authority/data-theme/GOVE> ;
   dcterms:rightsHolder <https://github.com/metamuses> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/AS_NEEDED> ;
+  prov:wasDerivedFrom hts:D1_ACCOMODATIONS_BOLOGNA,
+    hts:D2_ACCOMODATIONS_CAPACITY,
+    hts:D4_LEGISLATIONS ;
+  dcterms:publisher <https://github.com/metamuses> ;
   dcat:distribution hts:MD3_LEGISLATIVE_IMPACT_DISTRIBUTION .
 
 hts:MD3_LEGISLATIVE_IMPACT_DISTRIBUTION a dcatapit:Distribution,
@@ -299,6 +309,9 @@ hts:MD4_PRICE_FACILITIES_GROWTH a dcatapit:Dataset,
     <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
   dcterms:rightsHolder <https://github.com/metamuses> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/AS_NEEDED> ;
+  prov:wasDerivedFrom hts:D1_ACCOMODATIONS_BOLOGNA,
+    hts:D5_RENTAL_PRICES_BOLOGNA ;
+  dcterms:publisher <https://github.com/metamuses> ;
   dcat:distribution hts:MD4_PRICE_FACILITIES_GROWTH_DISTRIBUTION .
 
 hts:MD4_PRICE_FACILITIES_GROWTH_DISTRIBUTION a dcatapit:Distribution,
@@ -319,6 +332,9 @@ hts:MD5_REGIONAL_ENROLLMENT_RENT_PRICES a dcatapit:Dataset,
     <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
   dcterms:rightsHolder <https://github.com/metamuses> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/AS_NEEDED> ;
+  prov:wasDerivedFrom hts:D5_RENTAL_PRICES_BOLOGNA,
+    hts:D6_STUDENT_ENROLLMENT_REGIONAL ;
+  dcterms:publisher <https://github.com/metamuses> ;
   dcat:distribution hts:MD5_REGIONAL_ENROLLMENT_RENT_PRICES_DISTRIBUTION .
 
 hts:MD5_REGIONAL_ENROLLMENT_RENT_PRICES_DISTRIBUTION a dcatapit:Distribution,
@@ -339,6 +355,8 @@ hts:MD6_REGIONAL_SENSITIVITY_INDEX a dcatapit:Dataset,
     <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
   dcterms:rightsHolder <https://github.com/metamuses> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/AS_NEEDED> ;
+  prov:wasDerivedFrom hts:D5_RENTAL_PRICES_BOLOGNA,
+    hts:D6_STUDENT_ENROLLMENT ;
   dcat:distribution hts:MD6_REGIONAL_SENSITIVITY_INDEX_DISTRIBUTION .
 
 hts:MD6_REGIONAL_SENSITIVITY_INDEX_DISTRIBUTION a dcatapit:Distribution,
