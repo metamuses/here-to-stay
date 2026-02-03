@@ -10,13 +10,13 @@
 # ===== CATALOG ==========================
 hts:CATALOG_HERE_TO_STAY a dcatapit:Catalog,
     dcat:Catalog ;
-  dcterms:title ""@it ;
-  dcterms:description ""@it ;
+  dcterms:title "Here to Stay - Open Data su Turismo e Abitare a Bologna"@it ;
+  dcterms:title "Here to Stay - Open Data on Tourism and Housing in Bologna"@en ;
+  dcterms:description ""@en ;
   dcterms:publisher <https://github.com/metamuses> ;
   dcterms:modified "2026-02-05"^^xsd:date ;
   dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
   dcterms:language <http://publications.europa.eu/resource/authority/language/ITA> ;
-  dcterms:language <http://publications.europa.eu/resource/authority/language/ENG> ;
   foaf:homepage <https://github.com/metamuses/here-to-stay> ;
   dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme> ;
   dcat:dataset hts:D1_ACCOMODATIONS_BOLOGNA,
