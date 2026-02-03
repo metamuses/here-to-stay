@@ -317,7 +317,7 @@ hts:MD5_REGIONAL_ENROLLMENT_RENT_PRICES a dcatapit:Dataset,
   dcterms:modified "2026-02-05"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ,
     <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
-  dcterms:rightsHolder <https://github.com/metamuses> .
+  dcterms:rightsHolder <https://github.com/metamuses> ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/AS_NEEDED> ;
   dcat:distribution hts:MD5_REGIONAL_ENROLLMENT_RENT_PRICES_DISTRIBUTION .
 
