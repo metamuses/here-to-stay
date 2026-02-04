@@ -543,7 +543,161 @@ document.addEventListener('DOMContentLoaded', function() {
                 Plotly.newPlot('student-chart', data, layout, { responsive: true });
             })
             .catch(err => console.error("Error Student Chart:", err));
-}
+    }
+
+
+    // --- CHART 6: Price Sensitivity vs. Enrollment Growth (2014-2024) ---
+    function initSensitivityScatterPlot() {
+        fetch("datasets/MD6_regional_enrollment_rent_correlation.csv")
+            .then(response => {
+                if (!response.ok) throw new Error("File not found");
+                return response.text();
+            })
+
+            .then(csvText => {
+                const lines = csvText.trim().split(/\r?\n/);
+
+                // SMART PARSER
+                const parseCSVLine = (line) => {
+                    const result = [];
+                    let cur = '';
+                    let inQuotes = false;
+                    for (let char of line) {
+                        if (char === '"') inQuotes = !inQuotes;
+                        else if (char === ',' && !inQuotes) {
+                            result.push(cur.trim());
+                            cur = '';
+                        } else cur += char;
+                    }
+                    result.push(cur.trim());
+                    return result;
+                };
+
+                // CLEAN HEADERS: Remove BOM, spaces, and force lowercase
+                const headers = parseCSVLine(lines[0]).map(h =>
+                    h.replace(/[^\x20-\x7E]/g, "").trim().toLowerCase()
+                );
+
+                const normalize = s =>
+                    s.replace(/[^\x20-\x7E]/g, "")
+                    .trim()
+                    .toLowerCase();
+
+                const rows = lines.slice(1).map(line => {
+                    const values = parseCSVLine(line);
+                    return headers.reduce((obj, header, i) => {
+                        obj[header] = values[i] || null;
+                        return obj;
+                    }, {});
+                });
+
+                console.log("Row keys:", Object.keys(rows[0]));
+
+
+                // Robust Number Cleaner
+                const clean = (val) => {
+                    if (val === undefined || val === null || val === "") return 0;
+                    // Replace European comma and remove anything that isn't a number, dot, or minus sign
+                    let n = parseFloat(val.toString().replace(',', '.').replace(/[^\d.-]/g, ''));
+                    return isNaN(n) ? 0 : n;
+                };
+                // 2. DATA EXTRACTION
+                const regions = rows.map(r => r['regione']);
+                const xSens = rows.map(r => clean(r[normalize('indice di sensibilità')]));
+                const yGrowth = rows.map(r => clean(r[normalize('delta percentuale decennale')]));
+
+                // Debugging: Check if the numbers are actually coming through
+                console.log("X values (Sensitivity):", xSens);
+                console.log("Y values (Growth):", yGrowth);
+                console.log("Parsed headers:", headers);
+
+                // Generate colors dynamically since we don't have Knime RowColors
+                const regionColors = regions.map((_, i) => {
+                    const palette = [theme.sources.istat, theme.sources.openData, theme.heading, '#221D3F', '#82B5AE', '#C9A12D'];
+                    return palette[i % palette.length];
+                });
+
+                // 3. SCATTER TRACE
+                const data = [{
+                    x: xSens,
+                    y: yGrowth,
+                    text: regions,
+                    mode: 'markers',
+                    textposition: 'top center',
+                    type: 'scatter',
+                    marker: {
+                        size: 18, // Fixed uniform size
+                        color: regionColors,
+                        line: { color: 'white', width: 2 }
+                      },
+                      hovertemplate: '<b>%{text}</b><br>Sensitivity: %{x:.2f}<br>Growth: %{y:.1f}%<extra></extra>'
+                }];
+
+                // 4. LAYOUT WITH QUADRANTS
+                const layout = {
+                    title: {
+                        text: 'Price Sensitivity vs. Enrollment Growth (2014-2024)',
+                        font: { color: theme.heading, size: 20 }
+                    },
+                    paper_bgcolor: 'rgba(0,0,0,0)',
+                    plot_bgcolor: '#fcfcfc',
+                    font: { color: theme.text },
+                    hovermode: 'closest',
+                    xaxis: {
+                        title: 'Price Sensitivity (Correlation Coefficient)',
+                        range: [Math.min(...xSens) - 0.1, Math.max(...xSens) + 0.1],
+                        zeroline: true,
+                        zerolinewidth: 2,
+                        zerolinecolor: '#333',
+                        gridcolor: theme.grid
+                    },
+                    yaxis: {
+                        title: 'Enrollment Growth (%)',
+                        range: [Math.min(...yGrowth) -0.5, Math.max(...yGrowth) +0.5 ],
+                        zeroline: true,
+                        zerolinewidth: 2,
+                        zerolinecolor: '#333',
+                        gridcolor: theme.grid
+                    },
+                    annotations: [
+                        {
+                            xref: 'paper', yref: 'paper',
+                            x: 0.05, y: 0.95, // Top Left
+                            text: '<b>Resilient / Price Insensitive</b>',
+                            showarrow: false,
+                            font: {color: 'grey', size: 11},
+                            xanchor: 'left'
+                        },
+                        {
+                            xref: 'paper', yref: 'paper',
+                            x: 0.05, y: 0.05, // Bottom Left
+                            text: '<b>Vulnerable / Price Driven</b>',
+                            showarrow: false,
+                            font: {color: '#771710', size: 11},
+                            xanchor: 'left'
+                        },
+                        {
+                            xref: 'paper', yref: 'paper',
+                            x: 0.95, y: 0.95, // Top Right
+                            text: '<b>Steady Growth</b>',
+                            showarrow: false,
+                            font: {color: 'grey', size: 11},
+                            xanchor: 'right'
+                        }
+                    ],
+                    shapes: [
+                        // Vertical line at X=0 that always stretches top to bottom
+                        { type: 'line', x0: 0, x1: 0, y0: 0, y1: 1, xref: 'x', yref: 'paper', line: { color: 'black', width: 1, dash: 'dot' } },
+                        // Horizontal line at Y=0 that always stretches left to right
+                        { type: 'line', x0: 0, x1: 1, y0: 0, y1: 0, xref: 'paper', yref: 'y', line: { color: 'black', width: 1, dash: 'dot' } }
+                    ],
+                    margin: { t: 80, b: 80, l: 80, r: 50 }
+                };
+
+                Plotly.newPlot('sensitivity-plot', data, layout, { responsive: true });
+            })
+            .catch(err => console.error("Error Sensitivity Plot:", err));
+    }
 
     // Initialize all charts
     initGrowthChart();
@@ -551,5 +705,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initLegislativeChart();
     initGrowthPricesChart();
     initStudentCompositionChart();
+    initSensitivityScatterPlot();
 });
 
