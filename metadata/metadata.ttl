@@ -260,7 +260,7 @@ hts:MD1_ISTAT_OPENDATA_ACCOMMODATIONS_DISTRIBUTION a dcatapit:Distribution,
     dcat:Distribution ;
   dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
   dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
-  dcat:accessURL <https://github.com/metamuses/here-to-stay/blob/main/datasets/mashup/istat_opendata_ACCOMMODATIONS.csv> .
+  dcat:accessURL <https://github.com/metamuses/here-to-stay/blob/main/datasets/mashup/istat_opendata_accommodations.csv> .
 
 # MD2 - Tourism carrying capacity
 hts:MD2_TOURISM_CARRYING_CAPACITY a dcatapit:Dataset,
