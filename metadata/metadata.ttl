@@ -407,7 +407,12 @@ hts:MD6_REGIONAL_SENSITIVITY_INDEX_DISTRIBUTION a dcatapit:Distribution,
     foaf:homepage <https://www.idealista.it/> .
 
 <https://github.com/metamuses> a dcatapit:Agent,
-      foaf:Agent ;
-    dcterms:identifier "MetaMuses" ;
+      foaf:Organization ;
+    dcterms:identifier "metamuses" ;
     foaf:name "MetaMuses"@en ;
-    foaf:homepage <https://github.com/metamuses> .
+    foaf:homepage <https://github.com/metamuses> ;
+    foaf:member
+      [ a foaf:Person; foaf:name "Tommaso Barbato" ; foaf:homepage <https://github.com/epistrephein> ],
+      [ a foaf:Person; foaf:name "Nicol D'Amelio" ; foaf:homepage <https://github.com/nicoldamelio> ],
+      [ a foaf:Person; foaf:name "Miriana Pinto" ; foaf:homepage <https://github.com/mir-pin> ],
+      [ a foaf:Person; foaf:name "Sara Roggiani" ; foaf:homepage <https://github.com/sararoggi> ] .
