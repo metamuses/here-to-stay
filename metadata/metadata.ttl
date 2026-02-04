@@ -10,9 +10,9 @@
 # ===== CATALOG ==========================
 hts:CATALOG_HERE_TO_STAY a dcatapit:Catalog,
     dcat:Catalog ;
-  dcterms:title "Here to Stay - Open Data su Turismo e Abitare a Bologna"@it ;
-  dcterms:title "Here to Stay - Open Data on Tourism and Housing in Bologna"@en ;
-  dcterms:description ""@en ;
+  dcterms:title "Here To Stay - Catalogo dei datasets per OADE"@it ;
+  dcterms:title "Here To Stay - OADE Datasets Catalog"@en ;
+  dcterms:description "Catalog of all the datasets used for the project Here To Stay created for Open Access and Digital Ethics 2025/26 course"@en ;
   dcterms:publisher <https://github.com/metamuses> ;
   dcterms:modified "2026-02-05"^^xsd:date ;
   dcterms:issued "2026-02-05"^^xsd:date ;
@@ -102,7 +102,7 @@ hts:D2_ACCOMMODATIONS_CAPACITY_SERIES_DISTRIBUTION a dcatapit:Distribution,
     dcat:Distribution ;
   dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
   dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
-  dcat:accessURL <https://github.com/metamuses/here-to-stay/tree/main/datasets/istat/facilities> .
+  dcat:accessURL <https://github.com/metamuses/here-to-stay/tree/main/datasets/original/istat/facilities> .
 
 # D3 - Tourist flow
 hts:D3_TOURIST_FLOW a dcatapit:Dataset,
@@ -148,7 +148,7 @@ hts:D3_TOURIST_FLOW_SERIES_DISTRIBUTION a dcatapit:Distribution,
     dcat:Distribution ;
   dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
   dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
-  dcat:accessURL <https://github.com/metamuses/here-to-stay/tree/main/datasets/istat/arrivals> .
+  dcat:accessURL <https://github.com/metamuses/here-to-stay/tree/main/datasets/original/istat/arrivals> .
 
 # D4 - Legislations
 hts:D4_LEGISLATIONS a dcatapit:Dataset,
@@ -169,7 +169,7 @@ hts:D4_LEGISLATIONS_DISTRIBUTION a dcatapit:Distribution,
     dcat:Distribution ;
   dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
   dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
-  dcat:accessURL <https://github.com/metamuses/here-to-stay/blob/main/datasets/legislations.csv> .
+  dcat:accessURL <https://github.com/metamuses/here-to-stay/blob/main/datasets/original/legislations.csv> .
 
 # D5 - Rental Prices in Bologna
 hts:D5_RENTAL_PRICES_BOLOGNA a dcatapit:Dataset,
@@ -216,7 +216,7 @@ hts:D5_RENTAL_PRICES_BOLOGNA_SERIES_DISTRIBUTION a dcatapit:Distribution,
     dcat:Distribution ;
   dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
   dcterms:license <http://rightsstatements.org/vocab/InC/1.0/> ;
-  dcat:accessURL <https://github.com/metamuses/here-to-stay/tree/main/datasets/idealista> .
+  dcat:accessURL <https://github.com/metamuses/here-to-stay/tree/main/datasets/original/idealista> .
 
 # D6 - Student enrollment by residence
 hts:D6_STUDENT_ENROLLMENT a dcatapit:Dataset,
