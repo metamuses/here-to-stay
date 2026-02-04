@@ -3,10 +3,16 @@
 """
 Convert the Excel file containing municipal tourist accommodation capacity data
 from Istat into per-year CSV files.
+
+Usage:
+    python extract_capacita_comunale.py
 """
 
 import pandas as pd
 
+XLS = pd.ExcelFile("capacità_comunale_2013-2024.xlsx")
+
+STRING_COLS = list(range(7))
 HEADERS = [
     "regioni",
     "cod. reg.",
@@ -64,9 +70,6 @@ HEADERS = [
     "totale esercizi ricettivi numero",
     "totale esercizi ricettivi letti",
 ]
-
-XLS = pd.ExcelFile("capacità_comunale_2013-2024.xlsx")
-STRING_COLS = list(range(7))
 
 # process sheets for each year from 2014 to 2024
 for year in range(2014, 2025):
