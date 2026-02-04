@@ -44,7 +44,7 @@ hts:D1_ACCOMMODATIONS_BOLOGNA a dcatapit:Dataset,
   dcterms:identifier "c_a944:D.elenco-esercizi-attivita-ricettive" ;
   dcterms:title "Elenco degli esercizi appartenenti alla categoria attività ricettive"@it ;
   dcterms:title "List of establishments belonging to the category of accommodation activities"@en ;
-  dcterms:description "Some description of the dataset that will be added later"@en ;
+  dcterms:description "The dataset contains the list of accommodation establishments in Bologna, including hotels, bed and breakfasts, hostels, and other types of lodging facilities. It provides information such as the name, address, type of accommodation, and contact details for each establishment."@en ;
   dcterms:modified "2025-12-31"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
   dcterms:rightsHolder <http://w3id.org/italia/data/public-organization/c_a944> ;
@@ -64,7 +64,7 @@ hts:D2_ACCOMMODATIONS_CAPACITY a dcatapit:Dataset,
   dcterms:identifier "ISTAT:D.DF_BULK_DCSC_CAPACOFTUR" ;
   dcterms:title "Capacità degli esercizi ricettivi per tipo di alloggio e per comune"@it ;
   dcterms:title "Capacity of collective tourist accommodation by type of accommodation and municipality"@en ;
-  dcterms:description "Some description of the dataset that will be added later"@en ;
+  dcterms:description "The dataset contains information on the capacity of accommodation establishments in Italy, categorized by type of accommodation and municipality. It includes data on the number of beds, rooms and bathrooms available in hotels, bed and breakfasts, hostels, and other types of lodging facilities across different municipalities."@en ;
   dcterms:modified "2025-07-24"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
   dcterms:rightsHolder <http://w3id.org/italia/data/public-organization/ISTAT> ;
@@ -110,7 +110,7 @@ hts:D3_TOURIST_FLOW a dcatapit:Dataset,
   dcterms:identifier "ISTAT:D.DF_BULK_DCSC_OCCUPCOLLE" ;
   dcterms:title "Movimento dei clienti (arrivi e presenze) negli esercizi ricettivi per tipologia ricettiva, residenza dei clienti e comune di destinazione"@it ;
   dcterms:title "Occupancy in collective accommodation establishments at municipality level by type of accomodation and residence of guests"@en ;
-  dcterms:description "Some description of the dataset that will be added later"@en ;
+  dcterms:description "The dataset contains information on the movement of customers in accommodation establishments in Italy, categorized by type of accommodation, residence of guests, and municipality of destination."@en ;
   dcterms:modified "2026-01-09"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
   dcterms:rightsHolder <http://w3id.org/italia/data/public-organization/ISTAT> ;
@@ -156,7 +156,7 @@ hts:D4_LEGISLATIONS a dcatapit:Dataset,
   dcterms:identifier "metamuses:D.legislations" ;
   dcterms:title "Legislazioni nazionali e regionali in materia di locazioni turistiche"@it ;
   dcterms:title "National and regional legislations on tourist rentals"@en ;
-  dcterms:description "Some description of the dataset that will be added later"@en ;
+  dcterms:description "The dataset contains a list of national and regional legislations in Italy that regulate tourist rentals, including laws, decrees, and regulations that impact the operation of accommodation establishments and the rights and responsibilities of hosts and guests. The data is sourced from Normattiva, the official repository of Italian legislation."@en ;
   dcterms:modified "2026-02-05"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/GOVE> ;
   dcterms:rightsHolder <https://github.com/metamuses> ;
@@ -177,7 +177,7 @@ hts:D5_RENTAL_PRICES_BOLOGNA a dcatapit:Dataset,
   dcterms:identifier "idealista:D.rental-prices-bologna" ;
   dcterms:title "Prezzi di locazione degli immobili residenziali offerti in affitto tramite la piattaforma Idealista a Bologna"@it ;
   dcterms:title "Rental prices of residential properties offered for rent through the Idealista platform in Bologna"@en ;
-  dcterms:description "Some description of the dataset that will be added later"@en ;
+  dcterms:description "The dataset contains information on the rental prices of residential properties offered for rent through the Idealista platform in Bologna. It includes data on the average rental price per square meter and the monthly, trimestral and annual percentage changes."@en ;
   dcterms:modified "2026-01-31"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
   dcterms:rightsHolder <http://w3id.org/italia/data/private-organization/05388220963> ;
@@ -224,7 +224,7 @@ hts:D6_STUDENT_ENROLLMENT a dcatapit:Dataset,
   dcterms:identifier "KH5RHFCV:D.b270ef1a-c219-48b1-8399-b1458e225d39" ;
   dcterms:title "Studenti iscritti per residenza e ateneo di iscrizione"@it ;
   dcterms:title "Students enrolled by residence and university of enrollment"@en ;
-  dcterms:description "Some description of the dataset that will be added later"@en ;
+  dcterms:description "The dataset contains information on university student enrollments in Italy, categorized by residence and university of enrollment. It includes data on the number of students enrolled in different universities across Italy, along with their place of residence."@en ;
   dcterms:modified "2025-12-10"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
   dcterms:rightsHolder <http://w3id.org/italia/data/public-organization/KH5RHFCV> ;
@@ -245,7 +245,7 @@ hts:MD1_ISTAT_OPENDATA_ACCOMMODATIONS a dcatapit:Dataset,
   dcterms:identifier "metamuses:D.MASHUP-istat_opendata_accommodations" ;
   dcterms:title "Confronto tra dati ISTAT e Open Data comunali sugli esercizi ricettivi a Bologna"@it ;
   dcterms:title "Comparison between ISTAT and municipal Open Data on accommodation establishments in Bologna"@en ;
-  dcterms:description "Some description of the dataset that will be added later"@en ;
+  dcterms:description "The dataset contains a comparison between the ISTAT data on accommodation establishments and the municipal Open Data for Bologna."@en ;
   dcterms:modified "2026-02-05"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
   dcterms:rightsHolder <https://github.com/metamuses> ;
@@ -268,7 +268,7 @@ hts:MD2_TOURISM_CARRYING_CAPACITY a dcatapit:Dataset,
   dcterms:identifier "metamuses:D.MASHUP-tourism_carrying_capacity" ;
   dcterms:title "Stima della capacità di carico turistica a Bologna"@it ;
   dcterms:title "Estimate of tourism carrying capacity in Bologna"@en ;
-  dcterms:description "Some description of the dataset that will be added later"@en ;
+  dcterms:description "The dataset contains an estimate of the tourism carrying capacity in Bologna, calculated based on the accommodation capacity and tourist flow data."@en ;
   dcterms:modified "2026-02-05"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
   dcterms:rightsHolder <https://github.com/metamuses> ;
@@ -291,7 +291,7 @@ hts:MD3_LEGISLATIVE_IMPACT a dcatapit:Dataset,
   dcterms:identifier "metamuses:D.MASHUP-legislative_impact" ;
   dcterms:title "Impatto delle legislazioni sulle locazioni turistiche a Bologna"@it ;
   dcterms:title "Impact of legislations on tourist rentals in Bologna"@en ;
-  dcterms:description "Some description of the dataset that will be added later"@en ;
+  dcterms:description "The dataset contains an analysis of the impact of national and regional legislations on tourist rentals in Bologna, based on the comparison between the legislative framework and the trends in accommodation capacity and rental prices."@en ;
   dcterms:modified "2026-02-05"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON>,
     <http://publications.europa.eu/resource/authority/data-theme/GOVE> ;
@@ -316,7 +316,7 @@ hts:MD4_PRICE_FACILITIES_GROWTH a dcatapit:Dataset,
   dcterms:identifier "metamuses:D.MASHUP-price_facilities_growth" ;
   dcterms:title "Confronto tra tasso di crescita dei prezzi di locazione e degli esercizi ricettivi a Bologna"@it ;
   dcterms:title "Comparison between growth rate of rental prices and accommodation establishments in Bologna"@en ;
-  dcterms:description "Some description of the dataset that will be added later"@en ;
+  dcterms:description "The dataset contains a comparison between the growth rate of rental prices and the growth rate of accommodation establishments in Bologna, based on the analysis of the trends in the Idealista rental prices and the ISTAT accommodation capacity data."@en ;
   dcterms:modified "2026-02-05"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ,
     <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
@@ -340,7 +340,7 @@ hts:MD5_REGIONAL_ENROLLMENT_RENT_PRICES a dcatapit:Dataset,
   dcterms:identifier "metamuses:D.MASHUP-regional_enrollment_rent_prices" ;
   dcterms:title "Confronto tra iscrizioni universitarie e prezzi di locazione a livello regionale"@it ;
   dcterms:title "Comparison between university enrollments and rental prices at regional level"@en ;
-  dcterms:description "Some description of the dataset that will be added later"@en ;
+  dcterms:description "The dataset contains a comparison between university enrollments and rental prices at regional level in Italy, based on the analysis of the trends in the student enrollment data from the Ministry of University and Research and the rental price data from Idealista."@en ;
   dcterms:modified "2026-02-05"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ,
     <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
@@ -364,7 +364,7 @@ hts:MD6_REGIONAL_SENSITIVITY_INDEX a dcatapit:Dataset,
   dcterms:identifier "metamuses:D.MASHUP-regional_sensitivity_index" ;
   dcterms:title "Indice di sensibilità regionale alle iscrizioni studentesche"@it ;
   dcterms:title "Regional sensitivity index to student enrollments"@en ;
-  dcterms:description "Some description of the dataset that will be added later"@en ;
+  dcterms:description "The dataset contains an index of regional sensitivity to student enrollments in Italy, calculated based on the analysis of the trends in the student enrollment data from the Ministry of University and Research and the rental price data from Idealista."@en ;
   dcterms:modified "2026-02-05"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ,
     <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
