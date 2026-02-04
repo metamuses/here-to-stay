@@ -15,6 +15,7 @@ hts:CATALOG_HERE_TO_STAY a dcatapit:Catalog,
   dcterms:description ""@en ;
   dcterms:publisher <https://github.com/metamuses> ;
   dcterms:modified "2026-02-05"^^xsd:date ;
+  dcterms:issued "2026-02-05"^^xsd:date ;
   dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
   dcterms:language <http://publications.europa.eu/resource/authority/language/ITA>,
     <http://publications.europa.eu/resource/authority/language/ENG> ;
