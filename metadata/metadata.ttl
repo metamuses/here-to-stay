@@ -19,7 +19,7 @@ hts:CATALOG_HERE_TO_STAY a dcatapit:Catalog,
   dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
   dcterms:language <http://publications.europa.eu/resource/authority/language/ITA>,
     <http://publications.europa.eu/resource/authority/language/ENG> ;
-  foaf:homepage <https://github.com/metamuses/here-to-stay> ;
+  foaf:homepage <https://metamuses.github.io/here-to-stay> ;
   dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme> ;
   dcat:dataset hts:D1_ACCOMMODATIONS_BOLOGNA,
       hts:D2_ACCOMMODATIONS_CAPACITY,
@@ -126,7 +126,7 @@ hts:D3_TOURIST_FLOW_DISTRIBUTION a dcatapit:Distribution,
 
 hts:D3_TOURIST_FLOW_SERIES a dcatapit:Dataset,
     dcat:Dataset ;
-  dcterms:identifier "metamuses:D.DF_BULK_DCSC_OCCUPCOLLE-SERIES" ;
+  dcterms:identifier "ISTAT:D.DF_BULK_DCSC_OCCUPCOLLE-SERIES" ;
   dcterms:title "Movimento dei clienti (arrivi e presenze) negli esercizi ricettivi per tipologia ricettiva, residenza dei clienti e comune di destinazione - Serie 2014-2024"@it ;
   dcterms:title "Occupancy in collective accommodation establishments at municipality level by type of accomodation and residence of guests - Series 2014-2024"@en ;
   dcterms:description "Granular version of the ISTAT dataset on tourist flow, divided into annual CSV files for the period 2014-2024."@en ;
@@ -235,14 +235,14 @@ hts:D6_STUDENT_ENROLLMENT a dcatapit:Dataset,
 hts:D6_STUDENT_ENROLLMENT_DISTRIBUTION a dcatapit:Distribution,
     dcat:Distribution ;
   dcterms:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
-  dcterms:license <http://publications.europa.eu/resource/authority/licence/CC_PDM_1_0> ;
+  dcterms:license <https://w3id.org/italia/controlled-vocabulary/licences/A1_PublicDomain> ;
   dcat:accessURL <https://dati-ustat.mur.gov.it/dataset/iscritti/resource/b270ef1a-c219-48b1-8399-b1458e225d39> .
 
 # ===== MASHUP DATASETS ==================
 # MD1 - Istat vs Open Data accommodations
 hts:MD1_ISTAT_OPENDATA_ACCOMMODATIONS a dcatapit:Dataset,
     dcat:Dataset ;
-  dcterms:identifier "metamuses:D.MASHUP-istat_opendata_ACCOMMODATIONS" ;
+  dcterms:identifier "metamuses:D.MASHUP-istat_opendata_accommodations" ;
   dcterms:title "Confronto tra dati ISTAT e Open Data comunali sugli esercizi ricettivi a Bologna"@it ;
   dcterms:title "Comparison between ISTAT and municipal Open Data on accommodation establishments in Bologna"@en ;
   dcterms:description "Some description of the dataset that will be added later"@en ;
@@ -362,8 +362,8 @@ hts:MD5_REGIONAL_ENROLLMENT_RENT_PRICES_DISTRIBUTION a dcatapit:Distribution,
 hts:MD6_REGIONAL_SENSITIVITY_INDEX a dcatapit:Dataset,
     dcat:Dataset ;
   dcterms:identifier "metamuses:D.MASHUP-regional_sensitivity_index" ;
-  dcterms:title "Indice di sensibilità regionale alle locazioni turistiche"@it ;
-  dcterms:title "Regional sensitivity index to tourist rentals"@en ;
+  dcterms:title "Indice di sensibilità regionale alle iscrizioni studentesche"@it ;
+  dcterms:title "Regional sensitivity index to student enrollments"@en ;
   dcterms:description "Some description of the dataset that will be added later"@en ;
   dcterms:modified "2026-02-05"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ,
