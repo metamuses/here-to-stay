@@ -517,7 +517,7 @@ function initSensitivityScatterPlot() {
                     marker: {
                         size: 18, // Fixed uniform size
                         color: regionColors,
-                        line: { color: 'white', width: 2 }
+                        line: { width: 2 }
                       },
                       hovertemplate: '<b>%{text}</b><br>Sensitivity: %{x:.2f}<br>Growth: %{y:.1f}%<extra></extra>'
                 }];
@@ -529,7 +529,7 @@ function initSensitivityScatterPlot() {
                         font: { color: theme.heading, size: 20 }
                     },
                     paper_bgcolor: 'rgba(0,0,0,0)',
-                    plot_bgcolor: '#fcfcfc',
+                    plot_bgcolor: '#E5D2CC',
                     font: { color: theme.text },
                     hovermode: 'closest',
                     xaxis: {
@@ -554,7 +554,7 @@ function initSensitivityScatterPlot() {
                             x: 0.05, y: 0.95, // Top Left
                             text: '<b>Resilient / Price Insensitive</b>',
                             showarrow: false,
-                            font: {color: 'grey', size: 11},
+                            font: {color: theme.text, size: 11},
                             xanchor: 'left'
                         },
                         {
@@ -570,7 +570,7 @@ function initSensitivityScatterPlot() {
                             x: 0.95, y: 0.95, // Top Right
                             text: '<b>Steady Growth</b>',
                             showarrow: false,
-                            font: {color: 'grey', size: 11},
+                            font: {color: theme.text, size: 11},
                             xanchor: 'right'
                         }
                     ],
