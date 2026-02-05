@@ -29,6 +29,8 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
   <!-- =======================================================
   * Template Name: Scaffold
   * Template URL: https://bootstrapmade.com/scaffold-bootstrap-metro-style-template/
@@ -1979,7 +1981,7 @@
             <span class="visually-hidden">Next</span>
           </button>
 
-          <div class="carousel-inner">   
+          <div class="carousel-inner">
             <!-- visualization 1 -->
             <div class="carousel-item active">
               <div class="row align-items-center">
@@ -1992,16 +1994,14 @@
                       <br>
                       We then proceeded to compare these results with D2, coming from <u>Istat</u>: this dataset has the same focus as D1, as it counts the number of different types of accommodations for each city in Italy. It is organized in a folder of 11 files for the 11 years included in our time span, since on the Istat websites the files are divided per year and all held in a zip available for download. Considering that the Istat dataset is comprehensive of information about all italian cities, we filtered it to only focus on Bologna. As the dataset already had the total number of facilities per city per year, it was easy to visualize the rise in the number among the different years. Nevertheless, the values regarding the accommodations from the Istat dataset were far below the ones from Open Data Bologna. This discrepancy likely arises because the Bolognese Open Data portal logs all locally registered entities, whereas Istat tends to exclude facilities that are active but report zero occupancy. Moreover, the Istat dataset focuses on hotel establishments, hence it may not be considering short-term rentals, such as those offered by <a href="https://www.airbnb.it/" target="_blank">AirBnB</a>, <a href="https://www.booking.com/index.it.html?label=it-it-booking-desktop-new-VRZD0IC5lt9Ulq*ajTZ_bgS652828999642%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp1008141%3Ali%3Adec%3Adm&gclid=Cj0KCQiA-YvMBhDtARIsAHZuUzKNGVBk3pT9UZM7UO8ri2t0K7Z_tYCAoK0_3YL2bgfxbi8mxZUC5N0aAmrCEALw_wcB&aid=2311236&ws=&gad_source=1&gad_campaignid=19655506920&gbraid=0AAAAAD_Ls1LB9k1C_t9xNhhH4wfi_UPqH&chal_t=1770239430958&force_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank">Booking</a> or such platforms.
                       <br>
-                      While the absolute numbers differed substantially, the upward trend remained still evident across both data sources. Therefore we decided to verify the correlation among the two datasets and understand if the growth rate was similar for the two among the years. This resulted in our first <strong>mashup dataset MD1</strong> and we visualized the comparison between the variations in percentages of growth of the two datasets. The figures did not line up perfectly but they were qualitatively aligned, showing a shared trajectory despite the numerical gap; this ensured that both sources were equally authoritative even if relying on diverse inclusion criteria for their counts. 
+                      While the absolute numbers differed substantially, the upward trend remained still evident across both data sources. Therefore we decided to verify the correlation among the two datasets and understand if the growth rate was similar for the two among the years. This resulted in our first <strong>mashup dataset MD1</strong> and we visualized the comparison between the variations in percentages of growth of the two datasets. The figures did not line up perfectly but they were qualitatively aligned, showing a shared trajectory despite the numerical gap; this ensured that both sources were equally authoritative even if relying on diverse inclusion criteria for their counts.
                     </p>
                   </div>
                 </div>
                 <div class="col-lg-6">
-                  <div id="graph-container-1" class="graph-box"> 
-
-                  </div>
+                  <div id="line-plot1" class="viz-box"></div> <!-- CHART 1: ISTAT vs Open Data Growth Comparison (MD1) -->
                 </div>
-                
+
               </div>
             </div><!-- /visualization 1 -->
 
@@ -2011,7 +2011,7 @@
                 <div class="col-lg-6">
                   <div class="workflow-scroll-box">
                     <p>
-                      The <strong style="color: #771710">second focus</strong> in our workflow aimed to assess whether the expansion of the accommodation sector was commensurate with the surge in tourist arrivals in Bologna. For this matter, we analyzed D3, another dataset coming from Istat and recording tourist flows - specifically arrivals and overnight stays - within accommodation establishments for every Italian municipality. In this instance as well, we extracted only the data pertaining to the municipality of Bologna and processed the dataset as to be left only with the total arrivals per year in the city. We chose to only take into consideration the arrivals to quantify the actual number of visitors, rather than the total nights spent. From the results we learnt that the tourist flow grew steadily until 2020, when a sharp decline was registered due to the pandemic; subsequently, figures rebounded significantly, reaching new peaks by 2024. 
+                      The <strong style="color: #771710">second focus</strong> in our workflow aimed to assess whether the expansion of the accommodation sector was commensurate with the surge in tourist arrivals in Bologna. For this matter, we analyzed D3, another dataset coming from Istat and recording tourist flows - specifically arrivals and overnight stays - within accommodation establishments for every Italian municipality. In this instance as well, we extracted only the data pertaining to the municipality of Bologna and processed the dataset as to be left only with the total arrivals per year in the city. We chose to only take into consideration the arrivals to quantify the actual number of visitors, rather than the total nights spent. From the results we learnt that the tourist flow grew steadily until 2020, when a sharp decline was registered due to the pandemic; subsequently, figures rebounded significantly, reaching new peaks by 2024.
                       <br>
                       At this point in the analysis we compared the growth in the number of facilities with the increase in tourist arrivals, questioning whether the proliferation of these units was justified by a proportional influx of tourists, or if other market dynamics were at play. For this matter we selected D2 and D3 as source datasets, because both coming from Istat and drawing information from the same group of registered facilities. We calculated annual tourism carrying capacity in Bologna (<i>densità di carico</i>: total arrivals / total facilities) and visualized its decrease from 2014 to 2024, meaning that the supply of accommodations significantly exceeds the actual demand.
                       The second mashup dataset (MD2) we created includes exactly the total arrivals and total facilities per year according to Istat and the calculated ratio between the two.
@@ -2021,13 +2021,13 @@
 
                 <!-- graph -->
                 <div class="col-lg-6">
-                  <div id="graph-container-1" class="graph-box"> 
+                  <div id="line-plot2" class="viz-box"> <!-- CHART 2: Per-establishment Tourism Load in Bologna (MD2) -->
 
                   </div>
                 </div>
-                
+
               </div>
-            </div><!-- /visualization 2 -->            
+            </div><!-- /visualization 2 -->
 
             <!-- visualization 3 -->
             <div class="carousel-item">
@@ -2050,55 +2050,63 @@
 
                 <!-- graph -->
                 <div class="col-lg-6">
-                  <div id="graph-container-1" class="graph-box"> 
+                  <div id="line-plot3" class="viz-box"> <!-- CHART 3: Legislative impact (MD3) -->
 
                   </div>
                 </div>
-                
+
               </div>
-            </div><!-- /visualization 3 --> 
-            
+            </div><!-- /visualization 3 -->
+
             <!-- visualization 4 -->
             <div class="carousel-item">
               <div class="row align-items-center">
                 <div class="col-lg-6">
                   <div class="workflow-scroll-box">
                     <p>
-                      
+
                     </p>
                   </div>
                 </div>
 
                 <!-- graph -->
                 <div class="col-lg-6">
-                  <div id="graph-container-1" class="graph-box"> 
+                  <div id="line-plot4" class="viz-box"> <!-- --- CHART 4: Price vs. Facilities Growth Rate (MD4) -->
 
                   </div>
                 </div>
-                
+
               </div>
             </div><!-- /visualization 4 -->
-            
+
             <!-- visualization 5 -->
             <div class="carousel-item">
               <div class="row align-items-center">
                 <div class="col-lg-6">
                   <div class="workflow-scroll-box">
                     <p>
-                      
+
                     </p>
                   </div>
                 </div>
 
-                <!-- graph -->
+                <!-- Leaflet map -->
                 <div class="col-lg-6">
-                  <div id="graph-container-1" class="graph-box"> 
+                    <div class="map-wrapper">
+                        <div class="map-controls">
+                            <h3>University Enrollment by Year</h3>
+                            <div class="custom-select">
+                                <label>Academic Year: </label>
+                                <select id="yearSelect">
+                                </select>
+                            </div>
+                        </div>
 
-                  </div>
+                        <div id="map"></div>
+                    </div>
                 </div>
-                
               </div>
-            </div><!-- /visualization 5 -->    
+            </div> <!-- /visualization 5 -->
 
             <!-- visualization 6 -->
             <div class="carousel-item">
@@ -2106,20 +2114,19 @@
                 <div class="col-lg-6">
                   <div class="workflow-scroll-box">
                     <p>
-                      
+
                     </p>
                   </div>
                 </div>
 
                 <!-- graph -->
                 <div class="col-lg-6">
-                  <div id="graph-container-1" class="graph-box"> 
-
+                  <div id="sensitivity-plot" class="viz-box"> <!-- CHART 6: Price Sensitivity vs. Enrollment Growth (2014-2024) -->
                   </div>
                 </div>
-                
+
               </div>
-            </div><!-- /visualization 6 -->    
+            </div><!-- /visualization 6 -->
 
             <!-- visualization 7 -->
             <div class="carousel-item">
@@ -2127,23 +2134,23 @@
                 <div class="col-lg-6">
                   <div class="workflow-scroll-box">
                     <p>
-                      
+
                     </p>
                   </div>
                 </div>
 
                 <!-- graph -->
                 <div class="col-lg-6">
-                  <div id="graph-container-1" class="graph-box"> 
+                  <div id="" class="">
 
                   </div>
                 </div>
-                
+
               </div>
-            </div><!-- /visualization 7 -->    
+            </div><!-- /visualization 7 -->
           </div>
 
-        </div> 
+        </div>
       </div>
     </section>
     <!-- /KNIME workflow section -->
@@ -2394,10 +2401,14 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  
+
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="assets/js/visualizations.js" defer></script>
 
 </body>
 
