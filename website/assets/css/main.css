@@ -1318,6 +1318,10 @@ section,
   color: var(--nav-dropdown-hover-color);
 }
 
+.licenses .section-title {
+  padding-bottom: 0;
+}
+
 /* ------ Visualizations ----- */
 
 .viz-box {
