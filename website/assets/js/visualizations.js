@@ -780,14 +780,44 @@ legend.onAdd = function (map) {
 legend.addTo(map);
 
 
-// Carousel Resize Handler
-document.getElementById('workflowCarousel').addEventListener('slide.bs.carousel', function () {
+// Carousel Resize Handler and Navigation Button Visibility
+document.getElementById('workflowCarousel').addEventListener('slide.bs.carousel', function (event) {
     // This finds all Plotly graphs on the page and tells them to resize to their containers
     const plotlyPlots = document.querySelectorAll('.js-plotly-plot');
     plotlyPlots.forEach(plot => {
         Plotly.Plots.resize(plot);
     });
 });
+
+// Update carousel navigation button visibility after slide transition
+document.getElementById('workflowCarousel').addEventListener('slid.bs.carousel', function () {
+    updateCarouselButtons();
+});
+
+// Function to update carousel navigation button visibility
+function updateCarouselButtons() {
+    const carousel = document.getElementById('workflowCarousel');
+    const items = carousel.querySelectorAll('.carousel-item');
+    const activeItem = carousel.querySelector('.carousel-item.active');
+    const activeIndex = Array.from(items).indexOf(activeItem);
+
+    const prevBtn = carousel.querySelector('.carousel-control-prev');
+    const nextBtn = carousel.querySelector('.carousel-control-next');
+
+    // Hide prev button on first slide
+    if (activeIndex === 0) {
+        prevBtn.style.visibility = 'hidden';
+    } else {
+        prevBtn.style.visibility = 'visible';
+    }
+
+    // Hide next button on last slide
+    if (activeIndex === items.length - 1) {
+        nextBtn.style.visibility = 'hidden';
+    } else {
+        nextBtn.style.visibility = 'visible';
+    }
+}
 
 
 // --- INITIALIZE ALL CHARTS ---
@@ -798,7 +828,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initGrowthPricesChart();
     initSensitivityScatterPlot();
     initItalyMap(); // Start the async map function
+
+    // Initialize carousel button visibility on page load
+    updateCarouselButtons();
 });
-
-
-

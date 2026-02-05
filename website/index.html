@@ -1469,9 +1469,9 @@
                 <p>
                   This project is the result of several analyses produced on a curated catalog of datasets assembled for our study.
                   <br>
-                  The catalog is composed of six original datasets, sourced from multiple providers, with some datasets coming from the same source and others from distinct institutions, and characterized by differences in access modality, metadata completeness, formats, and ease of retrieval. In some cases, the original data required format conversion or the construction of a coherent series, for example by annualizing values across multiple years or by reshaping tables to obtain comparable structures. One of the original datasets was created in-house by extracting and structuring information from legislative documents available on <a href="https://www.normattiva.it/" target="_blank">Normattiva</a>.
+                  The catalog is composed of <strong>six original datasets</strong>, sourced from multiple providers, with some datasets coming from the same source and others from distinct institutions, and characterized by differences in access modality, metadata completeness, formats, and ease of retrieval. In some cases, the original data required format conversion or the construction of a coherent series, for example by annualizing values across multiple years or by reshaping tables to obtain comparable structures. One of the original datasets was created in-house by extracting and structuring information from legislative documents available on <a href="https://www.normattiva.it/" target="_blank">Normattiva</a>.
                   <br>
-                  Alongside these, we created six mashup datasets, obtained by combining and cross-referencing the information contained in the original sources into integrated tables; these derived datasets power all graphs, indicators, and data-driven inferences produced in the project.
+                  Alongside these, we created <strong>six mashup datasets</strong>, obtained by combining and cross-referencing the information contained in the original sources into integrated tables; these derived datasets power all graphs, indicators, and data-driven inferences produced in the project.
                 </p>
 
                 <nav>
@@ -1537,7 +1537,6 @@
                             <th scope="row">Dataset</th>
                             <th scope="col">Identifier</th>
                             <th scope="col">Title</th>
-                            <th scope="col">Description</th>
                             <th scope="col">Modified</th>
                             <th scope="col">Theme</th>
                             <th scope="col">Rights Holder</th>
@@ -1555,7 +1554,6 @@
                             <th scope="row">D1</th>
                             <td>elenco-esercizi-attivita-ricettive</td>
                             <td>List of establishments belonging to the category of accommodation activities</td>
-                            <td></td>
                             <td>31/12/2025</td>
                             <td><a href="https://op.europa.eu/en/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme/ECON" target="_blank">Economy and finance</a></td>
 
@@ -1572,7 +1570,6 @@
                             <th>D2</th>
                             <td>DF_BULK_DCSC_CAPACOFTUR</td>
                             <td>Capacity of collective tourist accommodation by type of accommodation and municipality</td>
-                            <td></td>
                             <td>24/07/2025</td>
                             <td><a href="https://op.europa.eu/en/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme/ECON" target="_blank">Economy and finance</a></td>
                             <td>ISTAT</td>
@@ -1582,13 +1579,12 @@
                             <td>XLSX</td>
                             <td><a href="https://esploradati.istat.it/databrowser/#/it/dw/categories/IT1,Z0700SER,1.0/SER_TOURISM/SER_TOURISM_RELATED_FILES" target="_blank">IstatData</a></td>
                             <td><a href="https://github.com/metamuses/here-to-stay/tree/main/datasets/original/istat/facilities" target="_blank">GitHub</a></td>
-                            <td><a href="https://github.com/metamuses/here-to-stay/blob/main/metadata/metadata.ttl" target="_blank">hts:D1_ACCOMMODATIONS_BOLOGNA</a></td>
+                            <td><a href="https://github.com/metamuses/here-to-stay/blob/main/metadata/metadata.ttl" target="_blank">hts:D2_ACCOMMODATIONS_CAPACITY</a></td>
                           </tr>
                           <tr>
                             <th>D3</th>
                             <td>DF_BULK_DCSC_OCCUPCOLLE</td>
                             <td>Occupancy in collective accommodation establishments at municipality level by type of accomodation and residence of guests</td>
-                            <td></td>
                             <td>09/01/2026</td>
                             <td><a href="https://op.europa.eu/en/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme/EDUC" target="_blank">Education, culture and sport</a></td>
                             <td>ISTAT</td>
@@ -1597,21 +1593,20 @@
                             <td><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></td>
                             <td>XLSX</td>
                             <td><a href="https://esploradati.istat.it/databrowser/#/it/dw/categories/IT1,Z0700SER,1.0/SER_TOURISM/SER_TOURISM_RELATED_FILES" target="_blank">IstatData</a></td>
-                            <td><a href="https://github.com/metamuses/here-to-stay/tree/main/datasets/original/istat/facilities" target="_blank">GitHub</a></td>
+                            <td><a href="https://github.com/metamuses/here-to-stay/tree/main/datasets/original/istat/arrivals" target="_blank">GitHub</a></td>
                             <td><a href="https://github.com/metamuses/here-to-stay/blob/main/metadata/metadata.ttl" target="_blank">hts:D3_TOURIST_FLOW</a></td>
                           </tr>
                           <tr>
                             <th>D4</th>
                             <td>legislations</td>
                             <td>National and regional legislations on tourist rentals</td>
-                            <td></td>
                             <td>05/02/2026</td>
                             <td><a href="https://op.europa.eu/en/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme/GOVE" target="_blank">Government and public sector</a></td>
                             <td>MetaMuses</td>
                             <td>As needed</td>
                             <td>Public</td>
                             <td><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></td>
-                            <td><CSV/td>
+                            <td>CSV</td>
                             <td><a href="https://github.com/metamuses/here-to-stay/blob/main/datasets/original/legislations.csv" target="_blank">GitHub</a></td>
                             <td>-</td>
                             <td><a href="https://github.com/metamuses/here-to-stay/blob/main/metadata/metadata.ttl" target="_blank">hts:D4_LEGISLATIONS</a></td>
@@ -1620,7 +1615,6 @@
                             <th>D5</th>
                             <td>rental-prices-bologna</td>
                             <td>Rental prices of residential properties offered for rent through the Idealista platform in Bologna</td>
-                            <td></td>
                             <td>31/01/2026</td>
                             <td><a href="https://op.europa.eu/en/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme/ECON" target="_blank">Economy and finance</a></td>
                             <td>Idealista S.p.A.</td>
@@ -1636,7 +1630,6 @@
                             <th>D6</th>
                             <td>b270ef1a-c219-48b1-8399-b1458e225d39</td>
                             <td>Students enrolled by residence and university of enrollment</td>
-                            <td></td>
                             <td>10/12/2025</td>
                             <td><a href="https://op.europa.eu/en/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/data-theme/EDUC" target="_blank">Education, culture and sport</a></td>
                             <td>Ministero dell'Università e della Ricerca</td>
@@ -1777,48 +1770,58 @@
                 </div>
 
                 <h5>Metadata model</h5>
+                <p style="margin-bottom: 0;">
+                  All datasets have been assessed using the <a href="https://docs.italia.it/italia/daf/lg-patrimonio-pubblico/it/stabile/modellometadati.html" target="_blank"><strong>metadata model</strong></a> defined by <a href="https://www.agid.gov.it/it" target="_blank">Agenzia per l'Italia Digitale (AgID)</a>, which frames metadata quality as a four-level classification intended to describe how “attached” metadata are to the data they describe, and how informative they are. The model focuses on two dimensions: the strength of the data-metadata relationship (whether metadata are embedded, tightly linked, or merely external) and the level of detail provided (whether metadata describe the whole dataset only, or go deeper into its internal structure).
+                  <br>
+                  Most of the catalog falls under <strong>Level 2 (“weak”)</strong>, because metadata are external to the data and describe the dataset as a whole rather than individual records or variables:
+                </p>
+                <ul>
+                  <li><strong>Open Data Bologna</strong>: metadata are primarily provided on the dataset’s descriptive web page, while the downloadable files act as distributions with limited embedded description.</li>
+                  <li><strong>Ustat MUR</strong>: metadata are similarly exposed through the dataset’s descriptive page, with dataset-level information kept separate from the data files.</li>
+                  <li><strong>Our original dataset</strong>: metadata are captured in the project’s global Turtle metadata file, which serves as the external dataset-level description for the produced distributions.</li>
+                  <li><strong>ISTAT</strong>: metadata discovery depends on the SDMX access layer; it is necessary to retrieve the dataset identifier and then access the associated metadata through SDMX services rather than through a single descriptive landing page.</li>
+                </ul>
                 <p>
-                  All datasets have been assessed using the <a href="https://docs.italia.it/italia/daf/lg-patrimonio-pubblico/it/stabile/modellometadati.html" target="_blank">metadata model</a> defined by <a href="https://www.agid.gov.it/it" target="_blank">Agenzia per l'Italia Digitale (AgID)</a>, which frames metadata quality as a four-level classification intended to describe how “attached” metadata are to the data they describe, and how informative they are. The model focuses on two dimensions: the strength of the data-metadata relationship (whether metadata are embedded, tightly linked, or merely external) and the level of detail provided (whether metadata describe the whole dataset only, or go deeper into its internal structure).
-                  <br>
-                  Most of the catalog falls under Level 2 (“weak”), because metadata are external to the data and describe the dataset as a whole rather than individual records or variables:
-                  <ul>
-                    <li><strong>Open Data Bologna</strong>: metadata are primarily provided on the dataset’s descriptive web page, while the downloadable files act as distributions with limited embedded description.</li>
-                    <li><strong>Ustat MUR</strong>: metadata are similarly exposed through the dataset’s descriptive page, with dataset-level information kept separate from the data files.</li>
-                    <li><strong>Our original dataset</strong>: metadata are captured in the project’s global Turtle metadata file, which serves as the external dataset-level description for the produced distributions.</li>
-                    <li><strong>ISTAT</strong>: metadata discovery depends on the SDMX access layer; it is necessary to retrieve the dataset identifier and then access the associated metadata through SDMX services rather than through a single descriptive landing page.</li>
-                  </ul>
-                  <br>
-                  A separate case is the original dataset constructed from idealista data, which is closer to Level 1: the source is effectively restricted to being consulted only as rendered content on an HTML page and does not publish an appropriate, explicit metadata layer that can be linked to the dataset, so metadata must be reconstructed and documented ex-post by inference during collection and description.
+                  A separate case is the original dataset constructed from <strong>Idealista</strong> data, which is closer to Level 1: the source is effectively restricted to being consulted only as rendered content on an HTML page and does not publish an appropriate, explicit metadata layer that can be linked to the dataset, so metadata must be reconstructed and documented ex-post by inference during collection and description.
                 </p>
 
                 <h5>DCAT-AP_IT framework</h5>
                 <p>
-                  <a href="https://www.dati.gov.it/dcat-ap-it-v10-profilo-italiano-dcat-ap-0" target="_blank">DCAT-AP_IT</a> is the national metadata application profile adopted in Italy to describe catalogs, datasets, and their distributions in a uniform, machine-readable way, so that data published by different administrations can be discovered, compared, and harvested consistently across portals. It is the Italian profile of the European <a href="https://op.europa.eu/it/web/eu-vocabularies/dcat-ap" target="_blank">DCAT-AP</a>, which is the common specification promoted at EU level to exchange public-sector dataset descriptions among data portals.
+                  <a href="https://www.dati.gov.it/dcat-ap-it-v10-profilo-italiano-dcat-ap-0" target="_blank"><strong>DCAT-AP_IT</strong></a> is the national metadata application profile adopted in Italy to describe catalogs, datasets, and their distributions in a uniform, machine-readable way, so that data published by different administrations can be discovered, compared, and harvested consistently across portals. It is the Italian profile of the European <a href="https://op.europa.eu/it/web/eu-vocabularies/dcat-ap" target="_blank">DCAT-AP</a>, which is the common specification promoted at EU level to exchange public-sector dataset descriptions among data portals.
                   <br>
-                  This work sits on top of the broader <a href="https://www.w3.org/TR/vocab-dcat-3/" target="_blank">DCAT</a>, the W3C Data Catalog Vocabulary: an RDF vocabulary designed to represent data catalogs on the Web by modeling core entities such as Catalog, Dataset, and Distribution, and by linking descriptions to access points, formats, licenses, themes, and responsible agents in a way that software can process automatically. Starting from this shared semantic backbone (currently standardized as <a href="https://www.w3.org/TR/vocab-dcat-3/" target="_blank">DCAT v3</a>), DCAT-AP defines a European interoperability layer by selecting and constraining how DCAT should be used for public-sector data portals, while DCAT-AP_IT further specializes that layer for the Italian context by prescribing the required classes, properties, controlled vocabularies, and modeling patterns expected by national catalogs and publication workflows.
+                  This work sits on top of the broader <a href="https://www.w3.org/TR/vocab-dcat-3/" target="_blank"><strong>DCAT</strong></a>, the W3C Data Catalog Vocabulary: an RDF vocabulary designed to represent data catalogs on the Web by modeling core entities such as Catalog, Dataset, and Distribution, and by linking descriptions to access points, formats, licenses, themes, and responsible agents in a way that software can process automatically. Starting from this shared <strong>semantic backbone</strong> (currently standardized as <a href="https://www.w3.org/TR/vocab-dcat-3/" target="_blank">DCAT v3</a>), DCAT-AP defines a <strong>European interoperability</strong> layer by selecting and constraining how DCAT should be used for public-sector data portals, while DCAT-AP_IT further specializes that layer for the Italian context by prescribing the required classes, properties, controlled vocabularies, and modeling patterns expected by national catalogs and publication workflows.
                 </p>
 
                 <h6>Original datasets</h6>
                 <p>
-                  All original datasets were re-metadated by us in a strictly DCAT-AP_IT-compliant form so they can be treated as compliant within a single corpus.
+                  All original datasets were re-metadated by us in a <strong>strictly DCAT-AP_IT-compliant</strong> form so they can be treated as compliant within a single corpus.
                   <br>
                   Concretely, we extracted (or, when necessary, inferred) the values for the mandatory elements (<code>dcterms:identifier</code>, <code>dcterms:title</code>, <code>dcterms:description</code>, <code>dcterms:modified</code>, <code>dcat:theme</code>, <code>dcterms:rightsHolder</code>, <code>dcterms:accrualPeriodicity</code>, and <code>dcat:distribution</code>) using the <code>dcterms</code> and <code>dcat</code> vocabularies, and we populated them consistently across the catalog.
                   <br>
-                  We also implemented the required separation between dataset and distribution by modeling each distribution with its required fields (notably <code>dcterms:format</code>, <code>dcterms:license</code>, and <code>dcat:accessURL</code>), and we explicitly represented our own file conversions and segmentations when producing new distributions; where relevant, we captured temporal and spatial framing (e.g., <code>dcterms:temporal</code> and <code>dcterms:spatial</code>) to reflect annualized series or geographically scoped extractions.
+                  We also implemented the <strong>required separation</strong> between dataset and distribution by modeling each distribution with its required fields (notably <code>dcterms:format</code>, <code>dcterms:license</code>, and <code>dcat:accessURL</code>), and we explicitly represented our own file conversions and segmentations when producing new distributions; where relevant, we captured temporal and spatial framing (e.g., <code>dcterms:temporal</code> and <code>dcterms:spatial</code>) to reflect annualized series or geographically scoped extractions.
                 </p>
 
                 <h6>Mashup datasets</h6>
                 <p>
-                  All mashup datasets were metadated coherently under DCAT-AP_IT from the beginning, so that even the datasets created “inside” the project are described with the same up-to-date national standard used for public-sector catalogs in Italy, and can therefore be interpreted in the same way as the original sources in terms of Dataset/Distribution separation, access points, formats, licenses, themes and agents. In addition, we made provenance explicit by linking each mashup dataset to its originating dataset(s) using the W3C <a href="https://www.w3.org/TR/prov-o/" target="_blank">PROV</a> ontology, a standard vocabulary specifically designed to represent and interchange provenance information, i.e. who/what generated a resource, from which inputs, through which transformations, so that readers can reconstruct the genealogy of each derived table.
+                  All mashup datasets were metadated coherently under <strong>DCAT-AP_IT</strong> from the beginning, so that even the datasets created inside the project are described with the same up-to-date national standard used for public-sector catalogs in Italy, and can therefore be interpreted in the same way as the original sources in terms of Dataset/Distribution separation, access points, formats, licenses, themes and agents. In addition, we made <strong>provenance explicit</strong> by linking each mashup dataset to its originating dataset(s) using the W3C <a href="https://www.w3.org/TR/prov-o/" target="_blank"><strong>PROV</strong></a> ontology, a standard vocabulary specifically designed to represent and interchange provenance information, i.e. who/what generated a resource, from which inputs, through which transformations, so that readers can reconstruct the genealogy of each derived table.
                   <br>
-                  We used in particular <code>prov:wasDerivedFrom</code> to state derivation relationships, and we set ourselves as <code>dcterms:publisher</code> for the newly produced outputs: this cross-referencing within metadata matters because it makes data-driven conclusions auditable, supports reuse without guesswork, and lets downstream users assess trust, scope, and limitations by immediately seeing which source(s) each mashup depends on.
+                  We used in particular <code>prov:wasDerivedFrom</code> to state <strong>derivation relationships</strong>, and we set ourselves as <code>dcterms:publisher</code> for the newly produced outputs: this cross-referencing within metadata matters because it makes data-driven conclusions auditable, supports reuse without guesswork, and lets downstream users assess trust, scope, and limitations by immediately seeing which source(s) each mashup depends on.
                 </p>
 
-                <h3 class="analysis-second-title">FAIR principles</h3>
+                <h5>Technical hardening</h5>
                 <p>
-                  The table below uses the “FAIR Principles overview” as a checklist to evaluate our outputs against a widely used reference framework for data stewardship. <a href="https://www.go-fair.org/fair-principles" target="_blank">The FAIR Principles</a>, promoted by the GO FAIR Initiative, define what it means for digital assets to be Findable, Accessible, Interoperable, and Reusable, and they stress machine-actionability: the goal is not only that humans can read a dataset description, but that software agents can discover it via identifiers and registries, understand enough metadata to interpret it, and follow explicit access and reuse conditions with minimal manual mediation.
+                  To reduce avoidable metadata drift, as an extra layer of technical care we added automated checks in our GitHub repository: a GitHub Action runs <a href="https://librdf.org/raptor/rapper.html" target="_blank"><strong>rapper</strong></a>, a command-line RDF parser and serializer from the Raptor RDF toolkit, on every push to ensure our Turtle files parse correctly and remain <strong>syntactically valid</strong>, treating RDF syntax errors like failing tests.
                   <br>
-                  By mapping each principle to concrete cataloging choices (identifiers, access URLs, formats, licenses, provenance links, and vocabulary usage), the checklist helps make our level of compliance explicit and auditable, and highlights where the catalog behaves like a robust, standards-aligned digital object rather than a one-off collection of files.
+                  This continuous syntax check is complemented by a <strong>semantic compliance</strong> check: we also submitted our metadata Turtle file to the <a href="https://validatore.dati.gov.it/dcat-ap_validator.html" target="_blank"><strong>official DCAT-AP_IT validator</strong></a> published by AgID, which verifies structural congruence against the profile rules. At the time of publication of the project, the metadata file returned 0 errors, giving us an external confirmation that the file is not only well-formed RDF, but also aligned with the DCAT-AP_IT constraints expected by the national guidelines.
+                </p>
+
+                <hr>
+
+                <h4 class="analysis-second-title">FAIR principles</h4>
+                <p>
+                  The table below uses the “FAIR Principles overview” as a checklist to evaluate our outputs against a widely used reference framework for data stewardship. <a href="https://www.go-fair.org/fair-principles" target="_blank">The FAIR Principles</a>, promoted by the GO FAIR Initiative, define what it means for digital assets to be <strong>Findable</strong>, <strong>Accessible</strong>, <strong>Interoperable</strong>, and <strong>Reusable</strong>, and they stress machine-actionability: the goal is not only that humans can read a dataset description, but that software agents can discover it via identifiers and registries, understand enough metadata to interpret it, and follow explicit access and reuse conditions with minimal manual mediation.
+                  <br>
+                  By mapping each principle to concrete cataloging choices (identifiers, access URLs, formats, licenses, provenance links, and vocabulary usage), the <strong>checklist</strong> helps make our level of compliance explicit and auditable, and highlights where the catalog behaves like a robust, standards-aligned digital object rather than a one-off collection of files.
                 </p>
 
                 <div class="accordion">
@@ -1952,13 +1955,6 @@
                     </div>
                   </div>
                 </div>
-
-                <h5>Technical hardening</h5>
-                <p>
-                  To reduce avoidable metadata drift, as an extra layer of technical care we added automated checks in our GitHub repository: a GitHub Action runs <a href="https://librdf.org/raptor/rapper.html" target="_blank">rapper</a>, a command-line RDF parser and serializer from the Raptor RDF toolkit, on every push to ensure our Turtle files parse correctly and remain syntactically valid, treating RDF syntax errors like failing tests.
-                  <br>
-                  This continuous syntax check is complemented by a semantic compliance check: we also submitted our metadata Turtle file to the <a href="https://validatore.dati.gov.it/dcat-ap_validator.html" target="_blank">official DCAT-AP_IT validator</a> published by AgID, which verifies structural congruence against the profile rules. At the time of publication of the project, the metadata file returned 0 errors, giving us an external confirmation that the file is not only well-formed RDF, but also aligned with the DCAT-AP_IT constraints expected by the national guidelines.
-                </p>
               </div>
             </div>
           </div><!-- End tab content item -->
