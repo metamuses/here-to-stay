@@ -663,10 +663,51 @@ async function initItalyMap() {
         // Update map whenever the user changes the year
         yearSelect.addEventListener("change", (e) => updateMap(e.target.value));
 
+
+        // LOAD MAP avoiding viewport resizing
+        function forceProperLayout() {
+            applyResponsiveFit();
+            map.invalidateSize(true);
+          }
+      
+          map.whenReady(() => {
+            requestAnimationFrame(() => {
+              forceProperLayout();
+              setTimeout(() => {
+                map.invalidateSize(true);
+              }, 200);
+            });
+          });
+
+          window.addEventListener(
+            "load",
+            () => {
+              setTimeout(() => {
+                forceProperLayout();
+              }, 300);
+            },
+            { once: true }
+          );
+          let resizeTimer;
+
+        const resizeObserver = new ResizeObserver(() => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            map.invalidateSize();
+            applyResponsiveFit();
+        }, 100);
+        });
+   
+        const mapDiv = document.getElementById("map");
+        if (mapDiv) {
+        resizeObserver.observe(mapDiv);
+        }
+
     } catch (err) {
         console.error("Data loading failed. Check filenames:", err);
     }
 }
+
 
 function updateMap(selectedYear) {
     // Remove existing layer so colors don't stack/overlap
