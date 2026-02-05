@@ -4,13 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title></title>
+  <title>Here To Stay</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo/favicon.svg">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -535,7 +534,7 @@
                               <tr>
                                 <th scope="row">Coherence</th>
                                 <td>
-                                  TWe verified the mathematical consistency of the dataset, ensuring that aggregate figures strictly match the sum of their disaggregated components, and that the logical constraints between related variables were respected across all records.
+                                  We verified the mathematical consistency of the dataset, ensuring that aggregate figures strictly match the sum of their disaggregated components, and that the logical constraints between related variables were respected across all records.
                                   <br>
                                   The classification of accommodation types is consistent with the Capacity dataset (D2), allowing for the calculation of derived indicators without classification conflicts.
                                 </td>
@@ -1472,7 +1471,7 @@
 
                 <nav>
                   <div class="nav nav-tabs technical-tabs" id="nav-tab" role="tablist">
-                    <button class="nav-link active" id="nav-catalogue-tab" data-bs-toggle="tab" data-bs-target="#nav-catalogue" type="button" role="tab" aria-controls="nav-catalogue" aria-selected="true"><b>Catalogue</b></button>
+                    <button class="nav-link active" id="nav-catalogue-tab" data-bs-toggle="tab" data-bs-target="#nav-catalogue" type="button" role="tab" aria-controls="nav-catalogue" aria-selected="true"><b>Catalog</b></button>
                     <button class="nav-link" id="nav-original-tab" data-bs-toggle="tab" data-bs-target="#nav-original" type="button" role="tab" aria-controls="nav-original" aria-selected="false"><b>Original Metadata</b></button>
                     <button class="nav-link" id="nav-mashup-tab" data-bs-toggle="tab" data-bs-target="#nav-mashup"type="button" role="tab" aria-controls="nav-mashup" aria-selected="false"><b>Mashup Metadata</b></button>
                   </div>
@@ -2012,7 +2011,7 @@
                 <div class="col-lg-6">
                   <div class="workflow-scroll-box">
                     <p>
-                      The second focus in our workflow aimed to assess whether the expansion of the accommodation sector was commensurate with the surge in tourist arrivals in Bologna. For this matter, we analyzed D3, another dataset coming from Istat and recording tourist flows - specifically arrivals and overnight stays - within accommodation establishments for every Italian municipality. In this instance as well, we extracted only the data pertaining to the municipality of Bologna and processed the dataset as to be left only with the total arrivals per year in the city. We chose to only take into consideration the arrivals to quantify the actual number of visitors, rather than the total nights spent. From the results we learnt that the tourist flow grew steadily until 2020, when a sharp decline was registered due to the pandemic; subsequently, figures rebounded significantly, reaching new peaks by 2024. 
+                      The <strong style="color: #771710">second focus</strong> in our workflow aimed to assess whether the expansion of the accommodation sector was commensurate with the surge in tourist arrivals in Bologna. For this matter, we analyzed D3, another dataset coming from Istat and recording tourist flows - specifically arrivals and overnight stays - within accommodation establishments for every Italian municipality. In this instance as well, we extracted only the data pertaining to the municipality of Bologna and processed the dataset as to be left only with the total arrivals per year in the city. We chose to only take into consideration the arrivals to quantify the actual number of visitors, rather than the total nights spent. From the results we learnt that the tourist flow grew steadily until 2020, when a sharp decline was registered due to the pandemic; subsequently, figures rebounded significantly, reaching new peaks by 2024. 
                       <br>
                       At this point in the analysis we compared the growth in the number of facilities with the increase in tourist arrivals, questioning whether the proliferation of these units was justified by a proportional influx of tourists, or if other market dynamics were at play. For this matter we selected D2 and D3 as source datasets, because both coming from Istat and drawing information from the same group of registered facilities. We calculated annual tourism carrying capacity in Bologna (densità di carico: total arrivals / total facilities) and visualized its decrease from 2014 to 2024, meaning that the supply of accommodations significantly exceeds the actual demand.
                       The second mashup dataset (MD2) we created includes exactly the total arrivals and total facilities per year according to Istat and the calculated ratio between the two.
@@ -2036,7 +2035,15 @@
                 <div class="col-lg-6">
                   <div class="workflow-scroll-box">
                     <p>
-                      
+                      A <strong style="color: #771710">legal assessment</strong> of the regulatory framework associated with tourist short-term rentals was also conducted as part of this study. Due to the lack of a dataset tailored to the team’s need, we compiled one (D4) selecting the most relevant legislations for the matter, introduced quite recently to regulate the short-term rental market, characterized by significant regulatory gaps. For our analysis, we selected national laws from the Normattiva portal, identifying relevant legislation through a set of keywords closely aligned with the subject matter of the research. The laws made part of the dataset are the following:
+                      <ul>
+                        <li>D. L. 50/2017: Introduced the tax regime for short-term rentals, defining the 21% flat-rate tax (cedolare secca).</li>
+                        <li>D. L 34/2019: Established the first national database for accommodation facilities and short-term rental properties, laying the groundwork for a standardized Identification Code system.</li>
+                        <li>D. L. 145/2023: Introduced the National Identification Code (CIN), mandating security standards and establishing a rigorous penalty system to combat unauthorized hospitality practices.</li>
+                        <li>D.L. 213/2023: Amended the taxation of short-term rentals by increasing the flat-rate tax from 21% to 26% for owners managing multiple rental units (from the second unit onwards).</li>
+                        <li>The Tourism Code (D.Lgs. 79/2011) already mentioned was also included for compliance. </li>
+                      </ul>
+                      The legislation was introduced in the data analysis to potentially visualize long-term effects of the laws on the number of new facilities arising in the city of Bologna. The mashup dataset resulting from this step (MD3) combines the same yearly totals for the facilities sourced from D1 and D2 with the titles and descriptions of the laws. The timeframe object of the analysis was divided into phases, each beginning with the entry into force of a specific law, in order to assess whether the introduction of the legislation produced any observable effects. Yet, the visualization shows that in spite of the laws being introduced, the number of facilities rises throughout the years exponentially, as already stated for the first visualization. This may indicate a regulatory lag or a market where capital flow is resilient to legislative constraints, signaling that the measures implemented have not yet reached a saturation point capable of limiting expansion.
                     </p>
                   </div>
                 </div>
@@ -2161,13 +2168,18 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Sustainability</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum justo elit, ut placerat felis tempor in. Ut ut vehicula arcu. Maecenas quis ligula in quam consectetur faucibus vitae ut erat. Donec sapien nunc, egestas sit amet mollis vehicula, commodo non libero. Nullam lobortis malesuada sodales.</p>
+        <p>
+          The sustainability of the data used in this project is evaluated based on source reliability.
+          <br>
+          The datasets (D1, D2, D3, D6) sourced from the Municipality of Bologna’s Open Data portal, ISTAT and MUR-USTAT are considered high-sustainability sources, since they are maintained under legal mandates for public statistics and administrative transparency. due to legal mandates for public statistics. While these datasets do not currently use persistent identifiers (PIDs), their structured naming conventions and institutional metadata ensure they remain retrievable through official archives even in the event of URL reconfiguration.
+          <br>
+          The Idealista dataset (D5) represents a high-volatility source, since commercial newsroom URLs are highly likely to become obsolete or change. In compliance with intellectual property constraints, raw commercial datasets will be destroyed once the primary research objectives are achieved, as we do not hold the rights for long-term redistribution.
+          <br>
+          To ensure the long-term accessibility of our unique contributions, the legislation dataset (D4) and the integrated "mashup" datasets produced by the team have been assigned permanent identifiers through GitHub.
+          <br>
+          Here To Stay is the final project developed for the Open Access And Digital Ethics course (a.y. 2025/2026) within the Digital Humanities and Digital Knowledge Master's Degree (University of Bologna). As such, the project is not subject to active maintenance or future updates beyond the scope of its initial submission.
+        </p>
       </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-          <p></p>
-      </div>
     </section><!-- /sustainability Section -->
 
     <!-- Results section -->
@@ -2381,7 +2393,7 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>

@@ -1086,6 +1086,14 @@ section,
   background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
 }
 
+.workflow-scroll-box a {
+  color: var(--heading-color);
+}
+
+.workflow-scroll-box a:hover {
+  color: var(--nav-dropdown-hover-color);
+}
+
 .graph-box {
   height: 600px;
   width: 100%;
