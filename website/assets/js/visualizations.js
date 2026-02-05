@@ -133,11 +133,9 @@ function initCapacityChart () {
                     // --- LEGEND SETTINGS ---
                     showlegend: true,
                     legend: {
-                        orientation: 'h', // Horizontal
+                        orientation: 'h',
                         yanchor: 'bottom',
-                        y: -0.3,         // Position it below the x-axis
-                        // xanchor: 'center',
-                        // x: 0.5,
+                        y: -0.3,
                         font: { color: theme.text }
                     },
                     // -----------------------
@@ -175,7 +173,6 @@ function initLegislativeChart () {
           })
 
           .then(csvText => {
-                // Ignores commas inside double quotes
                 const parseCSVLine = (line) => {
                     const result = [];
                     let cur = '';
@@ -208,7 +205,6 @@ function initLegislativeChart () {
                 };
 
                 // --- COLOR MAPPING FOR PERIODS ---
-                // Since we don't have getRowColors() like in Knime, we define a map here
                 const periodColorMap = {
                     "Mercato deregolamentato": theme.teal,
                     "Istituzionalizzazione locazioni brevi": theme.golden,
@@ -288,8 +284,6 @@ function initLegislativeChart () {
                     }
                 });
 
-                console.log("Shapes generated:", shapes.length); // Check this in F12
-
                 const layout = {
                     title: { text: 'Legislative Impact', font: { color: theme.heading, size: 20 } },
                     paper_bgcolor: 'rgba(0,0,0,0)',
@@ -299,8 +293,8 @@ function initLegislativeChart () {
                     // --- LEGEND SETTINGS ---
                     showlegend: true,
                     legend: {
-                        orientation: 'h', // Horizontal
-                        y: -0.3,         // Position it below the x-axis
+                        orientation: 'h',
+                        y: -0.3,
                         xanchor: 'center',
                         x: 0.5,
                         font: { color: theme.text }
@@ -313,7 +307,6 @@ function initLegislativeChart () {
                       dtick: 1
                     },
                     yaxis: {
-                      // title: "Arrival Density (per structure)",
                       title: {
                         text: "Arrival Density (per structure)",
                         standoff: 15,
@@ -492,13 +485,8 @@ function initSensitivityScatterPlot() {
                     }, {});
                 });
 
-                console.log("Row keys:", Object.keys(rows[0]));
-
-
-                // Robust Number Cleaner
                 const clean = (val) => {
                     if (val === undefined || val === null || val === "") return 0;
-                    // Replace European comma and remove anything that isn't a number, dot, or minus sign
                     let n = parseFloat(val.toString().replace(',', '.').replace(/[^\d.-]/g, ''));
                     return isNaN(n) ? 0 : n;
                 };
@@ -506,11 +494,6 @@ function initSensitivityScatterPlot() {
                 const regions = rows.map(r => r['regione']);
                 const xSens = rows.map(r => clean(r[normalize('indice di sensibilità')]));
                 const yGrowth = rows.map(r => clean(r[normalize('delta percentuale decennale')]));
-
-                // Debugging: Check if the numbers are actually coming through
-                console.log("X values (Sensitivity):", xSens);
-                console.log("Y values (Growth):", yGrowth);
-                console.log("Parsed headers:", headers);
 
                 // Generate colors dynamically since we don't have Knime RowColors
                 const regionColors = regions.map((_, i) => {
@@ -626,23 +609,6 @@ const map = L.map('map', {
     maxBoundsViscosity: 1.0 // Makes the edges "hard" so you can't pull past them
 });
 
-// General map
-// const map = L.map('map', {
-//     center: [41.8719, 12.5674],
-//     zoom: 6,
-//     minZoom: 5,
-//     maxZoom: 10
-// });
-
-// Using CartoDB Positron (OSM-based) for a clean, professional look
-// (defualt)
-// L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-//     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-//     subdomains: 'abcd',
-//     maxZoom: 20
-// }).addTo(map);
-
-// (try 1)
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
     subdomains: 'abcd',
@@ -651,7 +617,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}', {
 
 let geoData, csvData, geoLayer;
 
-//Color Function (Dark Red #771710 for high values)
+// Color Function (Dark Red #771710 for high values)
 function getColor(d) {
     return d > 20  ? '#771710' :
            d > 10  ? '#9A2D24' :
@@ -660,7 +626,7 @@ function getColor(d) {
                      '#F3B1AD';
 }
 
-// 2. Mapping Object (Ensure these keys match your GeoJSON properties exactly)
+// Mapping Object (Ensure these keys match your GeoJSON properties exactly)
 const regionMapper = {
     "Valle d'Aosta/Vallée d'Aoste": "VALLE D'AOSTA",
     "Trentino-Alto Adige/Südtirol": "TRENTINO ALTO ADIGE",
@@ -669,15 +635,12 @@ const regionMapper = {
 };
 
 
-// 6. Initialization
+// Initialization
 async function initItalyMap() {
     try {
         // FETCH LOCAL FILES
         geoData = await d3.json("assets/datasets/limits_IT_regions.geojson");
         csvData = await d3.csv("assets/datasets/D1_student_composition.csv");
-
-        // DEBUG
-        console.table(Object.keys(csvData[0]));
 
         const yearSelect = document.getElementById("yearSelect");
         const years = [...new Set(csvData.map(d => d.AnnoA))].sort().reverse();
@@ -689,10 +652,10 @@ async function initItalyMap() {
             yearSelect.appendChild(opt);
         });
 
-        // ACTION: Call updateMap for the first time to show the first year
+        // Call updateMap for the first time to show the first year
         updateMap(years[0]);
 
-        // LISTEN: Update map whenever the user changes the year
+        // Update map whenever the user changes the year
         yearSelect.addEventListener("change", (e) => updateMap(e.target.value));
 
     } catch (err) {
@@ -708,7 +671,6 @@ function updateMap(selectedYear) {
 
     geoLayer = L.geoJson(geoData, {
         style: (feature) => {
-            // Use the key found in your downloaded GeoJSON (e.g., 'reg_name')
             const geoName = feature.properties.reg_name || feature.properties.name;
             const csvCol = (regionMapper[geoName] || geoName).toUpperCase().trim();
             const val = parseFloat(yearRow[csvCol]) || 0;
@@ -757,7 +719,6 @@ function updateMap(selectedYear) {
     }).addTo(map);
 }
 
-// 7. Legend (Uses your specific CSS classes)
 const legend = L.control({position: 'bottomright'});
 legend.onAdd = function (map) {
     const div = L.DomUtil.create('div', 'legend legend-container');
@@ -773,7 +734,7 @@ legend.onAdd = function (map) {
 legend.addTo(map);
 
 
-// Change '#yourCarouselId' to the ID of your actual carousel
+// Carousel Resize Handler
 document.getElementById('workflowCarousel').addEventListener('slide.bs.carousel', function () {
     // This finds all Plotly graphs on the page and tells them to resize to their containers
     const plotlyPlots = document.querySelectorAll('.js-plotly-plot');
@@ -784,7 +745,6 @@ document.getElementById('workflowCarousel').addEventListener('slide.bs.carousel'
 
 
 // --- INITIALIZE ALL CHARTS ---
-// This part should be at the very bottom of your file
 document.addEventListener('DOMContentLoaded', () => {
     initGrowthChart();
     initCapacityChart();
