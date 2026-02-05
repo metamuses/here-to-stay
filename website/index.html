@@ -29,6 +29,8 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
   <!-- =======================================================
   * Template Name: Scaffold
   * Template URL: https://bootstrapmade.com/scaffold-bootstrap-metro-style-template/
@@ -2003,9 +2005,7 @@
                   </div>
                 </div>
                 <div class="col-lg-6">
-                  <div id="graph-container-1" class="graph-box">
-
-                  </div>
+                  <div id="line-plot1" class="viz-box"></div> <!-- CHART 1: ISTAT vs Open Data Growth Comparison (MD1) -->
                 </div>
 
               </div>
@@ -2027,7 +2027,7 @@
 
                 <!-- graph -->
                 <div class="col-lg-6">
-                  <div id="graph-container-1" class="graph-box">
+                  <div id="line-plot2" class="viz-box"> <!-- CHART 2: Per-establishment Tourism Load in Bologna (MD2) -->
 
                   </div>
                 </div>
@@ -2056,7 +2056,7 @@
 
                 <!-- graph -->
                 <div class="col-lg-6">
-                  <div id="graph-container-1" class="graph-box">
+                  <div id="line-plot3" class="viz-box"> <!-- CHART 3: Legislative impact (MD3) -->
 
                   </div>
                 </div>
@@ -2080,7 +2080,7 @@
 
                 <!-- graph -->
                 <div class="col-lg-6">
-                  <div id="graph-container-1" class="graph-box">
+                  <div id="line-plot4" class="viz-box"> <!-- --- CHART 4: Price vs. Facilities Growth Rate (MD4) -->
 
                   </div>
                 </div>
@@ -2094,6 +2094,7 @@
                 <div class="col-lg-6">
                   <div class="workflow-scroll-box">
                     <p>
+
                       Lastly, the study examined the effects of touristification on <strong style="color: #771710">students</strong>, focusing on housing affordability. The objective was to determine whether this demographic segment is particularly vulnerable to or affected by the rising costs associated with the growth of short-term rentals. D6 was analysed for this matter: the dataset comes from MUR and describes student enrollment by province of residence and degree program for all Italian universities, from A.Y. 2010/2011 to A.Y. 2024/2025.
                       <br>
                       First, the team filtered the dataset to be left only with information regarding the University of Bologna. Then, students from different programs enrolled in the same academic year were summed together and the same was done from students coming from the same region; this was done to avoid singling out individuals in cases where very few students from a specific province were enrolled in a given course. The next step consisted in filtering out the years not included in the range of interest.
@@ -2105,17 +2106,46 @@
                   </div>
                 </div>
 
+                <!-- Leaflet map -->
+                <div class="col-lg-6">
+                    <div class="map-wrapper">
+                        <div class="map-controls">
+                            <h3>University Enrollment by Year</h3>
+                            <div class="custom-select">
+                                <label>Academic Year: </label>
+                                <select id="yearSelect">
+                                </select>
+                            </div>
+                        </div>
+
+                        <div id="map"></div>
+                    </div>
+                </div>
+              </div>
+            </div> <!-- /visualization 5 -->
+
+            <!-- visualization 6 -->
+            <div class="carousel-item">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div class="workflow-scroll-box">
+                    <p>
+
+
+                    </p>
+                  </div>
+                </div>
+
                 <!-- graph -->
                 <div class="col-lg-6">
-                  <div id="graph-container-1" class="graph-box">
-
+                  <div id="sensitivity-plot" class="viz-box"> <!-- CHART 6: Price Sensitivity vs. Enrollment Growth (2014-2024) -->
                   </div>
                 </div>
 
               </div>
-            </div><!-- /visualization 5 -->
+            </div><!-- /visualization 6 -->
 
-            <!-- visualization 6 -->
+            <!-- visualization 7 -->
             <div class="carousel-item">
               <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -2128,14 +2158,13 @@
 
                 <!-- graph -->
                 <div class="col-lg-6">
-                  <div id="graph-container-1" class="graph-box">
+                  <div id="" class="">
 
                   </div>
                 </div>
 
               </div>
-            </div><!-- /visualization 6 -->
-
+            </div><!-- /visualization 7 -->
           </div>
 
         </div>
@@ -2346,6 +2375,10 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="assets/js/visualizations.js" defer></script>
 
 </body>
 
