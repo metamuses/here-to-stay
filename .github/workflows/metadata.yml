@@ -1,4 +1,4 @@
-name: turtle
+name: metadata
 
 on:
   push:

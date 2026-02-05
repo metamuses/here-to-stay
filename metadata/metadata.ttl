@@ -12,7 +12,7 @@ hts:CATALOG_HERE_TO_STAY a dcatapit:Catalog,
     dcat:Catalog ;
   dcterms:title "Here To Stay - Catalogo dei datasets per OADE"@it ;
   dcterms:title "Here To Stay - OADE Datasets Catalog"@en ;
-  dcterms:description "Catalog of all the datasets used for the project Here To Stay created for Open Access and Digital Ethics 2025/26 course"@en ;
+  dcterms:description "Catalog of all the datasets used for the project Here To Stay created for Open Access and Digital Ethics 2025/26 course."@en ;
   dcterms:publisher <https://github.com/metamuses> ;
   dcterms:modified "2026-02-05"^^xsd:date ;
   dcterms:issued "2026-02-05"^^xsd:date ;
@@ -93,8 +93,8 @@ hts:D2_ACCOMMODATIONS_CAPACITY_SERIES a dcatapit:Dataset,
   dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
   dcterms:temporal [
     a dcterms:PeriodOfTime ;
-    dcat:startDate "2014-01-01"^^xsd:date ;
-    dcat:endDate "2024-12-31"^^xsd:date
+    dcatapit:startDate "2014-01-01"^^xsd:date ;
+    dcatapit:endDate "2024-12-31"^^xsd:date
   ] ;
   dcat:distribution hts:D2_ACCOMMODATIONS_CAPACITY_SERIES_DISTRIBUTION .
 
@@ -139,8 +139,8 @@ hts:D3_TOURIST_FLOW_SERIES a dcatapit:Dataset,
   dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
   dcterms:temporal [
     a dcterms:PeriodOfTime ;
-    dcat:startDate "2014-01-01"^^xsd:date ;
-    dcat:endDate "2024-12-31"^^xsd:date
+    dcatapit:startDate "2014-01-01"^^xsd:date ;
+    dcatapit:endDate "2024-12-31"^^xsd:date
   ] ;
   dcat:distribution hts:D3_TOURIST_FLOW_SERIES_DISTRIBUTION .
 
