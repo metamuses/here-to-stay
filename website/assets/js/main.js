@@ -216,7 +216,7 @@
    */
   const ttlDisplay = document.querySelector('#ttl-display');
   if (ttlDisplay) {
-    fetch("assets/data/your-file.ttl") 
+    fetch("assets/data/your-file.ttl")
       .then(response => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -239,7 +239,7 @@
     tabLinks.forEach(link => {
       link.addEventListener('click', function(e) {
         const targetId = this.getAttribute('data-tab-target');
-        
+
         const tabTrigger = document.querySelector(`.analyses .nav-tabs .nav-link[data-bs-target="${targetId}"]`);
 
         if (tabTrigger) {
@@ -248,7 +248,7 @@
 
           const section = document.querySelector('#analyses');
           if (section) {
-            const headerOffset = 60; 
+            const headerOffset = 60;
             const elementPosition = section.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -263,12 +263,52 @@
   });
 
 
+  // KNIME workflow
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".knime-zoom-container").forEach(function (container) {
+      const img = container.querySelector(".knime-zoom-img");
+
+      let scale = 1;
+      let pos = { x: 0, y: 0 };
+      let start = { x: 0, y: 0 };
+      let isDragging = false;
+
+      container.addEventListener("wheel", function (e) {
+        e.preventDefault();
+        const delta = e.deltaY > 0 ? -0.1 : 0.1;
+        scale = Math.min(Math.max(1, scale + delta), 5);
+        updateTransform();
+      });
+
+      container.addEventListener("mousedown", function (e) {
+        isDragging = true;
+        start = { x: e.clientX - pos.x, y: e.clientY - pos.y };
+        container.style.cursor = "grabbing";
+      });
+
+      window.addEventListener("mouseup", function () {
+        isDragging = false;
+        container.style.cursor = "grab";
+      });
+
+      window.addEventListener("mousemove", function (e) {
+        if (!isDragging) return;
+        pos = { x: e.clientX - start.x, y: e.clientY - start.y };
+        updateTransform();
+      });
+
+      function updateTransform() {
+        img.style.transform = `translate(${pos.x}px, ${pos.y}px) scale(${scale})`;
+      }
+    });
+  });
+
   // WORKFLOW CAROUSEL
   const myCarousel = document.getElementById('workflowCarousel');
 
   myCarousel.addEventListener('slid.bs.carousel', event => {
     const activeSlide = event.relatedTarget;
-    
+
     console.log("Slide changed! Now showing:", activeSlide);
   });
 
