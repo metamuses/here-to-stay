@@ -18,13 +18,14 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #E5D2CC; /* Background color for the entire website, including individual sections */
   --default-color: #221D3F; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #771710 ; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #221D3F ; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #C9A12D ; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #82B5AE ; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --orange-color: #c46a2e; /* Additional color for visualizations */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -105,10 +106,8 @@ h6 {
   font-family: var(--heading-font);
 }
 
-p {
-  text-wrap: pretty;
-  hyphens: auto;
-  text-align: justify;
+code {
+  color: var(--nav-dropdown-hover-color);
 }
 
 /*--------------------------------------------------------------
@@ -538,7 +537,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 40px 0;
   scroll-margin-top: 90px;
   overflow: clip;
 }
@@ -556,7 +555,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
   position: relative;
 }
 
@@ -566,6 +565,7 @@ section,
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
+  text-transform: uppercase;
 }
 
 .section-title h2:after {
@@ -583,13 +583,29 @@ section,
 
 .section-title p {
   margin-bottom: 0;
+  text-wrap: pretty;
+  hyphens: auto;
+  text-align: justify;
+  padding-right: 12%;
+  padding-left: 12%;
+  margin-inline: auto;
+  font-size: 1.1rem;
 }
+
+.section-title a {
+  color: var(--heading-color);
+}
+
+.section-title a:hover {
+  color: var(--nav-hover-color);
+}
+
 
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
               url(../img/hero-bg.jpg) right center no-repeat;
   background-size: cover;
   width: 100%;
@@ -651,6 +667,7 @@ section,
 .project .content p {
   margin: 15px 0 30px 0;
   line-height: 24px;
+  font-size: 1.1rem;
 }
 
 .project .section-title {
@@ -700,7 +717,7 @@ section,
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 100%; 
+  width: 100%;
   height: 100%;
 }
 
@@ -760,8 +777,12 @@ section,
   min-width: 80px;
 }
 
-.datasets .dataset-item ul a:hover {
+.datasets .dataset-item a {
   color: var(--heading-color);
+}
+
+.datasets .dataset-item ul a:hover {
+  color: var(--accent-color);
 }
 
 .datasets .dataset-item:hover {
@@ -780,6 +801,7 @@ section,
 .analyses .nav-tabs {
   border: 0;
 }
+
 
 .analyses .nav-link {
   color: var(--heading-color);
@@ -1068,6 +1090,14 @@ section,
   list-style-type: circle;
 }
 
+.technical-analysis a {
+  color: var(--heading-color);
+}
+
+.technical-analysis a:hover {
+  color: var(--nav-hover-color);
+}
+
 .technical-analysis .accordion-button:not(.collapsed) {
   color: var(--heading-color);
   background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
@@ -1079,6 +1109,43 @@ section,
 /*--------------------------------------------------------------
  # Workflow Section
 --------------------------------------------------------------*/
+.knime-zoom-container {
+  width: 100%;
+  max-width: 1000px;
+  height: 80vh;
+  margin: 0 auto;
+  background-color: #f6f8fa;
+  overflow: hidden;
+  position: relative;
+  cursor: zoom-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.knime-zoom-img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  object-fit: contain;
+  transition: none;
+  transform-origin: center center;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+}
+
+.knime-zoom-container:active {
+  cursor: zoom-in;
+}
+
+/* Adjust layout for phones */
+@media (max-width: 600px) {
+  .knime-zoom-container {
+    padding: 1rem;
+  }
+}
+
 .workflow-scroll-box {
   height: 600px;
   overflow-y: auto;
@@ -1116,7 +1183,7 @@ section,
 }
 
 .carousel-control-prev.arrow-btn {
-  left: -80px; 
+  left: -80px;
 }
 
 .carousel-control-next.arrow-btn {
@@ -1139,7 +1206,6 @@ section,
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23C9A12D'%3e%3cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
-
 @media (max-width: 780px) {
 
   #workflowCarousel {
@@ -1153,13 +1219,13 @@ section,
   }
 
   .carousel-control-prev.arrow-btn {
-      left: calc(50% - 50px); 
+      left: calc(50% - 50px);
   }
 
-  
+
   .carousel-control-next.arrow-btn {
       right: auto;
-      left: calc(50% + 10px); 
+      left: calc(50% + 10px);
   }
 }
 
@@ -1183,96 +1249,15 @@ section,
 /*--------------------------------------------------------------
 # Results Section
 --------------------------------------------------------------*/
-.results .results-container .results-item {
-  background-color: color-mix(in srgb, var(--default-color), transparent 96%);
-  position: relative;
-  padding: 20px;
-  margin-bottom: 20px;
-  overflow: hidden;
-  transition: 0.3s;
-}
-
-.results .results-container .results-item:last-child {
+.results .results-container {
   margin-bottom: 0;
-}
-
-.results .results-container .results-item h3 {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 24px;
-  margin: 0 30px 0 32px;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.results .results-container .results-item h3 span {
-  color: var(--accent-color);
-  padding-right: 5px;
-}
-
-.results .results-container .results-item h3:hover {
-  color: var(--accent-color);
-}
-
-.results .results-container .results-item .results-content {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: 0.3s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.results .results-container .results-item .results-content p {
-  margin-bottom: 0;
-  overflow: hidden;
-}
-
-.results .results-container .results-item .results-icon {
-  position: absolute;
-  top: 22px;
-  left: 20px;
-  font-size: 20px;
-  line-height: 0;
-  transition: 0.3s;
-  color: var(--accent-color);
-}
-
-.results .results-container .results-item .results-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 16px;
-  line-height: 0;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.results .results-container .results-item .results-toggle:hover {
-  color: var(--accent-color);
-}
-
-.results .results-container .results-active {
-  background-color: var(--accent-color);
-  transition: 0.3s;
-}
-
-.results .results-container .results-active h3,
-.results .results-container .results-active h3:hover,
-.results .results-container .results-active .results-toggle,
-.results .results-container .results-active .results-icon,
-.results .results-container .results-active .results-content {
-  color: var(--contrast-color);
-}
-
-.results .results-container .results-active .results-content {
-  grid-template-rows: 1fr;
-  visibility: visible;
-  opacity: 1;
-  padding-top: 10px;
-}
-
-.results .results-container .results-active .results-toggle {
-  transform: rotate(90deg);
+  text-wrap: pretty;
+  hyphens: auto;
+  text-align: justify;
+  padding-right: 15%;
+  padding-left: 15%;
+  margin-inline: auto;
+  font-size: 1.1rem;
 }
 
 /*--------------------------------------------------------------
@@ -1314,7 +1299,6 @@ section,
 
 /* --- Icon Styling --- */
 
-
 .team .member .member-info {
   padding-top: 10px;
 }
@@ -1324,4 +1308,126 @@ section,
   margin-bottom: 10px;
   font-size: 18px;
   color: var(--heading-color);
+}
+
+.licenses a {
+  color: var(--heading-color);
+}
+
+.licenses a:hover {
+  color: var(--nav-dropdown-hover-color);
+}
+
+.licenses .section-title {
+  padding-bottom: 0;
+}
+
+/* ------ Visualizations ----- */
+
+.viz-box {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+  height: 600px;
+  width: 100%;
+}
+
+/* Leaflet Map */
+#map {
+    background-color: color-mix(in srgb, var(--accent-color), transparent 95%); /* Or #ffffff if you want a clean white void */
+    outline: none;
+}
+
+/* Ensure the map doesn't show tiles outside the bounds if they haven't loaded */
+.leaflet-container {
+    background: color-mix(in srgb, var(--accent-color), transparent 95%) !important;
+}
+.map-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack controls on top of map */
+    height: 600px;         /* The total height of your box */
+    border: 1px solid #ddd;
+    overflow: hidden;      /* Keeps everything clean */
+}
+
+.map-controls {
+    flex: 0 1 auto;        /* Don't grow, but shrink if needed */
+    padding: 10px 15px;
+    text-align: center;
+    background: color-mix(in srgb, var(--accent-color), transparent 95%);
+    border-bottom: 2px solid #771710;
+    font-family: var(--default-font);
+    /* Remove margin-bottom to avoid gaps inside the flex box */
+    margin-bottom: 0;
+}
+
+.custom-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;          /* Space between label and select */
+    font-size: 0.85rem; /* Smaller text */
+}
+
+.custom-select select {
+    background-color: color-mix(in srgb, var(--accent-color), transparent 30% );
+    color: var(--background-color);
+    padding: 2px 5px;
+    border-radius: 4px;
+    border: 1px solid var(--accent-color);
+    outline: none;
+}
+
+#yearSelect {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid var(--accent-color);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#map {
+    flex: 1;               /* Tells the map to take up ALL remaining space */
+    width: 100%;
+}
+
+.legend {
+    background: color-mix(in srgb, var(--accent-color), transparent 30% );
+    padding: 10px;
+    line-height: 18px;
+    color: var(--background-color);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* Your specific CSS */
+.legend-container div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: var(--background-color);
+}
+
+.legend-container i {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    opacity: 0.7;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+/* Container for the tooltip */
+.leaflet-tooltip.custom-tooltip {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid var(--heading-color);
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    font-family: var(--default-font);
+    color: #333;
+}
+
+/* Remove the default tooltip arrow */
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+    display: none;
 }

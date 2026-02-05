@@ -15,8 +15,6 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -28,6 +26,8 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
   <!-- =======================================================
   * Template Name: Scaffold
@@ -228,7 +228,7 @@
                   <li>National and regional legislations on tourist rentals</li>
                   <li><strong>Source:</strong> <a href="https://www.normattiva.it/" target="_blank">Normattiva</a></li>
                   <li><strong>Format:</strong> .csv</li>
-                  <li><strong>URL:</strong> <a href="https://github.com/metamuses/here-to-stay/blob/main/datasets/legislations.csv" target="_blank">D4</a></li>
+                  <li><strong>URL:</strong> <a href="https://github.com/metamuses/here-to-stay/blob/main/datasets/original/legislations.csv" target="_blank">D4</a></li>
                   <li><strong>License:</strong> CC-BY 4.0</li>
                 </ul>
               </div>
@@ -275,7 +275,7 @@
                   <li>Comparison between ISTAT and municipal Open Data on accommodation establishments in Bologna</li>
                   <li><strong>Source:</strong> D1, D2</li>
                   <li><strong>Format:</strong> .csv</li>
-                  <li><strong>URL:</strong> <a href="https://github.com/metamuses/here-to-stay/blob/main/datasets/mashup/istat_opendata_ACCOMMODATIONS.csv" target="_blank">MD1</a></li>
+                  <li><strong>URL:</strong> <a href="https://github.com/metamuses/here-to-stay/blob/main/datasets/mashup/istat_opendata_accommodations.csv" target="_blank">MD1</a></li>
                   <li><strong>License:</strong> CC-BY 4.0</li>
                 </ul>
               </div>
@@ -373,6 +373,10 @@
 
     <!-- Analyses Section -->
     <section id="analyses" class="analyses section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Datasets Analyses</h2>
+      </div><!-- End Section Title -->
       <div class="container">
         <ul class="nav nav-tabs row  g-2 d-flex" data-aos="fade-up" data-aos-delay="100">
           <li class="nav-item col-3">
@@ -713,6 +717,7 @@
                   <br>
                   Regarding Dataset D4, compiled by the team for the sake of the project using the legislations included on the <a href="https://dati.normattiva.it/home" target="_blank">Normattiva</a> Open Data portal, the analysis was conducted with a dual focus: the dataset itself was assessed as a proprietary derivative, while questions regarding the platform infrastructure were answered in reference to the Normattiva portal, since the current webpage is only a report of the analysis conducted on the basis of open data and cannot be considered an open data portal. The ‘not applicable’ answers in this regard are justified by the fact that the dataset is not published on an open data portal and therefore is not updated nor indexable like usual open datasets.
                 </p>
+
                 <!-- Legal Accordion -->
                 <div class="accordion">
 
@@ -1485,17 +1490,17 @@
                         <tbody>
                           <tr>
                             <th scope="row">Title</th>
-                            <td>Here to Stay - OADE Datasets Catalog</td>
+                            <td>Here To Stay - OADE Datasets Catalog</td>
                           </tr>
                           <tr>
                             <th scope="row">Description</th>
-                            <td>A curated collection of metadata about the datasets for the project Here to Stay.</td>
+                            <td>A curated collection of metadata about the datasets for the project Here To Stay.</td>
                           </tr><tr>
                             <th scope="row">Publisher</th>
                             <td><a href="https://github.com/metamuses" target="_blank">MetaMuses</a></td>
                           </tr><tr>
                             <th scope="row">Homepage</th>
-                            <td><a href="https://metamuses.github.io/here-to-stay" target="_blank">Here to Stay</a></td>
+                            <td><a href="https://metamuses.github.io/here-to-stay" target="_blank">Here To Stay</a></td>
                           </tr><tr>
                             <th scope="row">Issued</th>
                             <td>05/02/2026</td>
@@ -1576,7 +1581,7 @@
                             <td><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></td>
                             <td>XLSX</td>
                             <td><a href="https://esploradati.istat.it/databrowser/#/it/dw/categories/IT1,Z0700SER,1.0/SER_TOURISM/SER_TOURISM_RELATED_FILES" target="_blank">IstatData</a></td>
-                            <td><a href="https://github.com/metamuses/here-to-stay/tree/main/datasets/istat/facilities" target="_blank">GitHub</a></td>
+                            <td><a href="https://github.com/metamuses/here-to-stay/tree/main/datasets/original/istat/facilities" target="_blank">GitHub</a></td>
                             <td><a href="https://github.com/metamuses/here-to-stay/blob/main/metadata/metadata.ttl" target="_blank">hts:D1_ACCOMMODATIONS_BOLOGNA</a></td>
                           </tr>
                           <tr>
@@ -1592,7 +1597,7 @@
                             <td><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></td>
                             <td>XLSX</td>
                             <td><a href="https://esploradati.istat.it/databrowser/#/it/dw/categories/IT1,Z0700SER,1.0/SER_TOURISM/SER_TOURISM_RELATED_FILES" target="_blank">IstatData</a></td>
-                            <td><a href="https://github.com/metamuses/here-to-stay/tree/main/datasets/istat/facilities" target="_blank">GitHub</a></td>
+                            <td><a href="https://github.com/metamuses/here-to-stay/tree/main/datasets/original/istat/facilities" target="_blank">GitHub</a></td>
                             <td><a href="https://github.com/metamuses/here-to-stay/blob/main/metadata/metadata.ttl" target="_blank">hts:D3_TOURIST_FLOW</a></td>
                           </tr>
                           <tr>
@@ -1797,16 +1802,16 @@
                 <p>
                   All original datasets were re-metadated by us in a strictly DCAT-AP_IT-compliant form so they can be treated as compliant within a single corpus.
                   <br>
-                  Concretely, we extracted (or, when necessary, inferred) the values for the mandatory elements (dcterms:identifier, dcterms:title, dcterms:description, dcterms:modified, dcat:theme, dcterms:rightsHolder, dcterms:accrualPeriodicity, and dcat:distribution) using the dcterms and dcat vocabularies, and we populated them consistently across the catalog.
+                  Concretely, we extracted (or, when necessary, inferred) the values for the mandatory elements (<code>dcterms:identifier</code>, <code>dcterms:title</code>, <code>dcterms:description</code>, <code>dcterms:modified</code>, <code>dcat:theme</code>, <code>dcterms:rightsHolder</code>, <code>dcterms:accrualPeriodicity</code>, and <code>dcat:distribution</code>) using the <code>dcterms</code> and <code>dcat</code> vocabularies, and we populated them consistently across the catalog.
                   <br>
-                  We also implemented the required separation between dataset and distribution by modeling each distribution with its required fields (notably dcterms:format, dcterms:license, and dcat:accessURL), and we explicitly represented our own file conversions and segmentations when producing new distributions; where relevant, we captured temporal and spatial framing (e.g., dcterms:temporal and dcterms:spatial) to reflect annualized series or geographically scoped extractions.
+                  We also implemented the required separation between dataset and distribution by modeling each distribution with its required fields (notably <code>dcterms:format</code>, <code>dcterms:license</code>, and <code>dcat:accessURL</code>), and we explicitly represented our own file conversions and segmentations when producing new distributions; where relevant, we captured temporal and spatial framing (e.g., <code>dcterms:temporal</code> and <code>dcterms:spatial</code>) to reflect annualized series or geographically scoped extractions.
                 </p>
 
                 <h6>Mashup datasets</h6>
                 <p>
                   All mashup datasets were metadated coherently under DCAT-AP_IT from the beginning, so that even the datasets created “inside” the project are described with the same up-to-date national standard used for public-sector catalogs in Italy, and can therefore be interpreted in the same way as the original sources in terms of Dataset/Distribution separation, access points, formats, licenses, themes and agents. In addition, we made provenance explicit by linking each mashup dataset to its originating dataset(s) using the W3C <a href="https://www.w3.org/TR/prov-o/" target="_blank">PROV</a> ontology, a standard vocabulary specifically designed to represent and interchange provenance information, i.e. who/what generated a resource, from which inputs, through which transformations, so that readers can reconstruct the genealogy of each derived table.
                   <br>
-                  We used in particular prov:wasDerivedFrom to state derivation relationships, and we set ourselves as dcterms:publisher for the newly produced outputs: this cross-referencing within metadata matters because it makes data-driven conclusions auditable, supports reuse without guesswork, and lets downstream users assess trust, scope, and limitations by immediately seeing which source(s) each mashup depends on.
+                  We used in particular <code>prov:wasDerivedFrom</code> to state derivation relationships, and we set ourselves as <code>dcterms:publisher</code> for the newly produced outputs: this cross-referencing within metadata matters because it makes data-driven conclusions auditable, supports reuse without guesswork, and lets downstream users assess trust, scope, and limitations by immediately seeing which source(s) each mashup depends on.
                 </p>
 
                 <h3 class="analysis-second-title">FAIR principles</h3>
@@ -1967,7 +1972,18 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Workflow</h2>
+        <p>
+          The original datasets were processed using KNIME platform. The process included data cleansing, handling missing values, and eliminating unnecessary fields for the purposes of the analysis, as well as combining multiple data sources to create the final mashup datasets.
+          <br>
+          The image below allows navigation through the workflow, while the full KNIME workflow can be downloaded <a href="https://github.com/metamuses/here-to-stay/tree/main/knime" target="_blank">here</a>.
+        </p>
       </div>
+
+      <div class="knime-zoom-container mb-5">
+          <img class="knime-zoom-img" src="assets/img/workflow.svg" alt="KNIME workflow">
+      </div>
+
+
       <div class="container px-5">
         <div id="workflowCarousel" class="carousel slide" data-bs-interval="false">
           <button class="carousel-control-prev arrow-btn" type="button" data-bs-target="#workflowCarousel" data-bs-slide="prev">
@@ -1979,7 +1995,7 @@
             <span class="visually-hidden">Next</span>
           </button>
 
-          <div class="carousel-inner">   
+          <div class="carousel-inner">
             <!-- visualization 1 -->
             <div class="carousel-item active">
               <div class="row align-items-center">
@@ -1990,18 +2006,16 @@
                       <br>
                       The team started the <strong>Knime workflow</strong> by analysing D1, published by <u>Open Data Bologna</u>: the dataset was a list of all tourist accommodations opened (and potentially closed) between 1982 and 2025, with the address and type of facility specified. The data minimization in this case consisted in the removal of all geospatial information (address and coordinates) and the dataset was subsequently filtered to leave out only the facilities that were open in the time span we considered. By counting the facilities annually, we observed that their number in 2024 was over five times higher than in 2014.
                       <br>
-                      We then proceeded to compare these results with D2, coming from <u>Istat</u>: this dataset has the same focus as D1, as it counts the number of different types of accommodations for each city in Italy. It is organized in a folder of 11 files for the 11 years included in our time span, since on the Istat websites the files are divided per year and all held in a zip available for download. Considering that the Istat dataset is comprehensive of information about all italian cities, we filtered it to only focus on Bologna. As the dataset already had the total number of facilities per city per year, it was easy to visualize the rise in the number among the different years. Nevertheless, the values regarding the accommodations from the Istat dataset were far below the ones from Open Data Bologna. This discrepancy likely arises because the Bolognese Open Data portal logs all locally registered entities, whereas Istat tends to exclude facilities that are active but report zero occupancy. Moreover, the Istat dataset focuses on hotel establishments, hence it may not be considering short-term rentals, such as those offered by <a href="https://www.airbnb.it/" target="_blank">AirBnB</a>, <a href="https://www.booking.com/index.it.html?label=it-it-booking-desktop-new-VRZD0IC5lt9Ulq*ajTZ_bgS652828999642%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp1008141%3Ali%3Adec%3Adm&gclid=Cj0KCQiA-YvMBhDtARIsAHZuUzKNGVBk3pT9UZM7UO8ri2t0K7Z_tYCAoK0_3YL2bgfxbi8mxZUC5N0aAmrCEALw_wcB&aid=2311236&ws=&gad_source=1&gad_campaignid=19655506920&gbraid=0AAAAAD_Ls1LB9k1C_t9xNhhH4wfi_UPqH&chal_t=1770239430958&force_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank">Booking</a> or such platforms.
+                      We then proceeded to compare these results with D2, coming from <u>Istat</u>: this dataset has the same focus as D1, as it counts the number of different types of accommodations for each city in Italy. It is organized in a folder of 11 files for the 11 years included in our time span, since on the Istat websites the files are divided per year and all held in a zip available for download. Considering that the Istat dataset is comprehensive of information about all italian cities, we filtered it to only focus on Bologna. As the dataset already had the total number of facilities per city per year, it was easy to visualize the rise in the number among the different years. Nevertheless, the values regarding the accommodations from the Istat dataset were far below the ones from Open Data Bologna. This <strong>discrepancy</strong> likely arises because the Bolognese Open Data portal logs all locally registered entities, whereas Istat tends to exclude facilities that are active but report zero occupancy. Moreover, the Istat dataset focuses on hotel establishments, hence it may not be considering short-term rentals, such as those offered by <a href="https://www.airbnb.it/" target="_blank">AirBnB</a>, <a href="https://www.booking.com/index.it.html?label=it-it-booking-desktop-new-VRZD0IC5lt9Ulq*ajTZ_bgS652828999642%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp1008141%3Ali%3Adec%3Adm&gclid=Cj0KCQiA-YvMBhDtARIsAHZuUzKNGVBk3pT9UZM7UO8ri2t0K7Z_tYCAoK0_3YL2bgfxbi8mxZUC5N0aAmrCEALw_wcB&aid=2311236&ws=&gad_source=1&gad_campaignid=19655506920&gbraid=0AAAAAD_Ls1LB9k1C_t9xNhhH4wfi_UPqH&chal_t=1770239430958&force_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank">Booking</a> or such platforms.
                       <br>
-                      While the absolute numbers differed substantially, the upward trend remained still evident across both data sources. Therefore we decided to verify the correlation among the two datasets and understand if the growth rate was similar for the two among the years. This resulted in our first <strong>mashup dataset MD1</strong> and we visualized the comparison between the variations in percentages of growth of the two datasets. The figures did not line up perfectly but they were qualitatively aligned, showing a shared trajectory despite the numerical gap; this ensured that both sources were equally authoritative even if relying on diverse inclusion criteria for their counts. 
+                      While the absolute numbers differed substantially, the upward trend remained still evident across both data sources. Therefore we decided to verify the correlation among the two datasets and understand if the growth rate was similar for the two among the years. This resulted in our first <strong>mashup dataset MD1</strong> and we visualized the comparison between the variations in percentages of growth of the two datasets. The figures did not line up perfectly but they were qualitatively aligned, showing a <strong>shared trajectory</strong> despite the numerical gap; this ensured that both sources were equally authoritative even if relying on diverse inclusion criteria for their counts.
                     </p>
                   </div>
                 </div>
                 <div class="col-lg-6">
-                  <div id="graph-container-1" class="graph-box"> 
-
-                  </div>
+                  <div id="line-plot1" class="viz-box"></div> <!-- CHART 1: ISTAT vs Open Data Growth Comparison (MD1) -->
                 </div>
-                
+
               </div>
             </div><!-- /visualization 1 -->
 
@@ -2011,9 +2025,9 @@
                 <div class="col-lg-6">
                   <div class="workflow-scroll-box">
                     <p>
-                      The <strong style="color: #771710">second focus</strong> in our workflow aimed to assess whether the expansion of the accommodation sector was commensurate with the surge in tourist arrivals in Bologna. For this matter, we analyzed D3, another dataset coming from Istat and recording tourist flows - specifically arrivals and overnight stays - within accommodation establishments for every Italian municipality. In this instance as well, we extracted only the data pertaining to the municipality of Bologna and processed the dataset as to be left only with the total arrivals per year in the city. We chose to only take into consideration the arrivals to quantify the actual number of visitors, rather than the total nights spent. From the results we learnt that the tourist flow grew steadily until 2020, when a sharp decline was registered due to the pandemic; subsequently, figures rebounded significantly, reaching new peaks by 2024. 
+                      The <strong style="color: #771710">second focus</strong> in our workflow aimed to assess whether the expansion of the accommodation sector was commensurate with the surge in tourist arrivals in Bologna. For this matter, we analyzed D3, another dataset coming from Istat and recording tourist flows - specifically arrivals and overnight stays - within accommodation establishments for every Italian municipality. In this instance as well, we extracted only the data pertaining to the municipality of Bologna and processed the dataset as to be left only with the <strong>total arrivals per year</strong> in the city. We chose to only take into consideration the arrivals to quantify the actual number of visitors, rather than the total nights spent. From the results we learnt that the <strong>tourist flow grew steadily</strong> until 2020, when a sharp decline was registered due to the pandemic; subsequently, figures rebounded significantly, reaching new peaks by 2024.
                       <br>
-                      At this point in the analysis we compared the growth in the number of facilities with the increase in tourist arrivals, questioning whether the proliferation of these units was justified by a proportional influx of tourists, or if other market dynamics were at play. For this matter we selected D2 and D3 as source datasets, because both coming from Istat and drawing information from the same group of registered facilities. We calculated annual tourism carrying capacity in Bologna (densità di carico: total arrivals / total facilities) and visualized its decrease from 2014 to 2024, meaning that the supply of accommodations significantly exceeds the actual demand.
+                      At this point in the analysis we compared the growth in the number of facilities with the increase in tourist arrivals, questioning whether the proliferation of these units was justified by a proportional influx of tourists, or if other market dynamics were at play. For this matter we selected D2 and D3 as source datasets, because both coming from Istat and drawing information from the same group of registered facilities. We calculated annual tourism carrying capacity in Bologna (<i><strong>densità di carico</strong></i>: total arrivals / total facilities) and visualized its decrease from 2014 to 2024, meaning that the supply of accommodations significantly exceeds the actual demand.
                       The second mashup dataset (MD2) we created includes exactly the total arrivals and total facilities per year according to Istat and the calculated ratio between the two.
                     </p>
                   </div>
@@ -2021,13 +2035,13 @@
 
                 <!-- graph -->
                 <div class="col-lg-6">
-                  <div id="graph-container-1" class="graph-box"> 
+                  <div id="line-plot2" class="viz-box"> <!-- CHART 2: Per-establishment Tourism Load in Bologna (MD2) -->
 
                   </div>
                 </div>
-                
+
               </div>
-            </div><!-- /visualization 2 -->            
+            </div><!-- /visualization 2 -->
 
             <!-- visualization 3 -->
             <div class="carousel-item">
@@ -2035,70 +2049,87 @@
                 <div class="col-lg-6">
                   <div class="workflow-scroll-box">
                     <p>
-                      A <strong style="color: #771710">legal assessment</strong> of the regulatory framework associated with tourist short-term rentals was also conducted as part of this study. Due to the lack of a dataset tailored to the team’s need, we compiled one (D4) selecting the most relevant legislations for the matter, introduced quite recently to regulate the short-term rental market, characterized by significant regulatory gaps. For our analysis, we selected national laws from the Normattiva portal, identifying relevant legislation through a set of keywords closely aligned with the subject matter of the research. The laws made part of the dataset are the following:
+                      A <strong style="color: #771710">legal assessment</strong> of the regulatory framework associated with tourist short-term rentals was also conducted as part of this study. Due to the lack of a dataset tailored to the team’s need, we compiled one (D4) selecting the most relevant legislations for the matter, introduced quite recently to <strong>regulate the short-term rental market</strong>, characterized by significant regulatory gaps. For our analysis, we selected national laws from the Normattiva portal, identifying relevant legislation through a set of keywords closely aligned with the subject matter of the research. The laws made part of the dataset are the following:
                       <ul>
-                        <li>D. L. 50/2017: Introduced the tax regime for short-term rentals, defining the 21% flat-rate tax (cedolare secca).</li>
-                        <li>D. L 34/2019: Established the first national database for accommodation facilities and short-term rental properties, laying the groundwork for a standardized Identification Code system.</li>
-                        <li>D. L. 145/2023: Introduced the National Identification Code (CIN), mandating security standards and establishing a rigorous penalty system to combat unauthorized hospitality practices.</li>
-                        <li>D.L. 213/2023: Amended the taxation of short-term rentals by increasing the flat-rate tax from 21% to 26% for owners managing multiple rental units (from the second unit onwards).</li>
-                        <li>The Tourism Code (D.Lgs. 79/2011) already mentioned was also included for compliance. </li>
+                        <li><a href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2017-04-24;50" target="_blank">D. L. 50/2017</a>: Introduced the tax regime for short-term rentals, defining the 21% flat-rate tax (cedolare secca).</li>
+                        <li><a href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2019;34~art35" target="_blank">D. L 34/2019</a>: Established the first national database for accommodation facilities and short-term rental properties, laying the groundwork for a standardized Identification Code system.</li>
+                        <li><a href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2023-10-18;145~art21-com1" target="_blank">D. L. 145/2023</a>: Introduced the National Identification Code (CIN), mandating security standards and establishing a rigorous penalty system to combat unauthorized hospitality practices.</li>
+                        <li><a href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2023-12-30;213" target="_blank">D.L. 213/2023</a>: Amended the taxation of short-term rentals by increasing the flat-rate tax from 21% to 26% for owners managing multiple rental units (from the second unit onwards).</li>
+                        <li>The Tourism Code (<a href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2011-05-23;79" target="_blank">D.Lgs. 79/2011</a>) already mentioned was also included for compliance. </li>
                       </ul>
-                      The legislation was introduced in the data analysis to potentially visualize long-term effects of the laws on the number of new facilities arising in the city of Bologna. The mashup dataset resulting from this step (MD3) combines the same yearly totals for the facilities sourced from D1 and D2 with the titles and descriptions of the laws. The timeframe object of the analysis was divided into phases, each beginning with the entry into force of a specific law, in order to assess whether the introduction of the legislation produced any observable effects. Yet, the visualization shows that in spite of the laws being introduced, the number of facilities rises throughout the years exponentially, as already stated for the first visualization. This may indicate a regulatory lag or a market where capital flow is resilient to legislative constraints, signaling that the measures implemented have not yet reached a saturation point capable of limiting expansion.
+                      The legislation was introduced in the data analysis to potentially visualize long-term effects of the laws on the number of new facilities arising in the city of Bologna. The mashup dataset resulting from this step (MD3) combines the same yearly totals for the facilities sourced from D1 and D2 with the titles and descriptions of the laws. The timeframe object of the analysis was divided into phases, each beginning with the entry into force of a specific law, in order to assess whether the introduction of the legislation produced any observable effects. Yet, the visualization shows that in spite of the laws being introduced, <strong>the number of facilities rises throughout the years exponentially</strong>, as already stated for the first visualization. This may indicate a regulatory lag or a market where capital flow is resilient to legislative constraints, signaling that the measures implemented have not yet reached a saturation point capable of limiting expansion.
                     </p>
                   </div>
                 </div>
 
                 <!-- graph -->
                 <div class="col-lg-6">
-                  <div id="graph-container-1" class="graph-box"> 
+                  <div id="line-plot3" class="viz-box"> <!-- CHART 3: Legislative impact (MD3) -->
 
                   </div>
                 </div>
-                
+
               </div>
-            </div><!-- /visualization 3 --> 
-            
+            </div><!-- /visualization 3 -->
+
             <!-- visualization 4 -->
             <div class="carousel-item">
               <div class="row align-items-center">
                 <div class="col-lg-6">
                   <div class="workflow-scroll-box">
                     <p>
-                      
+                      The research then turned to the economic impact, specifically addressing housing affordability and the upward pressure on <strong style="color: #771710">rental rates</strong>. D5 was sourced from Idealista and was organized in a folder comprising monthly rent prices from 2012 to 2025 for five zones of Bologna, specifically the city centre and four outer zones around it. The dataset was filtered for our years and months of interest and then the prices of the four outer zones were averaged out, to be able to oppose a single price to that of the historical centre. Subsequently, the average annual rental price for the two macro-areas was calculated from the monthly values and the analysis revealed that <strong>prices increased exponentially</strong> in both areas throughout the years.
+                      <br>
+                      The rental prices were later correlated with the number of structures extracted from D1, the dataset from Open Data Bologna, as it also included a distinction between the facilities located in the historical centre and those in the outer zones. First, a simple linear correlation was performed, yielding a coefficient close to 1. To ensure the robustness of this correlation, we compared the growth rates of both prices and facilities across the two zones. The resulting visualization shows that the two metrics follow nearly identical fluctuations, potentially confirming that <strong>the rise in rental prices is linked to the increase in short-term rental structures</strong>. The results seem to suggest that properties previously available for long-term residential use may have been converted into tourist accommodations, causing a <strong>supply-side contraction</strong>, driving rental prices upward as demand remains constant. The MD4 mashup dataset supporting this visualization includes the annual rental prices, the number of accommodation facilities and their corresponding growth rates for both the historical center and the outer zones of Bologna.
+
                     </p>
                   </div>
                 </div>
 
                 <!-- graph -->
                 <div class="col-lg-6">
-                  <div id="graph-container-1" class="graph-box"> 
+                  <div id="line-plot4" class="viz-box"> <!-- --- CHART 4: Price vs. Facilities Growth Rate (MD4) -->
 
                   </div>
                 </div>
-                
+
               </div>
             </div><!-- /visualization 4 -->
-            
+
             <!-- visualization 5 -->
             <div class="carousel-item">
               <div class="row align-items-center">
                 <div class="col-lg-6">
                   <div class="workflow-scroll-box">
                     <p>
-                      
+                      Lastly, the study examined the effects of touristification on <strong style="color: #771710">students</strong>, focusing on housing affordability. The objective was to determine whether this demographic segment is particularly vulnerable to or affected by the rising costs associated with the growth of short-term rentals. D6 was analysed for this matter: the dataset comes from MUR and describes student enrollment by province of residence and degree program for all Italian universities, from A.Y. 2010/2011 to A.Y. 2024/2025.
+                      <br>
+                      First, the team filtered the dataset to be left only with information regarding the University of Bologna. Then, students from different programs enrolled in the same academic year were summed together and the same was done from students coming from the same region; this was done to avoid singling out individuals in cases where very few students from a specific province were enrolled in a given course. The next step consisted in filtering out the years not included in the range of interest.
+                      <br>
+                      The first focus of the analysis aimed at <strong>verifying whether the total number of enrolled students had lowered in time</strong>, possibly due to rental price increase. Yet, the numbers actually increase between 2014 and 2024.
+                      <br>
+                      Hence, we reasoned on whether the <strong>regional composition</strong> of the student population has evolved over the years, focusing on changes in the geographic origin of enrolled students. Since the focus were Italian regions, we removed the information about foreign students from the dataset. We then proceeded to calculate for each year the percentage of students from each region out of the annual total to observe the geographic evolution of the student body over time. For doing so, we obtained the ten-year percentage change (delta) between 2014 and 2024 for each region and were able to witness a <strong>decline in the proportion of students from several Southern Italian regions</strong>, indicating that these areas represent a smaller share of the student body compared to a decade ago. This is displayed  geographically in the visualization of the Italian regions throughout the years of the considered time span.
                     </p>
                   </div>
                 </div>
 
-                <!-- graph -->
+                <!-- Leaflet map -->
                 <div class="col-lg-6">
-                  <div id="graph-container-1" class="graph-box"> 
+                    <div class="map-wrapper">
+                        <div class="map-controls">
+                            <h3>University Enrollment by Year</h3>
+                            <div class="custom-select">
+                                <label>Academic Year: </label>
+                                <select id="yearSelect">
+                                </select>
+                            </div>
+                        </div>
 
-                  </div>
+                        <div id="map"></div>
+                    </div>
                 </div>
-                
               </div>
-            </div><!-- /visualization 5 -->    
+            </div> <!-- /visualization 5 -->
 
             <!-- visualization 6 -->
             <div class="carousel-item">
@@ -2106,44 +2137,24 @@
                 <div class="col-lg-6">
                   <div class="workflow-scroll-box">
                     <p>
-                      
+                      The aim at this point was to put in correlation <strong>the rise of rental prices with the geographic evolution of the student population</strong>. MD5 was produced using D5 and D6 and includes the number of students enrolled each year from the single Italian regions aligned with the average rental price in Bologna for that year (the distinction between prices of the historical center and the outer zones is irrelevant for this matter). This mashup dataset was used to perform the correlation between the number of students and the prices for each region.
+                      <br>
+                      The result was a visualization of the <strong>Regional Sensitivity Index</strong>, representing how much each region is sensitive to the price rise. The southern regions, which registered a negative delta, also show a negative correlation coefficient. This confirms their high sensitivity to price increases and suggests that students from further regions are increasingly deterred from moving to Bologna. This visualization is documented by MD6, the last mashup dataset, which juxtaposes the sensitivity index with the ten-year percentage delta of students for all Italian regions. Emilia-Romagna was excluded from this specific analysis, as the majority of students from this region are commuters and do not typically participate in the local rental market. This is confirmed by the University of Bologna itself in an <a href="https://magazine.unibo.it/it/articoli/le-immatricolazioni-per-l2019anno-accademico-2024-2025-i-numeri-dell2019universita-di-bologna" target="_blank">article</a> from 2025, where it’s stated that for the A.Y. 2024/2025 a decline in new enrollments from Southern Italy was recorded, a trend consistent with the rising cost of living and renting affecting major university cities in the North; according to the article, this would be confirmed by a simultaneous increase in enrolments in Southern universities and also conversely corresponds to the rising of enrollments from Bologna and Emilia-Romagna - which also suggests that students are <strong>increasingly opting for local institutions</strong> to avoid the prohibitive costs of relocation.
+                      Therefore, our data analysis acts as a confirmation of what has been reported in the article.
                     </p>
                   </div>
                 </div>
 
                 <!-- graph -->
                 <div class="col-lg-6">
-                  <div id="graph-container-1" class="graph-box"> 
-
+                  <div id="sensitivity-plot" class="viz-box"> <!-- CHART 6: Price Sensitivity vs. Enrollment Growth (2014-2024) -->
                   </div>
                 </div>
-                
+
               </div>
-            </div><!-- /visualization 6 -->    
+            </div><!-- /visualization 6 -->
 
-            <!-- visualization 7 -->
-            <div class="carousel-item">
-              <div class="row align-items-center">
-                <div class="col-lg-6">
-                  <div class="workflow-scroll-box">
-                    <p>
-                      
-                    </p>
-                  </div>
-                </div>
-
-                <!-- graph -->
-                <div class="col-lg-6">
-                  <div id="graph-container-1" class="graph-box"> 
-
-                  </div>
-                </div>
-                
-              </div>
-            </div><!-- /visualization 7 -->    
-          </div>
-
-        </div> 
+        </div>
       </div>
     </section>
     <!-- /KNIME workflow section -->
@@ -2188,61 +2199,15 @@
       <div class="container section-title" data-aos="fade-up">
         <h2>Results</h2>
         <p>
-
+          <strong>Touristification</strong> has been at the center of mainstream debate for more than a decade, affecting not only Italy but several other European countries. The <strong>growth of short-term rental platforms</strong> has intensified pressure on housing markets, raising living costs and straining urban coexistence. The slogan “tourists go home”, which emerged from citizen protests in Barcelona, has become a symbol of the urban malaise that runs among the ones who inhabit the city. To date, unlike cities such as Barcelona, which announced a ban on short-term rentals, Italy has relied on local regulations.
+          <br>
+          According to a recent analysis by Demoskopika on overtourism, Bologna currently faces a “moderate risk”, yet the consequences are already strikingly visible. In this context, the Municipality of Bologna attempted in December 2025 to introduce stricter rules for tourist rentals in the historic center, but these were overturned by the Council of State due to their impact on established economic interests. While datasets, as stated throughout our analysis, only partially reflect the human cost of the crisis, student protests and the growing difficulty in finding housing highlight a deeper issue: the housing question has become a factor of social exclusion and a <strong>violation of the residents’ Right to the City</strong>.
+          <br>
+          Although Airbnb is not the sole driver of this crisis, Bologna’s housing emergency is an undeniable reality, confirmed by the city's own strategic responses. In 2023, the Municipality launched the <i>Piano per l’Abitare</i> (“Plan for Housing”), a €200 million investment to create 3,000 housing units for marginalized groups, students and those seeking below-market rents.
+          <br>
+          We’re all aware that without structural intervention and a rethink of urban space as a public good, cities like Bologna face the loss of their most vital asset: the <strong>social and cultural diversity</strong> brought by the student population. By investigating this phenomenon through data, our analysis aimed to sharpen the focus on this crisis. We firmly believe that, beyond public debate, rigorous data analysis and visualization can stimulate new perspectives and ensure this issue remains at the forefront of the political agenda.
         </p>
       </div><!-- End Section Title -->
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="results-container">
-              <div class="results-item results-active" data-aos="fade-up" data-aos-delay="200">
-                <i class="results-icon bi bi-question-circle"></i>
-                <h3>Non consectetur a erat nam at lectus urna duis?</h3>
-                <div class="results-content">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
-                </div>
-                <i class="results-toggle bi bi-chevron-right"></i>
-              </div><!-- End results item-->
-
-              <div class="results-item" data-aos="fade-up" data-aos-delay="300">
-                <i class="results-icon bi bi-question-circle"></i>
-                <h3>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</h3>
-                <div class="results-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="results-toggle bi bi-chevron-right"></i>
-              </div><!-- End results item-->
-
-              <div class="results-item" data-aos="fade-up" data-aos-delay="400">
-                <i class="results-icon bi bi-question-circle"></i>
-                <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
-                <div class="results-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
-                </div>
-                <i class="results-toggle bi bi-chevron-right"></i>
-              </div><!-- End results item-->
-
-              <div class="results-item" data-aos="fade-up" data-aos-delay="500">
-                <i class="results-icon bi bi-question-circle"></i>
-                <h3>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h3>
-                <div class="results-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="results-toggle bi bi-chevron-right"></i>
-              </div><!-- End results item-->
-
-              <div class="results-item" data-aos="fade-up" data-aos-delay="600">
-                <i class="results-icon bi bi-question-circle"></i>
-                <h3>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</h3>
-                <div class="results-content">
-                  <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
-                </div>
-                <i class="results-toggle bi bi-chevron-right"></i>
-              </div><!-- End results item-->
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
     <!-- /Results section -->
 
@@ -2300,31 +2265,28 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Licenses and Credits</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
       </div><!-- End Section Title -->
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row gy-4">
-          <div class="col-lg-6">
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
+          <div class="col-lg-12 text-center">
+            <h5>Images and icons</h5>
+            <ul class="list-unstyled">
+              <li>Here To Stay logo was created using <a href="https://it.vecteezy.com/vettori-gratis/bologna" target="_blank">Bologna Vettori di Vecteezy</a></li>
+              <li>Image on Hero section by <a href="https://commons.wikimedia.org/w/index.php?curid=1164299" target="_blank">Szs, CC BY-SA 3.0</a></li>
+              <li>Images on Team section by <a href="https://commons.wikimedia.org/w/index.php?curid=57474693" target="_blank">Una tantum - Own work, CC BY-SA 3.0</a></li>
+            </ul>
+            <h5>Software</h5>
+            <ul class="list-unstyled">
+              <li>Interactive charts powered by <a href="https://plotly.com/javascript/" target="_blank">Plotly.js</a></li>
+              <li>Data processing and analytics performed via <a href="https://www.knime.com/" target="_blank">KNIME Analytics Platform</a></li>
+            </ul>
+            <h5>Web template</h5>
+            <ul class="list-unstyled">
+              <li>This website is built on the HTML5 template <a href="https://bootstrapmade.com/scaffold-bootstrap-metro-style-template/" target="_blank">Scaffold</a></li>
             </ul>
           </div>
-          <div class="col-lg-6">
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div><!-- End licenses Form -->
-
         </div>
-
       </div>
-
     </section><!-- /licenses Section -->
   </main>
 
@@ -2332,7 +2294,7 @@
     <div class="container">
       <div class="row d-flex align-items-center">
         <div class="text-lg-left text-center footer-github">
-            <a href="https://github.com/metamuses/burning-down-the-house" target="_blank"><svg
+            <a href="https://github.com/metamuses/here-to-stay" target="_blank"><svg
               xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="" class="bi bi-github"
               viewBox="0 0 16 16">
               <path
@@ -2343,8 +2305,19 @@
         <div class="text-lg-left text-center footer-text">
           This project is developed for the <a href="https://www.unibo.it/en/study/course-units-transferable-skills-moocs/course-unit-catalogue/course-unit/2025/424645" target="_blank"><i>Open Access and Digital Ethics</i></a> course (a.y. 2025/2026) within the <a href="https://corsi.unibo.it/2cycle/DigitalHumanitiesKnowledge" target="_blank">Digital Humanities and Digital Knowledge</a> Master's Degree at <a href="https://www.unibo.it/en/homepage" target="_blank">University of Bologna</a>.
         </div>
+        <div class="container d-flex flex-column flex-lg-row justify-content-center align-items-center">
+            <div class="d-flex flex-column align-items-center">
+              <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX licenses form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
+              </div>
+            </div>
+        </div>
         <div class="text-lg-left text-center footer-github">
-          <div class="copyright">
+          <div class="copyright mt-3">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" id="Layer_1" x="0px" y="0px" width="20px" height="20px" viewBox="5.5 -3.5 64 64">
               <g>
                 <circle fill="#FFFFFF" cx="37.785" cy="28.501" r="28.836"/>
@@ -2361,20 +2334,6 @@
             </svg>
           </div>
         </div>
-        <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
-            <div class="d-flex flex-column align-items-center align-items-lg-start">
-              <div>
-                <!-- © Copyright <strong><span>MyWebsite</span></strong>. All Rights Reserved -->
-              </div>
-              <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX licenses form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
-                <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a> -->
-              </div>
-            </div>
-        </div>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -2387,16 +2346,19 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  
+
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="assets/js/visualizations.js" defer></script>
 
 </body>
 
