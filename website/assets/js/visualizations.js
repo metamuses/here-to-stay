@@ -71,6 +71,11 @@ function initGrowthChart() {
                     font: { color: theme.text },
                     xaxis: { title: 'Year', gridcolor: theme.grid },
                     yaxis: { title: 'Growth %', gridcolor: theme.grid },
+                    hoverlabel: {
+                      bgcolor: 'rgba(255, 255, 255, 0.95)',
+                      bordercolor: theme.heading,
+                      font: { color: '#333' },
+                    },
                     hovermode: 'x unified',
                     legend: { orientation: 'h', y: -0.2 },
                     dragmode: 'select', // This makes Box Select the default active tool

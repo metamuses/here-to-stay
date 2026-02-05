@@ -1394,12 +1394,6 @@ section,
   width: 100%;
 }
 
-/* #chart-wrapper {
-    width: 100%;
-    max-width: 900px;
-    margin-top: 2rem;
-} */
-
 /* Leaflet Map */
 #map {
     background-color: color-mix(in srgb, var(--accent-color), transparent 95%); /* Or #ffffff if you want a clean white void */
