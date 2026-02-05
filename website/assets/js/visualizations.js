@@ -608,8 +608,8 @@ const bounds = L.latLngBounds(southWest, northEast);
 
 const map = L.map('map', {
     center: [41.8719, 12.5674],
-    zoom: 6,
-    minZoom: 5,           // Prevents zooming out to see Europe
+    zoom: 5,
+    minZoom: 4,           // Prevents zooming out to see Europe
     maxBounds: bounds,    // Locks the view to Italy
     maxBoundsViscosity: 1.0 // Makes the edges "hard" so you can't pull past them
 });
