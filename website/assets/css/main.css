@@ -662,12 +662,14 @@ section,
 .project .content {
   background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
   padding: 40px;
+  margin: 0 8%;
 }
 
 .project .content p {
   margin: 15px 0 30px 0;
   line-height: 24px;
   font-size: 1.1rem;
+  text-align: justify;
 }
 
 .project .section-title {
