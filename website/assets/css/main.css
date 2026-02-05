@@ -106,12 +106,6 @@ h6 {
   font-family: var(--heading-font);
 }
 
-p {
-  text-wrap: pretty;
-  hyphens: auto;
-  text-align: justify;
-}
-
 code {
   color: var(--nav-dropdown-hover-color);
 }
@@ -543,7 +537,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 40px 0;
   scroll-margin-top: 90px;
   overflow: clip;
 }
@@ -561,7 +555,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
   position: relative;
 }
 
@@ -571,6 +565,7 @@ section,
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
+  text-transform: uppercase;
 }
 
 .section-title h2:after {
@@ -588,7 +583,23 @@ section,
 
 .section-title p {
   margin-bottom: 0;
+  text-wrap: pretty;
+  hyphens: auto;
+  text-align: justify;
+  padding-right: 12%;
+  padding-left: 12%;
+  margin-inline: auto;
+  font-size: 1.1rem;
 }
+
+.section-title a {
+  color: var(--heading-color);
+}
+
+.section-title a:hover {
+  color: var(--nav-hover-color);
+}
+
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -656,6 +667,7 @@ section,
 .project .content p {
   margin: 15px 0 30px 0;
   line-height: 24px;
+  font-size: 1.1rem;
 }
 
 .project .section-title {
@@ -789,6 +801,7 @@ section,
 .analyses .nav-tabs {
   border: 0;
 }
+
 
 .analyses .nav-link {
   color: var(--heading-color);
@@ -1236,96 +1249,15 @@ section,
 /*--------------------------------------------------------------
 # Results Section
 --------------------------------------------------------------*/
-.results .results-container .results-item {
-  background-color: color-mix(in srgb, var(--default-color), transparent 96%);
-  position: relative;
-  padding: 20px;
-  margin-bottom: 20px;
-  overflow: hidden;
-  transition: 0.3s;
-}
-
-.results .results-container .results-item:last-child {
+.results .results-container {
   margin-bottom: 0;
-}
-
-.results .results-container .results-item h3 {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 24px;
-  margin: 0 30px 0 32px;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.results .results-container .results-item h3 span {
-  color: var(--accent-color);
-  padding-right: 5px;
-}
-
-.results .results-container .results-item h3:hover {
-  color: var(--accent-color);
-}
-
-.results .results-container .results-item .results-content {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: 0.3s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.results .results-container .results-item .results-content p {
-  margin-bottom: 0;
-  overflow: hidden;
-}
-
-.results .results-container .results-item .results-icon {
-  position: absolute;
-  top: 22px;
-  left: 20px;
-  font-size: 20px;
-  line-height: 0;
-  transition: 0.3s;
-  color: var(--accent-color);
-}
-
-.results .results-container .results-item .results-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 16px;
-  line-height: 0;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.results .results-container .results-item .results-toggle:hover {
-  color: var(--accent-color);
-}
-
-.results .results-container .results-active {
-  background-color: var(--accent-color);
-  transition: 0.3s;
-}
-
-.results .results-container .results-active h3,
-.results .results-container .results-active h3:hover,
-.results .results-container .results-active .results-toggle,
-.results .results-container .results-active .results-icon,
-.results .results-container .results-active .results-content {
-  color: var(--contrast-color);
-}
-
-.results .results-container .results-active .results-content {
-  grid-template-rows: 1fr;
-  visibility: visible;
-  opacity: 1;
-  padding-top: 10px;
-}
-
-.results .results-container .results-active .results-toggle {
-  transform: rotate(90deg);
+  text-wrap: pretty;
+  hyphens: auto;
+  text-align: justify;
+  padding-right: 15%;
+  padding-left: 15%;
+  margin-inline: auto;
+  font-size: 1.1rem;
 }
 
 /*--------------------------------------------------------------

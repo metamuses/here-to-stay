@@ -373,6 +373,10 @@
 
     <!-- Analyses Section -->
     <section id="analyses" class="analyses section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Datasets Analyses</h2>
+      </div><!-- End Section Title -->
       <div class="container">
         <ul class="nav nav-tabs row  g-2 d-flex" data-aos="fade-up" data-aos-delay="100">
           <li class="nav-item col-3">
@@ -713,6 +717,7 @@
                   <br>
                   Regarding Dataset D4, compiled by the team for the sake of the project using the legislations included on the <a href="https://dati.normattiva.it/home" target="_blank">Normattiva</a> Open Data portal, the analysis was conducted with a dual focus: the dataset itself was assessed as a proprietary derivative, while questions regarding the platform infrastructure were answered in reference to the Normattiva portal, since the current webpage is only a report of the analysis conducted on the basis of open data and cannot be considered an open data portal. The ‘not applicable’ answers in this regard are justified by the fact that the dataset is not published on an open data portal and therefore is not updated nor indexable like usual open datasets.
                 </p>
+
                 <!-- Legal Accordion -->
                 <div class="accordion">
 
@@ -1967,6 +1972,11 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Workflow</h2>
+        <p>
+          The original datasets were processed using KNIME platform. The process included data cleansing, handling missing values, and eliminating unnecessary fields for the purposes of the analysis, as well as combining multiple data sources to create the final mashup datasets.
+          <br>
+          The image below allows navigation through the workflow, while the full KNIME workflow can be downloaded <a href="https://github.com/metamuses/here-to-stay/tree/main/knime" target="_blank">here</a>.
+        </p>
       </div>
 
       <div class="knime-zoom-container mb-5">
@@ -2092,7 +2102,6 @@
                 <div class="col-lg-6">
                   <div class="workflow-scroll-box">
                     <p>
-
                       Lastly, the study examined the effects of touristification on <strong style="color: #771710">students</strong>, focusing on housing affordability. The objective was to determine whether this demographic segment is particularly vulnerable to or affected by the rising costs associated with the growth of short-term rentals. D6 was analysed for this matter: the dataset comes from MUR and describes student enrollment by province of residence and degree program for all Italian universities, from A.Y. 2010/2011 to A.Y. 2024/2025.
                       <br>
                       First, the team filtered the dataset to be left only with information regarding the University of Bologna. Then, students from different programs enrolled in the same academic year were summed together and the same was done from students coming from the same region; this was done to avoid singling out individuals in cases where very few students from a specific province were enrolled in a given course. The next step consisted in filtering out the years not included in the range of interest.
@@ -2128,8 +2137,10 @@
                 <div class="col-lg-6">
                   <div class="workflow-scroll-box">
                     <p>
-
-
+                      The aim at this point was to put in correlation <strong>the rise of rental prices with the geographic evolution of the student population</strong>. MD5 was produced using D5 and D6 and includes the number of students enrolled each year from the single Italian regions aligned with the average rental price in Bologna for that year (the distinction between prices of the historical center and the outer zones is irrelevant for this matter). This mashup dataset was used to perform the correlation between the number of students and the prices for each region.
+                      <br>
+                      The result was a visualization of the <strong>Regional Sensitivity Index</strong>, representing how much each region is sensitive to the price rise. The southern regions, which registered a negative delta, also show a negative correlation coefficient. This confirms their high sensitivity to price increases and suggests that students from further regions are increasingly deterred from moving to Bologna. This visualization is documented by MD6, the last mashup dataset, which juxtaposes the sensitivity index with the ten-year percentage delta of students for all Italian regions. Emilia-Romagna was excluded from this specific analysis, as the majority of students from this region are commuters and do not typically participate in the local rental market. This is confirmed by the University of Bologna itself in an <a href="https://magazine.unibo.it/it/articoli/le-immatricolazioni-per-l2019anno-accademico-2024-2025-i-numeri-dell2019universita-di-bologna" target="_blank">article</a> from 2025, where it’s stated that for the A.Y. 2024/2025 a decline in new enrollments from Southern Italy was recorded, a trend consistent with the rising cost of living and renting affecting major university cities in the North; according to the article, this would be confirmed by a simultaneous increase in enrolments in Southern universities and also conversely corresponds to the rising of enrollments from Bologna and Emilia-Romagna - which also suggests that students are <strong>increasingly opting for local institutions</strong> to avoid the prohibitive costs of relocation.
+                      Therefore, our data analysis acts as a confirmation of what has been reported in the article.
                     </p>
                   </div>
                 </div>
@@ -2142,28 +2153,6 @@
 
               </div>
             </div><!-- /visualization 6 -->
-
-            <!-- visualization 7 -->
-            <div class="carousel-item">
-              <div class="row align-items-center">
-                <div class="col-lg-6">
-                  <div class="workflow-scroll-box">
-                    <p>
-
-                    </p>
-                  </div>
-                </div>
-
-                <!-- graph -->
-                <div class="col-lg-6">
-                  <div id="" class="">
-
-                  </div>
-                </div>
-
-              </div>
-            </div><!-- /visualization 7 -->
-          </div>
 
         </div>
       </div>
@@ -2209,8 +2198,6 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Results</h2>
-      </div><!-- End Section Title -->
-      <div class="container">
         <p>
           <strong>Touristification</strong> has been at the center of mainstream debate for more than a decade, affecting not only Italy but several other European countries. The <strong>growth of short-term rental platforms</strong> has intensified pressure on housing markets, raising living costs and straining urban coexistence. The slogan “tourists go home”, which emerged from citizen protests in Barcelona, has become a symbol of the urban malaise that runs among the ones who inhabit the city. To date, unlike cities such as Barcelona, which announced a ban on short-term rentals, Italy has relied on local regulations.
           <br>
@@ -2220,7 +2207,7 @@
           <br>
           We’re all aware that without structural intervention and a rethink of urban space as a public good, cities like Bologna face the loss of their most vital asset: the <strong>social and cultural diversity</strong> brought by the student population. By investigating this phenomenon through data, our analysis aimed to sharpen the focus on this crisis. We firmly believe that, beyond public debate, rigorous data analysis and visualization can stimulate new perspectives and ensure this issue remains at the forefront of the political agenda.
         </p>
-      </div>
+      </div><!-- End Section Title -->
     </section>
     <!-- /Results section -->
 
