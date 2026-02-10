@@ -77,7 +77,7 @@ Occupancy in collective accommodation establishments at municipality level by ty
 ### D4_LEGISLATIONS
 
 ###### Description
-National and regional legislations on tourist rentals
+National legislations on tourist rentals
 
 ###### Sources
 - [Normattiva](https://www.normattiva.it/) (but created by us)

@@ -154,9 +154,9 @@ hts:D3_TOURIST_FLOW_SERIES_DISTRIBUTION a dcatapit:Distribution,
 hts:D4_LEGISLATIONS a dcatapit:Dataset,
     dcat:Dataset ;
   dcterms:identifier "metamuses:D.legislations" ;
-  dcterms:title "Legislazioni nazionali e regionali in materia di locazioni turistiche"@it ;
-  dcterms:title "National and regional legislations on tourist rentals"@en ;
-  dcterms:description "The dataset contains a list of national and regional legislations in Italy that regulate tourist rentals, including laws, decrees, and regulations that impact the operation of accommodation establishments and the rights and responsibilities of hosts and guests. The data is sourced from Normattiva, the official repository of Italian legislation."@en ;
+  dcterms:title "Legislazioni nazionali in materia di locazioni turistiche"@it ;
+  dcterms:title "National legislations on tourist rentals"@en ;
+  dcterms:description "The dataset contains a list of national legislations in Italy that regulate tourist rentals, including laws, decrees, and regulations that impact the operation of accommodation establishments and the rights and responsibilities of hosts and guests. The data is sourced from Normattiva, the official repository of Italian legislation."@en ;
   dcterms:modified "2026-02-05"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/GOVE> ;
   dcterms:rightsHolder <https://github.com/metamuses> ;
@@ -291,7 +291,7 @@ hts:MD3_LEGISLATIVE_IMPACT a dcatapit:Dataset,
   dcterms:identifier "metamuses:D.MASHUP-legislative_impact" ;
   dcterms:title "Impatto delle legislazioni sulle locazioni turistiche a Bologna"@it ;
   dcterms:title "Impact of legislations on tourist rentals in Bologna"@en ;
-  dcterms:description "The dataset contains an analysis of the impact of national and regional legislations on tourist rentals in Bologna, based on the comparison between the legislative framework and the trends in accommodation capacity and rental prices."@en ;
+  dcterms:description "The dataset contains an analysis of the impact of national legislations on tourist rentals in Bologna, based on the comparison between the legislative framework and the trends in accommodation capacity and rental prices."@en ;
   dcterms:modified "2026-02-05"^^xsd:date ;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON>,
     <http://publications.europa.eu/resource/authority/data-theme/GOVE> ;
