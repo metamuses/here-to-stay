@@ -122,13 +122,49 @@
     // Function to equalize heights
     function equalizeCardHeights() {
       const cards = isotopeItem.querySelectorAll('.dataset-item');
+      // Reset heights to auto first
       cards.forEach(card => card.style.height = 'auto');
+
       let maxHeight = 0;
+
       cards.forEach(card => {
-        if (card.offsetHeight > maxHeight) {
-          maxHeight = card.offsetHeight;
+        let currentHeight = 0;
+        // Check if element is visible
+        if (card.offsetParent !== null) {
+          currentHeight = card.offsetHeight;
+        } else {
+          // If hidden, we need to clone it to measure natural height
+          const clone = card.cloneNode(true);
+          clone.style.visibility = 'hidden';
+          clone.style.position = 'absolute';
+          clone.style.display = 'block';
+          clone.style.width = card.offsetWidth + 'px'; // inherited width might be 0 if hidden parent?
+          // actually, safest is to append to the isotopeItem which has width
+          isotopeItem.appendChild(clone);
+
+          // If width is still 0, we might need to set it to row width / columns?
+          // But let's assume isotopeItem has width.
+          // Better: set width to match what it would be.
+          // The column classes (col-xl-3 etc) control width.
+          // If we append clone to isotopeItem (the row), it should take correct width if we keep classes.
+          // But clone is the inner .dataset-item.
+          // To measure correctly, we should probably clone the wrapper .col div?
+          // Or just set width explicitely to computed width of a visible sibling?
+
+          // Simplification: just measurescrollHeight of the content?
+          // Let's try appending to parent.
+          currentHeight = clone.offsetHeight;
+          isotopeItem.removeChild(clone);
+        }
+
+        if (currentHeight > maxHeight) {
+          maxHeight = currentHeight;
         }
       });
+
+      // Safety check
+      if (maxHeight < 100) maxHeight = 'auto'; // fallback
+
       cards.forEach(card => card.style.height = maxHeight + 'px');
     }
 
