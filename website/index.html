@@ -139,25 +139,7 @@
         </p>
       </div><!-- End Section Title -->
 
-      <script>
-        function equalizeCardHeights() {
-          const cards = document.querySelectorAll('.dataset-item');
 
-          cards.forEach(card => card.style.height = 'auto');
-
-          let maxHeight = 0;
-          cards.forEach(card => {
-            if (card.offsetHeight > maxHeight) {
-              maxHeight = card.offsetHeight;
-            }
-          });
-
-          cards.forEach(card => card.style.height = maxHeight + 'px');
-        }
-
-        window.addEventListener('load', equalizeCardHeights);
-        window.addEventListener('resize', equalizeCardHeights);
-      </script>
 
       <div class="container">
         <div class="isotope-layout" data-default-filter="*" data-layout="fitRows" data-sort="original-order">
@@ -1995,7 +1977,7 @@
                       <br>
                       The team started the <strong>Knime workflow</strong> by analysing D1, published by <u>Open Data Bologna</u>: the dataset was a list of all tourist accommodations opened (and potentially closed) between 1982 and 2025, with the address and type of facility specified. The data minimization in this case consisted in the removal of all geospatial information (address and coordinates) and the dataset was subsequently filtered to leave out only the facilities that were open in the time span we considered. By counting the facilities annually, we observed that their number in 2024 was over five times higher than in 2014.
                       <br>
-                      We then proceeded to compare these results with D2, coming from <u>Istat</u>: this dataset has the same focus as D1, as it counts the number of different types of accommodations for each city in Italy. It is organized in a folder of 11 files for the 11 years included in our time span, since on the Istat websites the files are divided per year and all held in a zip available for download. Considering that the Istat dataset is comprehensive of information about all italian cities, we filtered it to only focus on Bologna. As the dataset already had the total number of facilities per city per year, it was easy to visualize the rise in the number among the different years. Nevertheless, the values regarding the accommodations from the Istat dataset were far below the ones from Open Data Bologna. This <strong>discrepancy</strong> likely arises because the Bolognese Open Data portal logs all locally registered entities, whereas Istat tends to exclude facilities that are active but report zero occupancy. Moreover, the Istat dataset focuses on hotel establishments, hence it may not be considering short-term rentals, such as those offered by <a href="https://www.airbnb.it/" target="_blank">AirBnB</a>, <a href="https://www.booking.com/index.it.html?label=it-it-booking-desktop-new-VRZD0IC5lt9Ulq*ajTZ_bgS652828999642%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp1008141%3Ali%3Adec%3Adm&gclid=Cj0KCQiA-YvMBhDtARIsAHZuUzKNGVBk3pT9UZM7UO8ri2t0K7Z_tYCAoK0_3YL2bgfxbi8mxZUC5N0aAmrCEALw_wcB&aid=2311236&ws=&gad_source=1&gad_campaignid=19655506920&gbraid=0AAAAAD_Ls1LB9k1C_t9xNhhH4wfi_UPqH&chal_t=1770239430958&force_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank">Booking</a> or such platforms.
+                      We then proceeded to compare these results with D2, coming from <u>Istat</u>: this dataset has the same focus as D1, as it counts the number of different types of accommodations for each city in Italy. It is organized in a folder of 11 files for the 11 years included in our time span, since on the Istat websites the files are divided per year and all held in a zip available for download. Considering that the Istat dataset is comprehensive of information about all italian cities, we filtered it to only focus on Bologna. As the dataset already had the total number of facilities per city per year, it was easy to visualize the rise in the number among the different years. Nevertheless, the values regarding the accommodations from the Istat dataset were far below the ones from Open Data Bologna. This <strong>discrepancy</strong> likely arises because the Bolognese Open Data portal logs all locally registered entities, whereas Istat tends to exclude facilities that are active but report zero occupancy. Moreover, the Istat dataset focuses on hotel establishments, hence it may not be considering short-term rentals, such as those offered by <a href="https://www.airbnb.it/" target="_blank">AirBnB</a>, <a href="https://www.booking.com/index.it.html" target="_blank">Booking</a> or such platforms.
                       <br>
                       While the absolute numbers differed substantially, the upward trend remained still evident across both data sources. Therefore we decided to verify the correlation among the two datasets and understand if the growth rate was similar for the two among the years. This resulted in our first <strong>mashup dataset MD1</strong> and we visualized the comparison between the variations in percentages of growth of the two datasets. The figures did not line up perfectly but they were qualitatively aligned, showing a <strong>shared trajectory</strong> despite the numerical gap; this ensured that both sources were equally authoritative even if relying on diverse inclusion criteria for their counts.
                     </p>

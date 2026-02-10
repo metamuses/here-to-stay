@@ -6,7 +6,7 @@
 * License: https://bootstrapmade.com/license/
 */
 
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -50,7 +50,7 @@
    * Toggle mobile nav dropdowns
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
+    navmenu.addEventListener('click', function (e) {
       e.preventDefault();
       this.parentNode.classList.toggle('active');
       this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
@@ -112,13 +112,30 @@
   /**
    * Init isotope layout and filters
    */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
+  document.querySelectorAll('.isotope-layout').forEach(function (isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
     let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
     let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
+
+    // Function to equalize heights
+    function equalizeCardHeights() {
+      const cards = isotopeItem.querySelectorAll('.dataset-item');
+      cards.forEach(card => card.style.height = 'auto');
+      let maxHeight = 0;
+      cards.forEach(card => {
+        if (card.offsetHeight > maxHeight) {
+          maxHeight = card.offsetHeight;
+        }
+      });
+      cards.forEach(card => card.style.height = maxHeight + 'px');
+    }
+
+    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function () {
+      // Equalize heights BEFORE Isotope initialization
+      equalizeCardHeights();
+
       initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
         itemSelector: '.isotope-item',
         layoutMode: layout,
@@ -127,8 +144,16 @@
       });
     });
 
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
+    // Re-equalize and re-layout on window resize
+    window.addEventListener('resize', function () {
+      equalizeCardHeights();
+      if (initIsotope) {
+        initIsotope.layout();
+      }
+    });
+
+    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function (filters) {
+      filters.addEventListener('click', function () {
         isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
         this.classList.add('filter-active');
         initIsotope.arrange({
@@ -146,7 +171,7 @@
    * Init swiper sliders
    */
   function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+    document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
@@ -173,7 +198,7 @@
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
-  window.addEventListener('load', function(e) {
+  window.addEventListener('load', function (e) {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
         setTimeout(() => {
@@ -232,12 +257,12 @@
   }
 
   /* ANALYSES NAVBAR */
-  document.addEventListener('DOMContentLoaded', function() {
-  // Select all dropdown links with the custom class
+  document.addEventListener('DOMContentLoaded', function () {
+    // Select all dropdown links with the custom class
     const tabLinks = document.querySelectorAll('.external-tab-link');
 
     tabLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
+      link.addEventListener('click', function (e) {
         const targetId = this.getAttribute('data-tab-target');
 
         const tabTrigger = document.querySelector(`.analyses .nav-tabs .nav-link[data-bs-target="${targetId}"]`);
