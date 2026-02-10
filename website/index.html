@@ -299,7 +299,7 @@
               <div class="dataset-item mashup-dataset">
                 <div class="dataset-header">
                   <div class="icon"><i class="bi bi-union"></i></div>
-                  <h6>MD4 - Price Facilities Growth</h6>
+                  <h6>MD4 - Price VS Facilities Growth</h6>
                 </div>
                 <ul class="list-unstyled">
                   <li>Comparison between growth rate of rental prices and accommodation establishments in Bologna</li>
@@ -315,7 +315,7 @@
               <div class="dataset-item mashup-dataset">
                 <div class="dataset-header">
                   <div class="icon"><i class="bi bi-union"></i></div>
-                  <h6>MD5 - Regional Enrollment Rent Prices</h6>
+                  <h6>MD5 - Regional Enrollment VS Rent Prices</h6>
                 </div>
                 <ul class="list-unstyled">
                   <li>Comparison between university enrollments and rental prices at regional level</li>
@@ -782,7 +782,7 @@
                               <td><i class="bi bi-x" style="color: #771710; font-size: 30px;"></i></td>
                             </tr>
                             <tr>
-                              <th scope="row">the geolocalization process can’t identify single individuals in some circumstances?</th>
+                              <th scope="row">If geolocalization capabilities are being used, is it sure that the geolocalization process can’t identify single individuals in some circumstances?</th>
                               <td><i class="bi bi-x" style="color: #771710; font-size: 30px;"></i></td>
                               <td><i class="bi bi-check-lg" style="color: #221D3F; font-size: 24px;"></i></td>
                               <td><i class="bi bi-check-lg" style="color: #221D3F; font-size: 24px;"></i></td>
@@ -876,7 +876,7 @@
                               <td><i class="bi bi-x" style="color: #771710; font-size: 30px;"></i></td>
                               <td><i class="bi bi-x" style="color: #771710; font-size: 30px;"></i></td>
                               <td><i class="bi bi-x" style="color: #771710; font-size: 30px;"></i></td>
-                              <td><i class="bi bi-check-lg" style="color: #221D3F; font-size: 24px;"></i></td>
+                              <td><i class="bi bi-x" style="color: #771710; font-size: 30px;"></i></td>
                               <td><i class="bi bi-x" style="color: #771710; font-size: 30px;"></i></td>
                               <td><i class="bi bi-x" style="color: #771710; font-size: 30px;"></i></td>
                             </tr>
@@ -958,7 +958,7 @@
                               <td><i class="bi bi-check-lg" style="color: #221D3F; font-size: 24px;"></i></td>
                             </tr>
                             <tr>
-                              <th scope="row">HIs the open data/API platform license regime compliant with the IPR policy of the dataset?</th>
+                              <th scope="row">Is the open data/API platform license regime compliant with the IPR policy of the dataset?</th>
                               <td><i class="bi bi-check-lg" style="color: #221D3F; font-size: 24px;"></i></td>
                               <td><i class="bi bi-check-lg" style="color: #221D3F; font-size: 24px;"></i></td>
                               <td><i class="bi bi-check-lg" style="color: #221D3F; font-size: 24px;"></i></td>
@@ -1382,7 +1382,7 @@
                         <p>
                           The dataset regarding Tourist Accommodation Businesses (D1) was sourced from the Municipality of Bologna’s Open Data portal. This platform operates under European and national open data directives, ensuring that data are pre-anonymised and compliant with legislative principles.
                           <br>
-                          The primary ethical risk identified was the presence of granular geospatial data (addresses and house numbers). While geospatial information does not fall under the category of personal data, it poses a <strong>risk of indirect de-anonymisation</strong> when cross-referenced with other datasets. Since many extra-hotel facilities are operated by private individuals at their place of residence, publishing such details could compromise their privacy.  In this specific case, although the dataset concerns economic activities, many extra-hotel accommodation facilities are operated by private individuals, often at their place of residence. Furthermore, data concerning "ceased" activities could inadvertently disclose an individual’s economic failure, potentially impacting their human dignity. To mitigate these risks, we applied the principle of data minimisation, removing all specific geographic identifiers as they were not essential for the macro-level purposes of our analysis.
+                          The primary ethical risk identified was the presence of granular geospatial data (addresses and house numbers). While geospatial information does not fall under the category of personal data, it poses a <strong>risk of indirect de-anonymisation</strong> when cross-referenced with other datasets. Since many extra-hotel facilities are operated by private individuals at their place of residence, publishing such details could compromise their privacy. Furthermore, data concerning "ceased" activities could inadvertently disclose an individual’s economic failure, potentially impacting their human dignity. To mitigate these risks, we applied the principle of data minimisation, removing all specific geographic identifiers as they were not essential for the macro-level purposes of our analysis.
                         </p>
                       </div>
 
@@ -2110,7 +2110,7 @@
                     <p>
                       The aim at this point was to put in <strong style="color: #771710">correlation</strong> <strong>the rise of rental prices with the geographic evolution of the student population</strong>. MD5 was produced using D5 and D6 and includes the number of students enrolled each year from the single Italian regions aligned with the average rental price in Bologna for that year (the distinction between prices of the historical center and the outer zones is irrelevant for this matter). This mashup dataset was used to perform the correlation between the number of students and the prices for each region.
                       <br>
-                      The result was a visualization of the <strong>Regional Sensitivity Index</strong>, representing how much each region is sensitive to the price rise. The southern regions, which registered a negative delta, also show a negative correlation coefficient. This confirms their high sensitivity to price increases and suggests that students from further regions are increasingly deterred from moving to Bologna. This visualization is documented by MD6, the last mashup dataset, which juxtaposes the sensitivity index with the ten-year percentage delta of students for all Italian regions. Emilia-Romagna was excluded from this specific analysis, as the majority of students from this region are commuters and do not typically participate in the local rental market. This is confirmed by the University of Bologna itself in an <a href="https://magazine.unibo.it/it/articoli/le-immatricolazioni-per-l2019anno-accademico-2024-2025-i-numeri-dell2019universita-di-bologna" target="_blank">article</a> from 2025, where it’s stated that for the A.Y. 2024/2025 a decline in new enrollments from Southern Italy was recorded, a trend consistent with the rising cost of living and renting affecting major university cities in the North; according to the article, this would be confirmed by a simultaneous increase in enrolments in Southern universities and also conversely corresponds to the rising of enrollments from Bologna and Emilia-Romagna - which also suggests that students are <strong>increasingly opting for local institutions</strong> to avoid the prohibitive costs of relocation.
+                      The result was a visualization of the <strong>Regional Sensitivity Index</strong>, representing how much each region is sensitive to the price rise. The southern regions, which registered a negative delta, also show a negative correlation coefficient. This confirms their high sensitivity to price increases and suggests that students from further regions are increasingly deterred from moving to Bologna. This visualization is documented by MD6, the last mashup dataset, which juxtaposes the sensitivity index with the ten-year percentage delta of students for all Italian regions. Emilia-Romagna was excluded from this specific analysis, as the majority of students from this region are commuters and do not typically participate in the local rental market. This is confirmed by the University of Bologna itself in an <a href="https://magazine.unibo.it/it/articoli/le-immatricolazioni-per-l2019anno-accademico-2024-2025-i-numeri-dell2019universita-di-bologna" target="_blank">article</a> from 2025, where it’s stated that for the A.Y. 2024/2025 a decline in new enrollments from Southern Italy was recorded, a trend consistent with the rising cost of living and renting affecting major university cities in the North of Italy; according to the article, this would be confirmed by a simultaneous increase in enrolments in Southern universities and also conversely corresponds to the rising of enrollments from Bologna and Emilia-Romagna - which also suggests that students are <strong>increasingly opting for local institutions</strong> to avoid the prohibitive costs of relocation.
                       Therefore, our data analysis acts as a confirmation of what has been reported in the article.
                     </p>
                   </div>
@@ -2153,7 +2153,7 @@
         <p>
           The <strong>sustainability</strong> of the data used in this project is evaluated based on source reliability.
           <br>
-          The datasets (D1, D2, D3, D6) sourced from the <strong>Municipality of Bologna’s Open Data portal</strong>, ISTAT and MUR-USTAT are considered high-sustainability sources, since they are maintained under legal mandates for public statistics and administrative transparency. due to legal mandates for public statistics. While these datasets do not currently use persistent identifiers (PIDs), their structured naming conventions and institutional metadata ensure they remain retrievable through official archives even in the event of URL reconfiguration.
+          The datasets (<strong>D1, D2, D3, D6</strong>) sourced from the Municipality of Bologna’s Open Data portal, ISTAT and MUR-USTAT are considered high-sustainability sources, since they are maintained under legal mandates for public statistics and administrative transparency. While these datasets do not currently use persistent identifiers (PIDs), their structured naming conventions and institutional metadata ensure they remain retrievable through official archives even in the event of URL reconfiguration.
           <br>
           The <strong>Idealista</strong> dataset (D5) represents a high-volatility source, since commercial newsroom URLs are highly likely to become obsolete or change. In compliance with intellectual property constraints, raw commercial datasets will be destroyed once the primary research objectives are achieved, as we do not hold the rights for long-term redistribution.
           <br>
@@ -2172,7 +2172,7 @@
         <p>
           <strong>Touristification</strong> has been at the center of mainstream debate for more than a decade, affecting not only Italy but several other European countries. The <strong>growth of short-term rental platforms</strong> has intensified pressure on housing markets, raising living costs and straining urban coexistence. The slogan “tourists go home”, which emerged from citizen protests in Barcelona, has become a symbol of the urban malaise that runs among the ones who inhabit the city. To date, unlike cities such as Barcelona, which announced a ban on short-term rentals, Italy has relied on local regulations.
           <br>
-          According to a recent analysis by Demoskopika on overtourism, Bologna currently faces a “moderate risk”, yet the consequences are already strikingly visible. In this context, the Municipality of Bologna attempted in December 2025 to introduce stricter rules for tourist rentals in the historic center, but these were overturned by the Council of State due to their impact on established economic interests. While datasets, as stated throughout our analysis, only partially reflect the human cost of the crisis, student protests and the growing difficulty in finding housing highlight a deeper issue: the housing question has become a factor of social exclusion and a <strong>violation of the residents’ Right to the City</strong>.
+          According to a recent analysis by <a href="https://demoskopika.it/wp-content/uploads/2025/07/CS-Overtourism-2025.pdf">Demoskopika</a> on overtourism, Bologna currently faces a “moderate risk”, yet the consequences are already strikingly visible. In this context, the Municipality of Bologna attempted in December 2025 to introduce stricter rules for tourist rentals in the historic center, but these were overturned by the Council of State due to their impact on established economic interests. While datasets, as stated throughout our analysis, only partially reflect the human cost of the crisis, student protests and the growing difficulty in finding housing highlight a deeper issue: the housing question has become a factor of social exclusion and a <strong>violation of the residents’ Right to the City</strong>.
           <br>
           Although Airbnb is not the sole driver of this crisis, Bologna’s housing emergency is an undeniable reality, confirmed by the city's own strategic responses. In 2023, the Municipality launched the <i>Piano per l’Abitare</i> (“Plan for Housing”), a €200 million investment to create 3,000 housing units for marginalized groups, students and those seeking below-market rents.
           <br>
