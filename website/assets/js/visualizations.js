@@ -313,7 +313,7 @@ function initLegislativeChart () {
                     },
                     yaxis: {
                       title: {
-                        text: "Arrival Density (per structure)",
+                        text: "Number of Accommodation Facilities",
                         standoff: 15,
                       },
                       gridcolor: theme.grid,
@@ -669,7 +669,7 @@ async function initItalyMap() {
             applyResponsiveFit();
             map.invalidateSize(true);
           }
-      
+
           map.whenReady(() => {
             requestAnimationFrame(() => {
               forceProperLayout();
@@ -697,7 +697,7 @@ async function initItalyMap() {
             applyResponsiveFit();
         }, 100);
         });
-   
+
         const mapDiv = document.getElementById("map");
         if (mapDiv) {
         resizeObserver.observe(mapDiv);
