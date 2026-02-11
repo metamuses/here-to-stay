@@ -1326,7 +1326,7 @@
                       data-bs-parent="#accordionExample">
                       <div class="accordion-text">
                         <p>
-                          Following the principle of Data Protection by Design, we selected datasets that were pre-anonymised at the source. For private-sector data (Idealista), we ensured that the extraction and usage remained within the scope of academic research and "Fair Use," avoiding any infringement on proprietary rights or individual privacy. Internal responsibility was maintained for every stage of data cleaning and aggregation to prevent the introduction of errors or misinterpretations.
+                          Following the principle of Data Protection by Design, we selected datasets that were pre-anonymised at the source and limited the amount and granularity of data processed to what was strictly necessary for our research questions. For private-sector data (Idealista), we ensured that the extraction and usage remained within a clearly documented academic‑research purpose, avoiding any infringement of proprietary rights or individual privacy. Internal responsibility was maintained for every stage of data cleaning and aggregation to prevent the introduction of errors or misinterpretations. These choices are documented so that the research team can be held accountable for how data were selected, processed and interpreted.
                         </p>
                       </div>
                     </div>
@@ -1396,7 +1396,7 @@
                       <div class="swiper-slide">
                         <h6>Idealista</h6>
                         <p>
-                          The inclusion of market data from Idealista (D5) represents the most significant ethical challenge of this project. Unlike institutional sources, Idealista is a commercial entity whose data is generated for profit-making purposes. In accordance with the principle of accountability, we have ensured that the usage of this publicly accessible press data complies with the platform’s intended use for information and research purposes. Our secondary use is justified by the educational nature of this project. To address the lack of explicit consent from data subjects, we process the data exclusively in its most <strong>aggregated form</strong> to prevent any direct or indirect identification.
+                          The inclusion of market data from Idealista (D5) represents the most significant ethical challenge of this project. Unlike institutional sources, Idealista is a commercial entity whose data is generated for profit-making purposes. Our secondary use is justified by the educational nature of this project. To address the lack of explicit consent from data subjects, we process the data exclusively in its most <strong>aggregated form</strong> to prevent any direct or indirect identification.
                           <br>
                           Furthermore, we commit to <strong>deleting the raw data</strong> from our public platforms following the academic assessment, retaining only the visualizations derived from its integration with other datasets. Throughout the project, the source has been transparently cited to avoid any misattribution.
                           <br>
@@ -1409,12 +1409,12 @@
                       <div class="swiper-slide">
                         <h6>MUR-USTAT</h6>
                         <p>
-                          Student enrollment data (D6) were collected from the MIUR-USTAT Open Data platform. This dataset contains sensitive information concerning residence and citizenship of universities' students, therefore the ethical aspect of their handling has to be carefully considered. Our dataset contained information about the number of students by province of residence, province of study, university and disciplinary group. While the data arrived anonymised, we identified a risk of indirect re-identification through the combination of variables. For instance, crossing a specific province of residence with a niche "disciplinary group" could isolate individual student trajectories. In accordance with EU Ethics and Data Protection guidance, we mitigated this by clustering students at the regional level and deleting non-essential granular information, such as specific disciplinary codes, thereby upholding the principle of privacy by design.
+                          Student enrollment data (D6) were collected from the MUR-USTAT Open Data platform. This dataset contains sensitive information concerning residence and citizenship of universities' students, therefore the ethical aspect of their handling has to be carefully considered. Our dataset contained information about the number of students by province of residence, province of study, university and disciplinary group. While the data arrived anonymised, we identified a <strong>risk of indirect re-identification</strong> through the combination of variables. For instance, crossing a specific province of residence with a niche "disciplinary group" could isolate individual student trajectories. In accordance with EU Ethics and Data Protection guidance, we mitigated this by clustering students at the regional level and deleting non-essential granular information, such as specific disciplinary codes, thereby upholding the principle of privacy by design.
                         </p>
                       </div>
 
                       <div class="swiper-slide">
-                        <h6>Ethical Risks and Bias Mitigation</h6>
+                        <h6>Ethical risks and limitations </h6>
                         <p>
                           We acknowledge several limitations and biases that inform our ethical approach:
                           <ul>
@@ -1429,7 +1429,7 @@
                         <p>
                           The final dataset (D4) consists of a self-produced record of national regulations governing short-term rentals in Italy. While this dataset does not contain personal data, its construction carries specific ethical responsibilities regarding objectivity and transparency.
                           <br>
-                          The dataset was compiled by aggregating official legislative texts from Nomattiva, the official Italian government portal providing access to legislation. The primary ethical risk in self-producing a regulatory dataset is the potential for arbitrary selection. Deciding which laws are "relevant" can inadvertently bias the analysis toward a specific narrative. To minimize this risk and ensure methodological integrity, we performed a systematic search on Normattiva using specific keywords (“strutture ricettive”, “affitti brevi”, “locazioni brevi”). The results were manually reviewed and scraped to ensure a comprehensive overview of the regulatory evolution.
+                          The dataset was compiled by aggregating official legislative texts from Nomattiva, the official Italian government portal providing access to legislation. The primary ethical risk in self-producing a regulatory dataset is the potential for <strong>arbitrary selection</strong>. Deciding which laws are "relevant" can inadvertently bias the analysis toward a specific narrative. To minimize this risk and ensure methodological integrity, we performed a systematic search on Normattiva using specific keywords (“strutture ricettive”, “affitti brevi”, “locazioni brevi”). The results were manually reviewed and scraped to ensure a comprehensive overview of the regulatory evolution.
                           <br>
                           This dataset serves to investigate how legislative choices have attempted to regulate the short term rental market. It provides a necessary "human-centric" background to our analysis, shifting the focus from abstract statistics to the concrete impact of policy-making on the Right to Education and Housing.
                         </p>
